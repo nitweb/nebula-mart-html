@@ -1,0 +1,195 @@
+/* NEBULA MART — contact */
+.cinfo {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr))
+}
+
+.cinfo__item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.3rem;
+    transition: transform .2s, border-color .2s
+}
+
+a.cinfo__item:hover {
+    transform: translateY(-3px);
+    border-color: var(--navy)
+}
+
+.cinfo__item>.ic {
+    flex: none;
+    width: 3rem;
+    height: 3rem;
+    padding: .8rem;
+    border-radius: 1rem;
+    background: var(--navy);
+    color: #fff
+}
+
+.cinfo__item:nth-child(even)>.ic {
+    background: var(--amber);
+    color: var(--ink)
+}
+
+.cinfo__item h3 {
+    font-family: var(--font-body);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: rgb(var(--color-ink)/.55)
+}
+
+.cinfo__item p {
+    margin-top: .2rem;
+    font-weight: 800;
+    line-height: 1.4
+}
+
+.cinfo__item small {
+    display: block;
+    margin-top: .15rem;
+    font-weight: 500;
+    font-size: .82rem;
+    color: rgb(var(--color-ink)/.6)
+}
+
+.cgrid {
+    display: grid;
+    gap: 1.6rem;
+    margin-top: 1.6rem
+}
+
+@media(min-width:1024px) {
+    .cgrid {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch
+    }
+}
+
+.cform {
+    padding: 1.6rem
+}
+
+@media(min-width:640px) {
+    .cform {
+        padding: 2.2rem
+    }
+}
+
+.cform h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem)
+}
+
+.cform>p {
+    margin-top: .5rem;
+    color: rgb(var(--color-ink)/.7);
+    line-height: 1.55
+}
+
+.cform form {
+    display: grid;
+    gap: 1.05rem;
+    margin-top: 1.5rem
+}
+
+.cform .two {
+    display: grid;
+    gap: 1.05rem
+}
+
+@media(min-width:640px) {
+    .cform .two {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.cform .count {
+    justify-self: end;
+    margin-top: -.3rem;
+    font-size: .78rem;
+    color: rgb(var(--color-ink)/.5)
+}
+
+.cmap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 28rem
+}
+
+.cmap iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 24rem;
+    border: 0;
+    background: var(--soft)
+}
+
+.cmap__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .9rem;
+    padding: 1.2rem 1.4rem;
+    border-top: 1px solid var(--line);
+    background: #fff
+}
+
+.cmap__bar strong {
+    display: block;
+    font-size: 1.05rem
+}
+
+.cmap__bar span {
+    font-size: .9rem;
+    color: rgb(var(--color-ink)/.65)
+}
+
+.cmap__bar .btn {
+    padding: .7rem 1.1rem;
+    font-size: .92rem
+}
+
+.cquick {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.6rem
+}
+
+@media(min-width:768px) {
+    .cquick {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+.cquick a {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    padding: 1.2rem 1.4rem;
+    font-weight: 800;
+    transition: border-color .15s, transform .15s
+}
+
+.cquick a:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px)
+}
+
+.cquick a>.ic:first-child {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: .65rem;
+    border-radius: .85rem;
+    background: var(--soft);
+    color: var(--navy)
+}
+
+.cquick a>.ic:last-child {
+    margin-left: auto;
+    color: rgb(var(--color-ink)/.4)
+}

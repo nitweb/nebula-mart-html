@@ -1,0 +1,199 @@
+/* NEBULA MART — FAQ */
+.faq-tools {
+    display: grid;
+    gap: 1.1rem;
+    margin-bottom: 1.8rem
+}
+
+.faq-tools .fld__box input {
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem;
+    font-size: 1.02rem
+}
+
+.faq-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+.faq-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    color: rgb(var(--color-ink)/.65)
+}
+
+.faq-meta button {
+    border: 0;
+    background: none;
+    padding: .3rem 0;
+    font-weight: 800;
+    color: var(--navy)
+}
+
+.faq-meta button:hover {
+    text-decoration: underline
+}
+
+.faq-layout {
+    display: grid;
+    gap: 2rem
+}
+
+@media(min-width:1024px) {
+    .faq-layout {
+        grid-template-columns: 1fr 20rem;
+        align-items: start
+    }
+}
+
+.faq-list {
+    display: grid;
+    gap: .75rem
+}
+
+.qa {
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: 1.1rem;
+    transition: border-color .15s, box-shadow .15s
+}
+
+.qa:hover {
+    border-color: rgb(var(--color-primary-200))
+}
+
+.qa[open] {
+    border-color: var(--navy);
+    box-shadow: 0 18px 36px -26px rgb(11 58 140/.55)
+}
+
+.qa[hidden] {
+    display: none
+}
+
+.qa summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem 1.3rem;
+    cursor: pointer;
+    font-weight: 800;
+    line-height: 1.4;
+    list-style: none
+}
+
+.qa summary::-webkit-details-marker {
+    display: none
+}
+
+.qa summary .ic {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    padding: .45rem;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--navy);
+    transition: transform .2s, background .2s, color .2s
+}
+
+.qa[open] summary .ic {
+    transform: rotate(180deg);
+    background: var(--navy);
+    color: #fff
+}
+
+.qa__a {
+    padding: 0 1.3rem 1.3rem;
+    line-height: 1.65;
+    color: rgb(var(--color-ink)/.75)
+}
+
+.qa__a a {
+    color: var(--navy);
+    font-weight: 800
+}
+
+.qa__a a:hover {
+    text-decoration: underline
+}
+
+.faq-empty {
+    padding: 2.2rem;
+    text-align: center
+}
+
+.faq-empty[hidden] {
+    display: none
+}
+
+.faq-empty h3 {
+    font-size: 1.5rem
+}
+
+.faq-empty p {
+    margin: .5rem 0 1.2rem;
+    color: rgb(var(--color-ink)/.7)
+}
+
+.faq-aside {
+    display: grid;
+    gap: 1rem
+}
+
+.faq-aside .card {
+    padding: 1.5rem
+}
+
+.faq-aside h3 {
+    font-size: 1.3rem
+}
+
+.faq-aside p {
+    margin-top: .4rem;
+    font-size: .92rem;
+    line-height: 1.55;
+    color: rgb(var(--color-ink)/.7)
+}
+
+.faq-aside .btn {
+    margin-top: 1rem
+}
+
+.faq-aside .dark {
+    background: var(--ink);
+    color: #fff;
+    border: 0
+}
+
+.faq-aside .dark p {
+    color: rgb(255 255 255/.75)
+}
+
+.quick a {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding: .7rem 0;
+    font-weight: 700;
+    border-top: 1px solid var(--line)
+}
+
+.quick a:first-of-type {
+    border-top: 0
+}
+
+.quick a:hover {
+    color: var(--navy)
+}
+
+.quick .ic {
+    color: var(--navy)
+}

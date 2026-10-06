@@ -6,29 +6,45 @@
    ========================================================================== */
 :root {
   /* Primary: navy blue (buttons, links, focus ring) */
-  --color-primary:       11 58 140;    /* #0B3A8C */
-  --color-primary-dark:  8 43 105;     /* #082B69  hover */
-  --color-primary-soft:  240 246 255;  /* #F0F6FF  light section background */
-  --color-primary-100:   219 232 250;  /* #DBE8FA */
-  --color-primary-200:   186 209 245;  /* #BAD1F5 */
-  --color-primary-300:   130 168 230;  /* #82A8E6 */
+  --color-primary: 11 58 140;
+  /* #0B3A8C */
+  --color-primary-dark: 8 43 105;
+  /* #082B69  hover */
+  --color-primary-soft: 240 246 255;
+  /* #F0F6FF  light section background */
+  --color-primary-100: 219 232 250;
+  /* #DBE8FA */
+  --color-primary-200: 186 209 245;
+  /* #BAD1F5 */
+  --color-primary-300: 130 168 230;
+  /* #82A8E6 */
 
   /* Accent: amber (CTA buttons, badges, highlights) */
-  --color-accent:        245 168 0;    /* #F5A800 */
-  --color-accent-dark:   217 145 0;    /* #D99100  hover */
-  --color-accent-soft:   255 246 222;  /* #FFF6DE */
+  --color-accent: 245 168 0;
+  /* #F5A800 */
+  --color-accent-dark: 217 145 0;
+  /* #D99100  hover */
+  --color-accent-soft: 255 246 222;
+  /* #FFF6DE */
 
   /* Neutrals */
-  --color-ink:           15 26 58;     /* #0F1A3A  text, dark sections, footer */
-  --color-paper:         255 255 255;  /* #FFFFFF  page background */
-  --color-line:          222 230 243;  /* #DEE6F3  borders, dividers */
+  --color-ink: 15 26 58;
+  /* #0F1A3A  text, dark sections, footer */
+  --color-paper: 255 255 255;
+  /* #FFFFFF  page background */
+  --color-line: 222 230 243;
+  /* #DEE6F3  borders, dividers */
 
   /* Status */
-  --color-star:          245 168 0;    /* #F5A800  rating stars */
-  --color-success:       10 143 107;   /* #0A8F6B */
-  --color-danger:        220 38 38;    /* #DC2626 */
+  --color-star: 245 168 0;
+  /* #F5A800  rating stars */
+  --color-success: 10 143 107;
+  /* #0A8F6B */
+  --color-danger: 220 38 38;
+  /* #DC2626 */
 
   /* Fonts (files are in assets/fonts, declared in style.css) */
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;   /* headings */
-  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  /* headings */
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }

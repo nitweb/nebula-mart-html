@@ -1,0 +1,368 @@
+/* NEBULA MART — track order */
+.trk-grid {
+    display: grid;
+    gap: 1.5rem
+}
+
+@media(min-width:1024px) {
+    .trk-grid {
+        grid-template-columns: 1.25fr .75fr;
+        align-items: stretch
+    }
+}
+
+.trk-find {
+    padding: 1.6rem
+}
+
+@media(min-width:640px) {
+    .trk-find {
+        padding: 2.2rem
+    }
+}
+
+.trk-find h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem)
+}
+
+.trk-find>p {
+    margin-top: .6rem;
+    color: rgb(var(--color-ink)/.7);
+    line-height: 1.55
+}
+
+.trk-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+    align-items: flex-end
+}
+
+.trk-form .fld {
+    flex: 1 1 15rem
+}
+
+.trk-form .fld__box input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase
+}
+
+.trk-form .fld__box input::placeholder {
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0
+}
+
+.trk-form .btn {
+    padding: 1.05rem 1.6rem
+}
+
+.trk-try {
+    margin-top: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .6rem;
+    font-size: .9rem;
+    color: rgb(var(--color-ink)/.65)
+}
+
+.trk-how {
+    padding: 1.6rem;
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+    position: relative;
+    overflow: hidden
+}
+
+.trk-how::after {
+    content: "";
+    position: absolute;
+    right: -2.5rem;
+    top: -2.5rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: rgb(var(--color-accent))
+}
+
+.trk-how h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem
+}
+
+.trk-how ol {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 1.1rem;
+    margin-top: 1.3rem;
+    counter-reset: s
+}
+
+.trk-how li {
+    display: flex;
+    gap: .85rem;
+    align-items: flex-start;
+    line-height: 1.5;
+    font-size: .95rem;
+    color: rgb(255 255 255/.8);
+    counter-increment: s
+}
+
+.trk-how li::before {
+    content: counter(s);
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: rgb(255 255 255/.14);
+    font-weight: 800;
+    font-size: .85rem;
+    color: #fff
+}
+
+.trk-how b {
+    display: block;
+    color: #fff
+}
+
+/* result */
+.trk-res,
+.trk-none {
+    margin-top: 1.5rem;
+    padding: 1.6rem;
+    animation: trkIn .35s ease both
+}
+
+@media(min-width:768px) {
+    .trk-res {
+        padding: 2.2rem
+    }
+}
+
+@keyframes trkIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.trk-res[hidden],
+.trk-none[hidden] {
+    display: none
+}
+
+.trk-res__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.trk-res__k {
+    font-size: .85rem;
+    font-weight: 700;
+    color: rgb(var(--color-ink)/.55)
+}
+
+.trk-res h2 {
+    margin-top: .2rem;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    word-break: break-all
+}
+
+.trk-res__eta {
+    margin-top: .4rem;
+    color: rgb(var(--color-ink)/.7)
+}
+
+.trk-flow {
+    position: relative;
+    margin-top: 2.2rem
+}
+
+.trk-line {
+    position: absolute;
+    background: var(--line);
+    border-radius: 9px;
+    overflow: hidden;
+    left: 1.1rem;
+    top: 1.2rem;
+    bottom: 1.2rem;
+    width: 4px
+}
+
+.trk-line i {
+    display: block;
+    background: var(--navy);
+    width: 100%;
+    height: calc(var(--p, 0)*1%);
+    transition: height .8s ease
+}
+
+.trk-steps {
+    position: relative;
+    display: grid;
+    gap: 1.6rem
+}
+
+.trk-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start
+}
+
+.trk-node {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--line);
+    font-weight: 800;
+    font-size: .9rem;
+    color: rgb(var(--color-ink)/.45)
+}
+
+.trk-t {
+    font-weight: 800
+}
+
+.trk-d {
+    margin-top: .15rem;
+    font-size: .9rem;
+    line-height: 1.45;
+    color: rgb(var(--color-ink)/.6)
+}
+
+.trk-step:not(.is-done):not(.is-now) .trk-t {
+    color: rgb(var(--color-ink)/.5)
+}
+
+.is-done .trk-node {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff
+}
+
+.is-now .trk-node {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--ink);
+    box-shadow: 0 0 0 6px rgb(var(--color-accent)/.25)
+}
+
+@media(min-width:768px) {
+    .trk-line {
+        left: 10%;
+        right: 10%;
+        top: 1.1rem;
+        bottom: auto;
+        width: auto;
+        height: 4px
+    }
+
+    .trk-line i {
+        width: calc(var(--p, 0)*1%);
+        height: 100%;
+        transition: width .8s ease
+    }
+
+    .trk-steps {
+        grid-template-columns: repeat(5, 1fr);
+        gap: .8rem
+    }
+
+    .trk-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .trk-d {
+        max-width: 11rem
+    }
+}
+
+.trk-facts {
+    display: grid;
+    gap: .8rem;
+    margin-top: 2.2rem
+}
+
+@media(min-width:640px) {
+    .trk-facts {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+.trk-facts>div {
+    padding: 1rem 1.15rem;
+    border-radius: 1rem;
+    background: var(--soft)
+}
+
+.trk-facts dt {
+    font-size: .8rem;
+    font-weight: 700;
+    color: rgb(var(--color-ink)/.55)
+}
+
+.trk-facts dd {
+    margin-top: .2rem;
+    font-weight: 800
+}
+
+.trk-none {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgb(var(--color-danger)/.05);
+    border-color: rgb(var(--color-danger)/.3)
+}
+
+.trk-none>.ic {
+    flex: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: .7rem;
+    border-radius: 50%;
+    background: rgb(var(--color-danger));
+    color: #fff
+}
+
+.trk-none h2 {
+    font-size: 1.5rem
+}
+
+.trk-none p {
+    margin-top: .4rem;
+    line-height: 1.55;
+    color: rgb(var(--color-ink)/.75)
+}
+
+.trk-none a {
+    color: var(--navy);
+    font-weight: 800
+}
+
+.trk-none a:hover {
+    text-decoration: underline
+}

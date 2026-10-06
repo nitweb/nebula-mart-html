@@ -1,0 +1,575 @@
+/* ==========================================================================
+   NEBULA MART — shared building blocks for the redesigned pages
+   (hero, support nav, buttons, cards, form fields, CTA band)
+   Colors come from variables.css only.
+   ========================================================================== */
+.pg {
+   --navy: rgb(var(--color-primary));
+   --ink: rgb(var(--color-ink));
+   --amber: rgb(var(--color-accent));
+   --line: rgb(var(--color-line));
+   --soft: rgb(var(--color-primary-soft));
+   color: var(--ink)
+}
+
+.pg *,
+.pg *::before,
+.pg *::after {
+   box-sizing: border-box
+}
+
+:where(.pg) :where(h1, h2, h3, h4) {
+   font-family: var(--font-display);
+   font-weight: 600;
+   letter-spacing: -.015em;
+   line-height: 1.12;
+   margin: 0
+}
+
+:where(.pg) :where(p, dl, dd, figure) {
+   margin: 0
+}
+
+:where(.pg) :where(ul, ol) {
+   list-style: none;
+   margin: 0;
+   padding: 0
+}
+
+:where(.pg) a {
+   color: inherit;
+   text-decoration: none
+}
+
+:where(.pg) img {
+   display: block;
+   max-width: 100%;
+   height: auto
+}
+
+:where(.pg) button {
+   font: inherit;
+   cursor: pointer
+}
+
+.wrap {
+   width: 100%;
+   max-width: 80rem;
+   margin-inline: auto;
+   padding-inline: 1rem
+}
+
+@media(min-width:1024px) {
+   .wrap {
+      padding-inline: 1.5rem
+   }
+}
+
+/* ---------- page hero ---------- */
+.ph {
+   position: relative;
+   overflow: hidden;
+   color: #fff;
+   padding: 2.25rem 0 4.5rem;
+   background: linear-gradient(115deg, rgb(var(--color-ink)) 0%, rgb(var(--color-primary-dark)) 50%, rgb(var(--color-primary)) 100%)
+}
+
+.ph::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-image: linear-gradient(rgb(255 255 255/.06) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255/.06) 1px, transparent 1px);
+   background-size: 46px 46px;
+   -webkit-mask-image: linear-gradient(100deg, #000 10%, transparent 80%);
+   mask-image: linear-gradient(100deg, #000 10%, transparent 80%)
+}
+
+.ph::after {
+   content: "";
+   position: absolute;
+   right: -6rem;
+   top: -7rem;
+   width: 25rem;
+   height: 25rem;
+   border-radius: 50%;
+   border: 2.6rem solid rgb(var(--color-accent)/.16)
+}
+
+.ph__in {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem
+}
+
+.ph h1 {
+   font-size: clamp(2.25rem, 5vw, 3.75rem);
+   margin-top: .9rem
+}
+
+.ph__sub {
+   margin-top: .8rem;
+   max-width: 34rem;
+   font-size: 1.05rem;
+   line-height: 1.55;
+   color: rgb(255 255 255/.82)
+}
+
+.ph__badge {
+   display: none;
+   flex: none;
+   width: 8rem;
+   height: 8rem;
+   border-radius: 2.2rem;
+   place-items: center;
+   background: rgb(255 255 255/.09);
+   border: 1px solid rgb(255 255 255/.22);
+   color: var(--amber);
+   font-size: 3.6rem;
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+   transform: rotate(6deg);
+   box-shadow: 0 24px 50px -24px rgb(0 0 0/.6)
+}
+
+.ph__badge .ic {
+   width: 1em;
+   height: 1em;
+   vertical-align: 0
+}
+
+@media(min-width:768px) {
+   .ph__badge {
+      display: grid
+   }
+
+   .ph {
+      padding: 3rem 0 5.2rem
+   }
+}
+
+.crumbs ol {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem;
+   font-size: .875rem;
+   color: rgb(255 255 255/.8)
+}
+
+.crumbs a:hover {
+   text-decoration: underline
+}
+
+.crumbs [aria-current] {
+   font-weight: 700;
+   color: #fff
+}
+
+/* ---------- support nav ---------- */
+.sn {
+   position: relative;
+   z-index: 5;
+   margin-top: -1.8rem
+}
+
+.sn__list {
+   display: flex;
+   gap: .25rem;
+   overflow-x: auto;
+   padding: .4rem;
+   background: #fff;
+   border: 1px solid var(--line);
+   border-radius: 1.1rem;
+   box-shadow: 0 18px 40px -22px rgb(15 26 58/.45);
+   scrollbar-width: none
+}
+
+.sn__list::-webkit-scrollbar {
+   display: none
+}
+
+.sn a {
+   flex: 1 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: .5rem;
+   padding: .8rem 1.05rem;
+   border-radius: .8rem;
+   white-space: nowrap;
+   font-weight: 700;
+   font-size: .92rem;
+   color: rgb(var(--color-ink)/.75);
+   transition: background .15s, color .15s
+}
+
+.sn a:hover {
+   background: var(--soft);
+   color: var(--navy)
+}
+
+.sn a[aria-current=page] {
+   background: var(--navy);
+   color: #fff
+}
+
+/* ---------- sections ---------- */
+.sec {
+   padding: 3.5rem 0
+}
+
+@media(min-width:1024px) {
+   .sec {
+      padding: 4.75rem 0
+   }
+}
+
+.sec--tint {
+   background: var(--soft)
+}
+
+.sec--dark {
+   background: var(--ink);
+   color: #fff
+}
+
+.sec__head {
+   max-width: 40rem;
+   margin-bottom: 2.2rem
+}
+
+.sec__head h2 {
+   font-size: clamp(1.8rem, 3.2vw, 2.6rem)
+}
+
+.sec__head p {
+   margin-top: .7rem;
+   line-height: 1.6;
+   color: rgb(var(--color-ink)/.7)
+}
+
+.sec--dark .sec__head p {
+   color: rgb(255 255 255/.75)
+}
+
+/* ---------- buttons ---------- */
+.btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: .55rem;
+   padding: .9rem 1.5rem;
+   border: 2px solid transparent;
+   border-radius: .9rem;
+   font-weight: 800;
+   line-height: 1.2;
+   text-align: center;
+   transition: background .15s, color .15s, border-color .15s, transform .15s
+}
+
+.btn:active {
+   transform: translateY(1px)
+}
+
+.btn--primary {
+   background: var(--navy);
+   color: #fff
+}
+
+.btn--primary:hover {
+   background: rgb(var(--color-primary-dark))
+}
+
+.btn--accent {
+   background: var(--amber);
+   color: var(--ink)
+}
+
+.btn--accent:hover {
+   background: rgb(var(--color-accent-dark))
+}
+
+.btn--ghost {
+   background: #fff;
+   color: var(--ink);
+   border-color: var(--line)
+}
+
+.btn--ghost:hover {
+   border-color: var(--navy);
+   color: var(--navy)
+}
+
+.btn--light {
+   background: #fff;
+   color: var(--navy)
+}
+
+.btn--light:hover {
+   background: rgb(var(--color-accent-soft))
+}
+
+.btn--line {
+   border-color: rgb(255 255 255/.4);
+   color: #fff
+}
+
+.btn--line:hover {
+   background: rgb(255 255 255/.12)
+}
+
+.btn--block {
+   width: 100%
+}
+
+/* ---------- cards / pills / chips ---------- */
+.card {
+   background: #fff;
+   border: 1px solid var(--line);
+   border-radius: 1.4rem
+}
+
+.pill {
+   display: inline-flex;
+   align-items: center;
+   gap: .4rem;
+   padding: .4rem .85rem;
+   border-radius: 999px;
+   font-size: .85rem;
+   font-weight: 800;
+   background: rgb(var(--color-accent-soft));
+   color: rgb(var(--color-accent-dark))
+}
+
+.chip {
+   display: inline-flex;
+   align-items: center;
+   gap: .4rem;
+   padding: .45rem .9rem;
+   border-radius: 999px;
+   border: 1.5px solid var(--line);
+   background: #fff;
+   font-size: .88rem;
+   font-weight: 700;
+   color: var(--ink);
+   transition: all .15s
+}
+
+.chip:hover {
+   border-color: var(--navy);
+   color: var(--navy)
+}
+
+.chip[aria-pressed=true] {
+   background: var(--navy);
+   border-color: var(--navy);
+   color: #fff
+}
+
+.note {
+   padding: .85rem 1rem;
+   border-radius: .9rem;
+   font-size: .92rem;
+   font-weight: 700;
+   background: var(--soft);
+   border: 1px solid rgb(var(--color-primary-200))
+}
+
+.note.is-ok {
+   background: rgb(var(--color-success)/.1);
+   border-color: rgb(var(--color-success)/.35);
+   color: rgb(var(--color-success))
+}
+
+.note[hidden] {
+   display: none
+}
+
+/* ---------- form fields ---------- */
+.fld {
+   display: grid;
+   gap: .4rem;
+   min-width: 0
+}
+
+.fld .lbl {
+   font-weight: 700;
+   font-size: .86rem
+}
+
+.fld .lbl i {
+   font-style: normal;
+   color: var(--navy)
+}
+
+.fld__box {
+   position: relative;
+   display: flex;
+   align-items: center
+}
+
+.fld__box>.ic {
+   position: absolute;
+   left: .95rem;
+   font-size: 1.05rem;
+   color: rgb(var(--color-primary)/.55);
+   pointer-events: none;
+   transition: color .15s
+}
+
+.fld__box input,
+.fld__box select,
+.fld__box textarea {
+   width: 100%;
+   min-width: 0;
+   padding: .88rem 1rem .88rem 2.75rem;
+   border: 1.5px solid var(--line);
+   border-radius: .9rem;
+   background: #fff;
+   font: inherit;
+   color: inherit;
+   transition: border-color .15s, box-shadow .15s
+}
+
+.fld__box select {
+   appearance: none;
+   -webkit-appearance: none;
+   padding-right: 2.6rem;
+   cursor: pointer
+}
+
+.fld__box .sel-arrow {
+   position: absolute;
+   right: .9rem;
+   left: auto;
+   pointer-events: none
+}
+
+.fld__box textarea {
+   min-height: 9rem;
+   resize: vertical;
+   line-height: 1.55
+}
+
+.fld__box--ta>.ic {
+   top: 1.05rem
+}
+
+.fld__box input::placeholder,
+.fld__box textarea::placeholder {
+   color: rgb(var(--color-ink)/.38)
+}
+
+.fld__box input:focus,
+.fld__box select:focus,
+.fld__box textarea:focus {
+   outline: 0;
+   border-color: var(--navy);
+   box-shadow: 0 0 0 4px rgb(var(--color-primary)/.13)
+}
+
+.fld__box:focus-within>.ic {
+   color: var(--navy)
+}
+
+.fld__box input:user-invalid,
+.fld__box textarea:user-invalid,
+.fld__box select:user-invalid {
+   border-color: rgb(var(--color-danger))
+}
+
+.fld__box .eye {
+   position: absolute;
+   right: .35rem;
+   display: grid;
+   place-items: center;
+   width: 2.5rem;
+   height: 2.5rem;
+   border: 0;
+   border-radius: .7rem;
+   background: transparent;
+   color: rgb(var(--color-ink)/.55)
+}
+
+.fld__box .eye:hover {
+   background: var(--soft);
+   color: var(--navy)
+}
+
+.fld__box .eye .ic {
+   position: static;
+   color: inherit;
+   font-size: 1.15rem
+}
+
+.fld__box--pw input {
+   padding-right: 3rem
+}
+
+/* ---------- CTA band ---------- */
+.cta {
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   padding: 2rem;
+   border-radius: 1.8rem;
+   color: #fff;
+   background: linear-gradient(115deg, rgb(var(--color-ink)), rgb(var(--color-primary)))
+}
+
+.cta::after {
+   content: "";
+   position: absolute;
+   right: -3.5rem;
+   bottom: -5rem;
+   width: 15rem;
+   height: 15rem;
+   border-radius: 50%;
+   background: rgb(var(--color-accent))
+}
+
+.cta>* {
+   position: relative;
+   z-index: 1
+}
+
+.cta h2 {
+   font-size: clamp(1.5rem, 3vw, 2.2rem)
+}
+
+.cta p {
+   margin-top: .5rem;
+   color: rgb(255 255 255/.8);
+   max-width: 32rem;
+   line-height: 1.55
+}
+
+.cta__act {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .7rem;
+   margin-right: 5rem
+}
+
+@media(max-width:640px) {
+   .cta {
+      padding: 1.6rem
+   }
+
+   .cta__act {
+      margin-right: 0
+   }
+}
+
+@media(prefers-reduced-motion:reduce) {
+   .pg * {
+      transition: none !important;
+      animation: none !important
+   }
+}

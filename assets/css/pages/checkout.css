@@ -1,0 +1,136 @@
+/* NEBULA MART — checkout page */
+#district-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 4px;
+    z-index: 40;
+    max-height: 240px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid rgb(var(--color-line));
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    padding: 4px
+}
+
+#area-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 4px;
+    z-index: 40;
+    max-height: 240px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid rgb(var(--color-line));
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    padding: 4px
+}
+
+#district-list[hidden] {
+    display: none
+}
+
+#area-list[hidden] {
+    display: none
+}
+
+#district-list li {
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px
+}
+
+#area-list li {
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px
+}
+
+#district-list li small {
+    font-weight: 500;
+    opacity: .55
+}
+
+#area-list li small {
+    font-weight: 500;
+    opacity: .55
+}
+
+#district-list li.on,
+#district-list li:hover {
+    background: rgb(var(--color-primary-soft))
+}
+
+#area-list li.on,
+#area-list li:hover {
+    background: rgb(var(--color-primary-soft))
+}
+
+#district-list li.none {
+    cursor: default;
+    opacity: .6
+}
+
+#area-list li.none {
+    cursor: default;
+    opacity: .6
+}
+
+#mini li {
+    align-items: flex-start
+}
+
+#mini .mi-price {
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: right;
+    line-height: 1.375
+}
+
+/* former inline styles */
+.u-ef28f7 {
+    background: rgb(var(--color-accent))
+}
+
+.u-85842e {
+    background: #E2136E
+}
+
+.u-435193 {
+    background: #F6921E
+}
+
+.u-e00e87 {
+    background: rgb(var(--color-primary))
+}
+
+.u-1126c2 {
+    background: rgb(var(--color-ink))
+}
+
+.u-7aeab9 {
+    background: #E2136E1A
+}
+
+.u-b12d5f {
+    background: #F6921E1A
+}
+
+.u-cdfbc3 {
+    padding: 10px 10px 2px 0
+}

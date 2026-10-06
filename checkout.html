@@ -16,8 +16,24 @@
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/tailwind.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+#district-list{position:absolute;left:0;right:0;top:100%;margin-top:4px;z-index:40;max-height:240px;overflow-y:auto;background:#fff;border:1px solid rgb(var(--color-line));border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:4px}
+#area-list{position:absolute;left:0;right:0;top:100%;margin-top:4px;z-index:40;max-height:240px;overflow-y:auto;background:#fff;border:1px solid rgb(var(--color-line));border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:4px}
+#district-list[hidden]{display:none}
+#area-list[hidden]{display:none}
+#district-list li{padding:9px 12px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+#area-list li{padding:9px 12px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+#district-list li small{font-weight:500;opacity:.55}
+#area-list li small{font-weight:500;opacity:.55}
+#district-list li.on,#district-list li:hover{background:rgb(var(--color-primary-soft))}
+#area-list li.on,#area-list li:hover{background:rgb(var(--color-primary-soft))}
+#district-list li.none{cursor:default;opacity:.6}
+#area-list li.none{cursor:default;opacity:.6}
+#mini li{align-items:flex-start}
+#mini .mi-price{white-space:nowrap;flex-shrink:0;text-align:right;line-height:1.375}
+</style>
 </head>
-<body class="antialiased" data-page="checkout">
+<body class="antialiased" data-page="checkout-x">
 
 <!-- SVG ICON SPRITE -->
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -519,11 +535,11 @@
 <div class=""><label for="name" class="block font-bold text-sm mb-1.5">Full name <span class="text-primary">*</span></label><input id="name" name="name" type="text" required autocomplete="name" placeholder="e.g. Rahim Uddin"  class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></div>
 <div class=""><label for="phone" class="block font-bold text-sm mb-1.5">Mobile number <span class="text-primary">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="numeric" pattern="01[3-9][0-9]{8}" maxlength="11" placeholder="01XXXXXXXXX"  class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></div>
 <div class="sm:col-span-2"><label for="email" class="block font-bold text-sm mb-1.5">Email address <span class="text-primary">*</span></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"  class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></div>
-<div><label for="division" class="block font-bold text-sm mb-1.5">Division <span class="text-primary">*</span></label><select id="division" name="division" required class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"><option value="">Select division</option></select></div>
-<div><label for="district" class="block font-bold text-sm mb-1.5">District <span class="text-primary">*</span></label><select id="district" name="district" required class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md" disabled><option value="">Select district</option></select></div>
-<div class="sm:col-span-2"><label for="area-sel" class="block font-bold text-sm mb-1.5">Area / Thana <span class="text-primary">*</span></label>
-<select id="area-sel" name="area_sel" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md" hidden><option value="">Select area</option></select>
-<input id="area-txt" name="area_txt" type="text" required placeholder="Thana or upazila" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></div>
+<div class="sm:col-span-2 relative"><label for="district" class="block font-bold text-sm mb-1.5">District <span class="text-primary">*</span></label>
+<input id="district" name="district" type="text" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="district-list" placeholder="Search or select district" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md">
+<ul id="district-list" role="listbox" hidden></ul></div>
+<div class="sm:col-span-2 relative"><label for="area-txt" class="block font-bold text-sm mb-1.5">Area / Thana <span class="text-primary">*</span></label>
+<input id="area-txt" aria-autocomplete="list" aria-controls="area-list" name="area_txt" type="text" required autocomplete="off" disabled placeholder="Select district first" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"><ul id="area-list" role="listbox" hidden></ul></div>
 <div class="sm:col-span-2"><label for="address" class="block font-bold text-sm mb-1.5">Full address <span class="text-primary">*</span></label><textarea id="address" name="address" rows="2" required autocomplete="street-address" placeholder="House, road, block, landmark" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></textarea></div>
 <div class="sm:col-span-2"><label for="note" class="block font-bold text-sm mb-1.5">Order note <span class="font-medium text-ink/55">(optional)</span></label><textarea id="note" name="note" rows="2" placeholder="Anything we should know, for example delivery time or gift wrap" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md"></textarea></div></div>
 <p id="zone-msg" class="mt-4 rounded-xl bg-accent/30 border border-line px-4 py-3 text-sm font-bold" role="status"></p></section>
@@ -549,7 +565,7 @@
 
 <aside aria-label="Order summary" class="lg:sticky lg:top-48 bg-white border border-line rounded-3xl p-6 shadow-sm">
 <div class="flex items-center justify-between"><h2 class="font-display font-extrabold text-2xl">Your order</h2><a href="cart.html" class="text-sm font-bold underline underline-offset-4">Edit cart</a></div>
-<ul id="mini" class="grid gap-3 mt-5 max-h-72 overflow-y-auto pr-1"></ul>
+<ul id="mini" class="grid gap-3 mt-5 max-h-72 overflow-y-auto" style="padding:10px 10px 2px 0"></ul>
 <dl class="mt-5 grid gap-2.5 border-t-2 border-dashed border-line pt-5">
 <div class="flex justify-between"><dt>Subtotal</dt><dd id="t-sub" class="font-bold"></dd></div>
 <div id="r-disc" class="flex justify-between" hidden><dt>Coupon NEBULA10</dt><dd id="t-disc" class="font-bold text-success"></dd></div>
@@ -700,5 +716,61 @@
 
 
 <script src="assets/js/main.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var BD={'Dhaka':['Dhaka','Gazipur','Narayanganj','Narsingdi','Manikganj','Munshiganj','Tangail','Kishoreganj','Faridpur','Gopalganj','Madaripur','Rajbari','Shariatpur'],'Chattogram':['Chattogram',"Cox's Bazar",'Cumilla','Feni','Brahmanbaria','Noakhali','Lakshmipur','Chandpur','Rangamati','Bandarban','Khagrachhari'],'Rajshahi':['Rajshahi','Bogura','Pabna','Sirajganj','Natore','Naogaon','Chapainawabganj','Joypurhat'],'Khulna':['Khulna','Jashore','Satkhira','Bagerhat','Kushtia','Jhenaidah','Magura','Narail','Chuadanga','Meherpur'],'Barishal':['Barishal','Bhola','Patuakhali','Pirojpur','Jhalokathi','Barguna'],'Sylhet':['Sylhet','Moulvibazar','Habiganj','Sunamganj'],'Rangpur':['Rangpur','Dinajpur','Gaibandha','Kurigram','Lalmonirhat','Nilphamari','Panchagarh','Thakurgaon'],'Mymensingh':['Mymensingh','Jamalpur','Netrokona','Sherpur']};
+var TH={"Dhaka":["Dhanmondi","Gulshan","Banani","Mirpur","Uttara","Mohammadpur","Motijheel","Tejgaon","Badda","Rampura","Khilgaon","Jatrabari","Malibagh","Shyamoli","Farmgate","Old Dhaka","Demra","Lalbagh","Kotwali","Sutrapur","Pallabi","Kafrul","Cantonment","Shahbagh","Ramna","Paltan","Hazaribagh","Sabujbagh","Khilkhet","Bhatara","Adabor","Bangshal","Chawkbazar","Gendaria","Wari","Savar","Keraniganj","Dhamrai","Nawabganj","Dohar"],"Gazipur":["Gazipur Sadar","Kaliakair","Kaliganj","Kapasia","Sreepur","Tongi"],"Narayanganj":["Narayanganj Sadar","Araihazar","Bandar","Rupganj","Sonargaon","Fatullah","Siddhirganj"],"Narsingdi":["Narsingdi Sadar","Belabo","Monohardi","Palash","Raipura","Shibpur"],"Manikganj":["Manikganj Sadar","Daulatpur","Ghior","Harirampur","Saturia","Shivalaya","Singair"],"Munshiganj":["Munshiganj Sadar","Gazaria","Lohajang","Sirajdikhan","Sreenagar","Tongibari"],"Tangail":["Tangail Sadar","Basail","Bhuapur","Delduar","Dhanbari","Ghatail","Gopalpur","Kalihati","Madhupur","Mirzapur","Nagarpur","Sakhipur"],"Kishoreganj":["Kishoreganj Sadar","Austagram","Bajitpur","Bhairab","Hossainpur","Itna","Karimganj","Katiadi","Kuliarchar","Mithamain","Nikli","Pakundia","Tarail"],"Faridpur":["Faridpur Sadar","Alfadanga","Bhanga","Boalmari","Charbhadrasan","Madhukhali","Nagarkanda","Sadarpur","Saltha"],"Gopalganj":["Gopalganj Sadar","Kashiani","Kotalipara","Muksudpur","Tungipara"],"Madaripur":["Madaripur Sadar","Kalkini","Rajoir","Shibchar"],"Rajbari":["Rajbari Sadar","Baliakandi","Goalanda","Kalukhali","Pangsha"],"Shariatpur":["Shariatpur Sadar","Bhedarganj","Damudya","Gosairhat","Naria","Zajira"],"Chattogram":["Kotwali","Pahartali","Panchlaish","Khulshi","Double Mooring","Bayazid","Halishahar","Chandgaon","Bakalia","Patenga","Anwara","Banshkhali","Boalkhali","Chandanaish","Fatikchhari","Hathazari","Lohagara","Mirsharai","Patiya","Rangunia","Raozan","Sandwip","Satkania","Sitakunda"],"Cox's Bazar":["Cox's Bazar Sadar","Chakaria","Kutubdia","Maheshkhali","Pekua","Ramu","Teknaf","Ukhia"],"Cumilla":["Cumilla Sadar","Cumilla Sadar Dakshin","Barura","Brahmanpara","Burichang","Chandina","Chauddagram","Daudkandi","Debidwar","Homna","Laksam","Meghna","Monohorgonj","Muradnagar","Nangalkot","Titas"],"Feni":["Feni Sadar","Chhagalnaiya","Daganbhuiyan","Fulgazi","Parshuram","Sonagazi"],"Brahmanbaria":["Brahmanbaria Sadar","Akhaura","Ashuganj","Bancharampur","Bijoynagar","Kasba","Nabinagar","Nasirnagar","Sarail"],"Noakhali":["Noakhali Sadar","Begumganj","Chatkhil","Companiganj","Hatiya","Kabirhat","Senbagh","Sonaimuri","Subarnachar"],"Lakshmipur":["Lakshmipur Sadar","Kamalnagar","Raipur","Ramganj","Ramgati"],"Chandpur":["Chandpur Sadar","Faridganj","Haimchar","Haziganj","Kachua","Matlab Dakshin","Matlab Uttar","Shahrasti"],"Rangamati":["Rangamati Sadar","Baghaichhari","Barkal","Belaichhari","Juraichhari","Kaptai","Kawkhali","Langadu","Naniarchar","Rajasthali"],"Bandarban":["Bandarban Sadar","Alikadam","Lama","Naikhongchhari","Rowangchhari","Ruma","Thanchi"],"Khagrachhari":["Khagrachhari Sadar","Dighinala","Lakshmichhari","Mahalchhari","Manikchhari","Matiranga","Panchhari","Ramgarh"],"Rajshahi":["Boalia","Motihar","Rajpara","Shah Makhdum","Bagha","Bagmara","Charghat","Durgapur","Godagari","Mohanpur","Paba","Puthia","Tanore"],"Bogura":["Bogura Sadar","Adamdighi","Dhunat","Dhupchanchia","Gabtali","Kahaloo","Nandigram","Sariakandi","Shajahanpur","Sherpur","Shibganj","Sonatala"],"Pabna":["Pabna Sadar","Atgharia","Bera","Bhangura","Chatmohar","Faridpur","Ishwardi","Santhia","Sujanagar"],"Sirajganj":["Sirajganj Sadar","Belkuchi","Chauhali","Kamarkhanda","Kazipur","Raiganj","Shahjadpur","Tarash","Ullapara"],"Natore":["Natore Sadar","Bagatipara","Baraigram","Gurudaspur","Lalpur","Singra","Naldanga"],"Naogaon":["Naogaon Sadar","Atrai","Badalgachhi","Dhamoirhat","Manda","Mahadebpur","Niamatpur","Patnitala","Porsha","Raninagar","Sapahar"],"Chapainawabganj":["Chapainawabganj Sadar","Bholahat","Gomastapur","Nachole","Shibganj"],"Joypurhat":["Joypurhat Sadar","Akkelpur","Kalai","Khetlal","Panchbibi"],"Khulna":["Khulna Sadar","Sonadanga","Khalishpur","Daulatpur","Khan Jahan Ali","Batiaghata","Dacope","Dumuria","Dighalia","Koyra","Paikgachha","Phultala","Rupsha","Terokhada"],"Jashore":["Jashore Sadar","Abhaynagar","Bagherpara","Chaugachha","Jhikargachha","Keshabpur","Manirampur","Sharsha"],"Satkhira":["Satkhira Sadar","Assasuni","Debhata","Kalaroa","Kaliganj","Shyamnagar","Tala"],"Bagerhat":["Bagerhat Sadar","Chitalmari","Fakirhat","Kachua","Mollahat","Mongla","Morrelganj","Rampal","Sarankhola"],"Kushtia":["Kushtia Sadar","Bheramara","Daulatpur","Khoksa","Kumarkhali","Mirpur"],"Jhenaidah":["Jhenaidah Sadar","Harinakunda","Kaliganj","Kotchandpur","Maheshpur","Shailkupa"],"Magura":["Magura Sadar","Mohammadpur","Shalikha","Sreepur"],"Narail":["Narail Sadar","Kalia","Lohagara"],"Chuadanga":["Chuadanga Sadar","Alamdanga","Damurhuda","Jibannagar"],"Meherpur":["Meherpur Sadar","Gangni","Mujibnagar"],"Barishal":["Barishal Sadar","Agailjhara","Babuganj","Bakerganj","Banaripara","Gournadi","Hizla","Mehendiganj","Muladi","Wazirpur"],"Bhola":["Bhola Sadar","Borhanuddin","Charfasson","Daulatkhan","Lalmohan","Manpura","Tazumuddin"],"Patuakhali":["Patuakhali Sadar","Bauphal","Dashmina","Dumki","Galachipa","Kalapara","Mirzaganj","Rangabali"],"Pirojpur":["Pirojpur Sadar","Bhandaria","Kawkhali","Mathbaria","Nazirpur","Nesarabad","Zianagar"],"Jhalokathi":["Jhalokathi Sadar","Kathalia","Nalchity","Rajapur"],"Barguna":["Barguna Sadar","Amtali","Bamna","Betagi","Patharghata","Taltali"],"Sylhet":["Sylhet Sadar","Kotwali","Jalalabad","Balaganj","Beanibazar","Bishwanath","Companiganj","Dakshin Surma","Fenchuganj","Golapganj","Gowainghat","Jaintiapur","Kanaighat","Osmani Nagar","Zakiganj"],"Moulvibazar":["Moulvibazar Sadar","Barlekha","Juri","Kamalganj","Kulaura","Rajnagar","Sreemangal"],"Habiganj":["Habiganj Sadar","Ajmiriganj","Bahubal","Baniachong","Chunarughat","Lakhai","Madhabpur","Nabiganj","Shayestaganj"],"Sunamganj":["Sunamganj Sadar","Bishwamvarpur","Chhatak","Dakshin Sunamganj","Derai","Dharampasha","Dowarabazar","Jagannathpur","Jamalganj","Sullah","Tahirpur"],"Rangpur":["Rangpur Sadar","Badarganj","Gangachara","Kaunia","Mithapukur","Pirgachha","Pirganj","Taraganj"],"Dinajpur":["Dinajpur Sadar","Birampur","Birganj","Biral","Bochaganj","Chirirbandar","Fulbari","Ghoraghat","Hakimpur","Kaharole","Khansama","Nawabganj","Parbatipur"],"Gaibandha":["Gaibandha Sadar","Fulchhari","Gobindaganj","Palashbari","Sadullapur","Saghata","Sundarganj"],"Kurigram":["Kurigram Sadar","Bhurungamari","Char Rajibpur","Chilmari","Phulbari","Nageshwari","Rajarhat","Raomari","Ulipur"],"Lalmonirhat":["Lalmonirhat Sadar","Aditmari","Hatibandha","Kaliganj","Patgram"],"Nilphamari":["Nilphamari Sadar","Dimla","Domar","Jaldhaka","Kishoreganj","Saidpur"],"Panchagarh":["Panchagarh Sadar","Atwari","Boda","Debiganj","Tetulia"],"Thakurgaon":["Thakurgaon Sadar","Baliadangi","Haripur","Pirganj","Ranisankail"],"Mymensingh":["Mymensingh Sadar","Bhaluka","Dhobaura","Fulbaria","Gaffargaon","Gauripur","Haluaghat","Ishwarganj","Muktagachha","Nandail","Phulpur","Tarakanda","Trishal"],"Jamalpur":["Jamalpur Sadar","Bakshiganj","Dewanganj","Islampur","Madarganj","Melandaha","Sarishabari"],"Netrokona":["Netrokona Sadar","Atpara","Barhatta","Durgapur","Kalmakanda","Kendua","Khaliajuri","Madan","Mohanganj","Purbadhala"],"Sherpur":["Sherpur Sadar","Jhenaigati","Nakla","Nalitabari","Sreebardi"]};
+var NEAR=['Gazipur','Narayanganj','Narsingdi','Munshiganj','Manikganj'];
+var ALL=[];Object.keys(BD).forEach(function(d){BD[d].forEach(function(x){ALL.push({n:x,d:d})})});
+ALL.sort(function(a,b){return a.n.localeCompare(b.n)});
+RD.ZONES.dhaka.fee=70;RD.ZONES.sub.fee=100;RD.ZONES.out.fee=130;
+var c=RD.cart(),o=RD.order(),$=function(i){return document.getElementById(i)};
+if(!c.length){location.replace('cart.html');return}
+var form=$('co'),dt=$('district'),at=$('area-txt'),ls=$('district-list'),idx=-1,shown=[];
+function find(v){v=(v||'').trim().toLowerCase();return ALL.filter(function(x){return x.n.toLowerCase()===v})[0]||null}
+function zone(){var m=find(dt.value);if(!m)return null;if(m.n==='Dhaka')return 'dhaka';return NEAR.indexOf(m.n)>=0?'sub':'out'}
+function money(){var t=RD.totals(c,o),Z=RD.ZONES[o.zone]||RD.ZONES.dhaka;
+$('mini').innerHTML=c.map(function(i){return '<li class="flex gap-3"><span class="relative shrink-0"><img src="'+i.img+'" alt="" width="300" height="300" class="w-14 h-14 rounded-lg object-cover border border-line"><span class="absolute -top-2 -right-2 min-w-5 h-5 px-1 rounded-full bg-ink text-white text-xs font-bold grid place-items-center">'+i.qty+'</span></span><span class="flex-1 min-w-0 text-sm font-bold leading-snug">'+i.name+(i.variant?'<span class="block text-xs font-medium text-ink/60">'+i.variant+'</span>':'')+'</span><span class="mi-price font-bold text-sm">'+RD.tk(i.price*i.qty)+'</span></li>'}).join('');
+$('t-sub').textContent=RD.tk(t.sub);$('r-disc').hidden=!t.disc;$('t-disc').textContent='-'+RD.tk(t.disc);$('t-fee').textContent=RD.tk(t.fee);$('t-zone').textContent='('+Z.label+')';$('t-total').textContent=RD.tk(t.total);
+document.querySelectorAll('.pay-amt').forEach(function(e){e.textContent=RD.tk(t.total)});
+$('zone-msg').textContent=zone()?Z.label+' delivery: '+RD.tk(t.fee)+', arrives in '+Z.eta+'.':'Select your district to see the delivery charge.';RD.hdr(c)}
+var lastD='',AREAS=[];
+function areas(){var m=find(dt.value),n=m?m.n:'';if(n===lastD)return;lastD=n;at.value='';AREAS=n?(TH[n]||[]):[];at.disabled=!n;at.placeholder=n?'Select or type thana / upazila':'Select district first'}
+function upd(){areas();var z=zone();if(z){o.zone=z;RD.saveOrder(o)}money()}
+function render(q){q=(q||'').trim().toLowerCase();shown=ALL.filter(function(x){return !q||x.n.toLowerCase().indexOf(q)>=0});idx=shown.length?0:-1;
+ls.innerHTML=shown.length?shown.map(function(x,i){return '<li role="option" data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+x.n+'<small>'+x.d+'</small></li>'}).join(''):'<li class="none">No district found</li>'}
+function open_(){render(dt.dataset.q);ls.hidden=false;dt.setAttribute('aria-expanded','true')}
+function close_(){ls.hidden=true;dt.setAttribute('aria-expanded','false')}
+function pick(i){var x=shown[i];if(!x)return;dt.value=x.n;dt.dataset.q='';close_();val();upd()}
+function val(){dt.setCustomValidity(dt.value&&!find(dt.value)?'Please select a district from the list':'')}
+function hi(){var l=ls.querySelectorAll('li');l.forEach(function(e,i){e.classList.toggle('on',i===idx)});if(l[idx])l[idx].scrollIntoView({block:'nearest'})}
+dt.addEventListener('focus',function(){dt.dataset.q='';open_();dt.select()});
+dt.addEventListener('input',function(){dt.dataset.q=dt.value;render(dt.value);ls.hidden=false;val();upd()});
+dt.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();if(ls.hidden)open_();else{idx=Math.min(idx+1,shown.length-1);hi()}}else if(e.key==='ArrowUp'){e.preventDefault();idx=Math.max(idx-1,0);hi()}else if(e.key==='Enter'&&!ls.hidden){e.preventDefault();pick(idx)}else if(e.key==='Escape'||e.key==='Tab'){close_()}});
+ls.addEventListener('mousedown',function(e){var li=e.target.closest('li[data-i]');if(li){e.preventDefault();pick(+li.dataset.i)}});
+document.addEventListener('click',function(e){if(!e.target.closest('#district,#district-list'))close_()});
+dt.addEventListener('blur',function(){setTimeout(function(){var m=find(dt.value);if(m)dt.value=m.n;close_();val();upd()},120)});
+var pays=document.querySelectorAll('input[name=pay]');
+function pp(){var v=document.querySelector('input[name=pay]:checked').value;document.querySelectorAll('[data-pay-panel]').forEach(function(p){p.hidden=p.dataset.payPanel!==v});document.querySelectorAll('[data-pay]').forEach(function(i){var on=i.dataset.pay===v;i.disabled=!on;i.required=on})}
+pays.forEach(function(r){r.onchange=pp});pp();
+form.addEventListener('submit',function(e){e.preventDefault();val();if(!form.reportValidity())return;
+var f=new FormData(form),p=f.get('pay'),m=find(dt.value),t=RD.totals(c,o);upd();t=RD.totals(c,o);
+var no='RD'+new Date().toISOString().slice(2,10).replace(/-/g,'')+Math.floor(10000+Math.random()*90000);
+RD.saveLast({no:no,at:new Date().toISOString(),name:f.get('name'),phone:f.get('phone'),email:f.get('email'),division:m.d,district:m.n,area:at.value,address:f.get('address'),note:f.get('note'),pay:p,trx:f.get(p+'_trx')||f.get('bank_ref')||'',zone:o.zone,items:c,t:t});
+RD.saveCart([]);RD.saveOrder({zone:o.zone,coupon:''});location.href='success.html'});
+var al=$('area-list'),ai=-1,ash=[];
+function arender(q){q=(q||'').trim().toLowerCase();ash=AREAS.filter(function(x){return !q||x.toLowerCase().indexOf(q)>=0});ai=ash.length?0:-1;al.innerHTML=ash.map(function(x,i){return '<li role="option" data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+x+'</li>'}).join('');al.hidden=!ash.length}
+function aclose(){al.hidden=true}
+function apick(i){if(ash[i]==null)return;at.value=ash[i];aclose();upd()}
+function ahi(){var l=al.querySelectorAll('li');l.forEach(function(e,i){e.classList.toggle('on',i===ai)});if(l[ai])l[ai].scrollIntoView({block:'nearest'})}
+at.addEventListener('focus',function(){if(!at.disabled){arender('');at.select()}});
+at.addEventListener('input',function(){arender(at.value);upd()});
+at.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();if(al.hidden)arender('');else{ai=Math.min(ai+1,ash.length-1);ahi()}}else if(e.key==='ArrowUp'){e.preventDefault();ai=Math.max(ai-1,0);ahi()}else if(e.key==='Enter'&&!al.hidden){e.preventDefault();apick(ai)}else if(e.key==='Escape'||e.key==='Tab'){aclose()}});
+al.addEventListener('mousedown',function(e){var li=e.target.closest('li[data-i]');if(li){e.preventDefault();apick(+li.dataset.i)}});
+at.addEventListener('blur',function(){setTimeout(aclose,120)});
+areas();money();
+});
+</script>
+
 </body>
 </html>

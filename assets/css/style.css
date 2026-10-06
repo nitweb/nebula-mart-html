@@ -1,0 +1,63 @@
+/* NEBULA MART — style.css (shared by all pages) */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/inter-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/inter-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/inter-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/fraunces-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:500;font-display:swap;src:url('../fonts/fraunces-latin-500-italic.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/fraunces-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:600;font-display:swap;src:url('../fonts/fraunces-latin-600-italic.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/fraunces-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:700;font-display:swap;src:url('../fonts/fraunces-latin-700-italic.woff2') format('woff2')}
+
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: rgb(var(--color-paper)); color: rgb(var(--color-ink)); }
+:focus-visible { outline: 3px solid rgb(var(--color-primary)); outline-offset: 2px; border-radius: 6px; }
+.mega-panel { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+.mega-item:hover > .mega-panel,
+.mega-item:focus-within > .mega-panel { visibility: visible; opacity: 1; transform: translateY(0); }
+.mega-item:hover > .mega-trigger,
+.mega-item:focus-within > .mega-trigger { background: rgb(var(--color-ink)); color: #fff; }
+.mega-item:hover > .mega-trigger .chev,
+.mega-item:focus-within > .mega-trigger .chev { transform: rotate(180deg); }
+.drop-panel { visibility: hidden; opacity: 0; transform: translateY(6px); transition: all .16s ease; }
+.drop:hover > .drop-panel, .drop:focus-within > .drop-panel { visibility: visible; opacity: 1; transform: translateY(0); }
+.marquee { animation: marquee 28s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+  .mega-panel, .drop-panel { transition: none; }
+}
+.link-u { background-image: linear-gradient(rgb(var(--color-primary)),rgb(var(--color-primary))); background-size: 0 3px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .2s; }
+.link-u:hover { background-size: 100% 3px; }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary .chev { transform: rotate(180deg); }
+
+
+/* headings use the display font at a lighter weight */
+.font-display{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em}
+
+/* shop */
+#shop-grid.is-list{grid-template-columns:1fr}
+#shop-grid.is-list article{flex-direction:row}
+#shop-grid.is-list article>div:first-child{width:36%;max-width:260px;flex-shrink:0}
+#shop-grid.is-list .ldesc{display:block}
+@media(max-width:1023px){#filter-panel{display:none;position:fixed;top:0;left:0;bottom:0;width:88%;max-width:24rem;z-index:70;overflow-y:auto;border-radius:0}#filter-panel.open{display:block}}
+
+/* success */
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+body[data-page="success"] .tick{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .6s .3s ease-out forwards}body[data-page="success"] .badge{animation:pop .5s ease-out both}
+@media (prefers-reduced-motion:reduce){body[data-page="success"] .tick{animation:none;stroke-dashoffset:0}body[data-page="success"] .badge{animation:none}}
+@media print{body[data-page="success"] header,body[data-page="success"] footer,#qv,#toast,.no-print{display:none!important}body[data-page="success"]{background:#fff}}
+
+/* footer column headings stay on the accent color */
+footer h3{color:rgb(var(--color-accent))}
+
+/* Logo mark (NM) */
+.logo-mark { font-size: 1.05rem; letter-spacing: -0.05em; line-height: 1; }
+
+/* Account / dropdown panels must sit above the main nav bar */
+.drop-panel { z-index: 60; }

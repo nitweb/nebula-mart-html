@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping Cart | NEBULA MART</title>
+<meta name="description" content="Review the items in your NEBULA MART cart.">
+<link rel="canonical" href="https://www.nebulamart.com/cart">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:site_name" content="NEBULA MART"><meta property="og:type" content="website"><meta property="og:locale" content="en_BD"><meta property="og:title" content="Shopping Cart | NEBULA MART"><meta property="og:description" content="Review the items in your NEBULA MART cart."><meta property="og:url" content="https://www.nebulamart.com/cart"><meta property="og:image" content="https://picsum.photos/seed/cart/1200/630">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="rgb(var(--color-primary))">
+
+
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<meta name="theme-color" content="#0B3A8C">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased" data-page="cart">
+
+<!-- SVG ICON SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" fill="currentColor"/><circle cx="17" cy="18" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-return" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m10 9.5 5 2.5-5 2.5v-5Z" fill="currentColor"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.3 2.5 2 4.2 4.5 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-primary text-white font-bold px-4 py-2 rounded-lg">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header id="site-header" class="sticky top-0 z-50">
+
+  <!-- Announcement marquee -->
+  <div class="bg-ink text-white overflow-hidden text-[13px] font-medium">
+    <div class="flex whitespace-nowrap marquee w-max py-2">
+      <div class="flex gap-10 pr-10 items-center">
+        <span><b class="text-accent">Free delivery</b> on orders over ৳2,000</span>
+        <span class="text-primary">●</span>
+        <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
+        <span class="text-primary">●</span>
+        <span>7-day easy returns on everything</span>
+        <span class="text-primary">●</span>
+        <span>Use code <b class="text-accent">NEBULA10</b> for 10% off your first order</span>
+        <span class="text-primary">●</span>
+      </div>
+      <div class="flex gap-10 pr-10 items-center" aria-hidden="true">
+        <span><b class="text-accent">Free delivery</b> on orders over ৳2,000</span>
+        <span class="text-primary">●</span>
+        <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
+        <span class="text-primary">●</span>
+        <span>7-day easy returns on everything</span>
+        <span class="text-primary">●</span>
+        <span>Use code <b class="text-accent">NEBULA10</b> for 10% off your first order</span>
+        <span class="text-primary">●</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main bar -->
+  <div class="bg-white border-b-4 border-line">
+    <div class="max-w-7xl mx-auto px-4 lg:px-6">
+      <div class="flex items-center gap-3 lg:gap-6 h-16 lg:h-20">
+
+        <!-- Mobile menu button -->
+        <button id="open-menu" class="lg:hidden -ml-2 p-2 rounded-lg hover:bg-primary-soft" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-7 h-7"><use href="#i-menu"/></svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 shrink-0" aria-label="NEBULA MART home">
+          <span class="relative grid place-items-center w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-primary -rotate-6">
+            <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-accent border border-white"></span>
+            <span class="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-primary border border-white"></span>
+            <span class="logo-mark font-display font-extrabold text-white">NM</span>
+          </span>
+          <span class="font-display font-extrabold text-2xl lg:text-[28px] tracking-tight">NEBULA MART</span>
+        </a>
+
+        <!-- Search (desktop) -->
+        <form action="/search" method="GET" role="search" class="hidden lg:flex flex-1 max-w-2xl mx-auto">
+          <div class="flex w-full rounded-2xl border border-line bg-paper overflow-hidden focus-within:shadow-md transition-shadow">
+            <label class="sr-only" for="search-q">Search products</label>
+            <input id="search-q" type="search" name="q" placeholder="Search for shoes, phones, skincare…" class="flex-1 bg-transparent px-4 py-3 text-[15px] placeholder:text-ink/50 focus:outline-none">
+            <button type="submit" class="bg-primary hover:bg-primary-dark text-white px-6 grid place-items-center transition-colors" aria-label="Search">
+              <svg class="w-5 h-5"><use href="#i-search"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Actions -->
+        <div class="ml-auto lg:ml-0 flex items-center gap-1 sm:gap-2">
+
+          <!-- Account dropdown -->
+          <div class="drop relative hidden sm:block">
+            <a href="account.html" class="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-primary-soft font-bold text-sm">
+              <svg class="w-6 h-6"><use href="#i-user"/></svg>
+              <span class="hidden xl:block leading-tight text-left">
+                <span class="block text-[11px] font-medium text-ink/60">Hello, guest</span>
+                Account
+              </span>
+            </a>
+            <div class="drop-panel absolute right-0 top-full pt-2 w-60">
+              <div class="bg-white border border-line rounded-2xl shadow-sm p-3">
+                <a href="login.html" class="block text-center bg-primary text-white font-bold rounded-xl py-2.5 hover:bg-primary-dark">Sign in</a>
+                <a href="register.html" class="block text-center mt-2 bg-accent text-ink font-bold rounded-xl py-2.5 hover:brightness-95">Create account</a>
+                <div class="mt-3 pt-3 border-t-2 border-dashed border-line text-sm font-medium grid gap-1">
+                  <a href="orders.html" class="px-2 py-1.5 rounded-lg hover:bg-primary-soft">My orders</a>
+                  <a href="track.html" class="px-2 py-1.5 rounded-lg hover:bg-primary-soft">Track a package</a>
+                  <a href="addresses.html" class="px-2 py-1.5 rounded-lg hover:bg-primary-soft">Saved addresses</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist -->
+          <a href="wishlist.html" class="relative p-2.5 rounded-xl hover:bg-primary-soft hidden sm:grid place-items-center" aria-label="Wishlist, 3 items">
+            <svg class="w-6 h-6"><use href="#i-heart"/></svg>
+            <span class="absolute top-0.5 right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[10px] font-bold grid place-items-center">3</span>
+          </a>
+
+          <!-- Cart -->
+          <button id="open-cart" class="flex items-center gap-2 bg-ink text-white rounded-xl pl-3 pr-3.5 py-2.5 font-bold text-sm hover:bg-primary transition-colors" aria-label="Open cart, 2 items" aria-controls="cart-drawer" aria-expanded="false">
+            <span class="relative">
+              <svg class="w-6 h-6"><use href="#i-bag"/></svg>
+              <span class="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-accent text-ink text-[10px] font-extrabold grid place-items-center">2</span>
+            </span>
+            <span class="hidden md:block">৳3,480</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search (mobile) -->
+      <form action="/search" method="GET" role="search" class="lg:hidden pb-3">
+        <div class="flex rounded-xl border border-line bg-paper overflow-hidden">
+          <label class="sr-only" for="search-m">Search products</label>
+          <input id="search-m" type="search" name="q" placeholder="Search products…" class="flex-1 bg-transparent px-4 py-2.5 text-[15px] focus:outline-none">
+          <button type="submit" class="bg-primary text-white px-4 grid place-items-center" aria-label="Search"><svg class="w-5 h-5"><use href="#i-search"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Desktop nav + MEGA MENU ===== -->
+  <nav class="hidden lg:block bg-white border-b border-line relative" aria-label="Main">
+    <div class="max-w-7xl mx-auto px-6">
+      <ul class="flex items-center gap-1 py-2">
+
+        <!-- Fashion -->
+        <li class="mega-item static">
+          <button class="mega-trigger flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors" aria-haspopup="true">
+            Fashion <svg class="chev w-4 h-4 transition-transform"><use href="#i-chev"/></svg>
+          </button>
+          <div class="mega-panel absolute left-0 right-0 top-full z-40">
+            <div class="max-w-7xl mx-auto px-6">
+              <div class="bg-white border border-line rounded-3xl shadow-sm mt-1 p-8 grid grid-cols-12 gap-8">
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Women</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Sarees &amp; Salwar</a></li>
+                    <li><a href="shop.html" class="link-u">Dresses &amp; Tops</a></li>
+                    <li><a href="shop.html" class="link-u">Kurtis</a></li>
+                    <li><a href="shop.html" class="link-u">Handbags</a></li>
+                    <li><a href="shop.html" class="link-u">Jewellery</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Men</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Panjabi</a></li>
+                    <li><a href="shop.html" class="link-u">Shirts &amp; T-shirts</a></li>
+                    <li><a href="shop.html" class="link-u">Jeans &amp; Pants</a></li>
+                    <li><a href="shop.html" class="link-u">Watches</a></li>
+                    <li><a href="shop.html" class="link-u">Wallets</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Footwear</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Sneakers</a></li>
+                    <li><a href="shop.html" class="link-u">Sandals</a></li>
+                    <li><a href="shop.html" class="link-u">Formal shoes</a></li>
+                    <li><a href="shop.html" class="link-u">Kids' shoes</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-primary p-5 text-white relative overflow-hidden group">
+                    <span class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-accent"></span>
+                    <span class="relative inline-block bg-white text-primary text-xs font-bold px-2.5 py-1 rounded-full">New season</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Eid-ready outfits, up to 40% off</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Shop fashion</span>
+                  </a>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-accent p-5 relative overflow-hidden">
+                    <span class="absolute -left-5 -top-5 w-24 h-24 rounded-full bg-accent"></span>
+                    <span class="relative inline-block bg-ink text-white text-xs font-bold px-2.5 py-1 rounded-full">Trending</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Sneakers under ৳2,500</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">See the picks</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Electronics -->
+        <li class="mega-item static">
+          <button class="mega-trigger flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors" aria-haspopup="true">
+            Electronics <svg class="chev w-4 h-4 transition-transform"><use href="#i-chev"/></svg>
+          </button>
+          <div class="mega-panel absolute left-0 right-0 top-full z-40">
+            <div class="max-w-7xl mx-auto px-6">
+              <div class="bg-white border border-line rounded-3xl shadow-sm mt-1 p-8 grid grid-cols-12 gap-8">
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Phones</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Smartphones</a></li>
+                    <li><a href="shop.html" class="link-u">Tablets</a></li>
+                    <li><a href="shop.html" class="link-u">Cases &amp; covers</a></li>
+                    <li><a href="shop.html" class="link-u">Power banks</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Computing</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Laptops</a></li>
+                    <li><a href="shop.html" class="link-u">Monitors</a></li>
+                    <li><a href="shop.html" class="link-u">Keyboards &amp; mice</a></li>
+                    <li><a href="shop.html" class="link-u">Routers</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-2">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Audio</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Earbuds</a></li>
+                    <li><a href="shop.html" class="link-u">Headphones</a></li>
+                    <li><a href="shop.html" class="link-u">Bluetooth speakers</a></li>
+                    <li><a href="shop.html" class="link-u">Smartwatches</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-primary p-5 text-white relative overflow-hidden">
+                    <span class="absolute -right-8 top-6 w-32 h-32 rounded-full bg-primary-200/80"></span>
+                    <span class="relative inline-block bg-accent text-ink text-xs font-bold px-2.5 py-1 rounded-full">Official warranty</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">New phones, 0% EMI up to 12 months</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Browse phones</span>
+                  </a>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-accent p-5 relative overflow-hidden">
+                    <span class="absolute -left-6 -bottom-6 w-28 h-28 rounded-full bg-accent"></span>
+                    <span class="relative inline-block bg-ink text-white text-xs font-bold px-2.5 py-1 rounded-full">Hot deal</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Earbuds from ৳990</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Grab a pair</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Home & Living -->
+        <li class="mega-item static">
+          <button class="mega-trigger flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors" aria-haspopup="true">
+            Home &amp; Living <svg class="chev w-4 h-4 transition-transform"><use href="#i-chev"/></svg>
+          </button>
+          <div class="mega-panel absolute left-0 right-0 top-full z-40">
+            <div class="max-w-7xl mx-auto px-6">
+              <div class="bg-white border border-line rounded-3xl shadow-sm mt-1 p-8 grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Furniture</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Beds &amp; mattresses</a></li>
+                    <li><a href="shop.html" class="link-u">Sofas &amp; chairs</a></li>
+                    <li><a href="shop.html" class="link-u">Desks &amp; storage</a></li>
+                    <li><a href="shop.html" class="link-u">Shelves</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Kitchen</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Cookware</a></li>
+                    <li><a href="shop.html" class="link-u">Appliances</a></li>
+                    <li><a href="shop.html" class="link-u">Dinnerware</a></li>
+                    <li><a href="shop.html" class="link-u">Storage boxes</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Decor</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Wall art</a></li>
+                    <li><a href="shop.html" class="link-u">Lighting</a></li>
+                    <li><a href="shop.html" class="link-u">Curtains &amp; rugs</a></li>
+                    <li><a href="shop.html" class="link-u">Plants &amp; planters</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-accent p-5 relative overflow-hidden">
+                    <span class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary"></span>
+                    <span class="relative inline-block bg-ink text-white text-xs font-bold px-2.5 py-1 rounded-full">Free assembly</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Refresh your room for less</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Shop home</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Beauty -->
+        <li class="mega-item static">
+          <button class="mega-trigger flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors" aria-haspopup="true">
+            Beauty <svg class="chev w-4 h-4 transition-transform"><use href="#i-chev"/></svg>
+          </button>
+          <div class="mega-panel absolute left-0 right-0 top-full z-40">
+            <div class="max-w-7xl mx-auto px-6">
+              <div class="bg-white border border-line rounded-3xl shadow-sm mt-1 p-8 grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Skincare</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Cleansers</a></li>
+                    <li><a href="shop.html" class="link-u">Moisturizers</a></li>
+                    <li><a href="shop.html" class="link-u">Sunscreen</a></li>
+                    <li><a href="shop.html" class="link-u">Serums</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Makeup</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Lips</a></li>
+                    <li><a href="shop.html" class="link-u">Eyes</a></li>
+                    <li><a href="shop.html" class="link-u">Face</a></li>
+                    <li><a href="shop.html" class="link-u">Nails</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Hair &amp; body</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Shampoo &amp; oil</a></li>
+                    <li><a href="shop.html" class="link-u">Perfume &amp; attar</a></li>
+                    <li><a href="shop.html" class="link-u">Grooming for men</a></li>
+                    <li><a href="shop.html" class="link-u">Body care</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-primary p-5 text-white relative overflow-hidden">
+                    <span class="absolute -left-6 -top-6 w-28 h-28 rounded-full bg-primary"></span>
+                    <span class="relative inline-block bg-white text-primary text-xs font-bold px-2.5 py-1 rounded-full">100% authentic</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Skincare sets, buy 2 get 1</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Shop beauty</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Grocery -->
+        <li class="mega-item static">
+          <button class="mega-trigger flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors" aria-haspopup="true">
+            Grocery <svg class="chev w-4 h-4 transition-transform"><use href="#i-chev"/></svg>
+          </button>
+          <div class="mega-panel absolute left-0 right-0 top-full z-40">
+            <div class="max-w-7xl mx-auto px-6">
+              <div class="bg-white border border-line rounded-3xl shadow-sm mt-1 p-8 grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Fresh</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Fruits</a></li>
+                    <li><a href="shop.html" class="link-u">Vegetables</a></li>
+                    <li><a href="shop.html" class="link-u">Fish &amp; meat</a></li>
+                    <li><a href="shop.html" class="link-u">Eggs &amp; dairy</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Pantry</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Rice, dal &amp; oil</a></li>
+                    <li><a href="shop.html" class="link-u">Spices</a></li>
+                    <li><a href="shop.html" class="link-u">Snacks</a></li>
+                    <li><a href="shop.html" class="link-u">Tea &amp; coffee</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <h3 class="font-display font-extrabold text-lg mb-3">Household</h3>
+                  <ul class="grid gap-2 text-[15px]">
+                    <li><a href="shop.html" class="link-u">Cleaning</a></li>
+                    <li><a href="shop.html" class="link-u">Tissue &amp; paper</a></li>
+                    <li><a href="shop.html" class="link-u">Baby care</a></li>
+                    <li><a href="shop.html" class="link-u">Pet supplies</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <a href="shop.html" class="block h-full rounded-2xl bg-accent p-5 relative overflow-hidden">
+                    <span class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-accent"></span>
+                    <span class="relative inline-block bg-ink text-white text-xs font-bold px-2.5 py-1 rounded-full">Same-day</span>
+                    <p class="relative font-display font-extrabold text-2xl leading-tight mt-3">Order by 2 PM, get it today</p>
+                    <span class="relative inline-block mt-4 font-bold underline underline-offset-4">Start shopping</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="shop.html" class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">Sports</a></li>
+        <li class="ml-auto"><a href="shop.html" class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">New in</a></li>
+        <li>
+          <a href="shop.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[15px] bg-primary text-white hover:brightness-95">
+            Flash deals <span class="bg-accent text-ink text-[11px] px-1.5 py-0.5 rounded-md">HOT</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================= MOBILE MENU ============================= -->
+<div id="mobile-menu" class="fixed inset-0 z-[70] hidden" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="absolute inset-0 bg-ink/60" data-close-menu></div>
+  <div class="absolute left-0 top-0 bottom-0 w-[86%] max-w-sm bg-white border-r-4 border-line overflow-y-auto">
+    <div class="flex items-center justify-between p-4 bg-primary text-white">
+      <span class="font-display font-extrabold text-xl">Menu</span>
+      <button class="p-2 rounded-lg hover:bg-white/15" data-close-menu aria-label="Close menu"><svg class="w-6 h-6"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="p-4 grid grid-cols-2 gap-2">
+      <a href="login.html" class="text-center bg-ink text-white font-bold rounded-xl py-2.5">Sign in</a>
+      <a href="register.html" class="text-center bg-accent font-bold rounded-xl py-2.5">Register</a>
+    </div>
+    <ul class="px-4 pb-6 divide-y-2 divide-line font-bold">
+      <li><details><summary class="flex justify-between items-center py-3.5 cursor-pointer">Fashion <svg class="chev w-5 h-5 transition-transform"><use href="#i-chev"/></svg></summary>
+        <ul class="pb-3 pl-3 grid gap-2.5 font-medium text-[15px]"><li><a href="shop.html">Women</a></li><li><a href="shop.html">Men</a></li><li><a href="shop.html">Footwear</a></li><li><a href="shop.html">Bags &amp; accessories</a></li></ul></details></li>
+      <li><details><summary class="flex justify-between items-center py-3.5 cursor-pointer">Electronics <svg class="chev w-5 h-5 transition-transform"><use href="#i-chev"/></svg></summary>
+        <ul class="pb-3 pl-3 grid gap-2.5 font-medium text-[15px]"><li><a href="shop.html">Phones &amp; tablets</a></li><li><a href="shop.html">Computing</a></li><li><a href="shop.html">Audio</a></li><li><a href="shop.html">Smartwatches</a></li></ul></details></li>
+      <li><details><summary class="flex justify-between items-center py-3.5 cursor-pointer">Home &amp; Living <svg class="chev w-5 h-5 transition-transform"><use href="#i-chev"/></svg></summary>
+        <ul class="pb-3 pl-3 grid gap-2.5 font-medium text-[15px]"><li><a href="shop.html">Furniture</a></li><li><a href="shop.html">Kitchen</a></li><li><a href="shop.html">Decor</a></li></ul></details></li>
+      <li><details><summary class="flex justify-between items-center py-3.5 cursor-pointer">Beauty <svg class="chev w-5 h-5 transition-transform"><use href="#i-chev"/></svg></summary>
+        <ul class="pb-3 pl-3 grid gap-2.5 font-medium text-[15px]"><li><a href="shop.html">Skincare</a></li><li><a href="shop.html">Makeup</a></li><li><a href="shop.html">Hair &amp; body</a></li></ul></details></li>
+      <li><details><summary class="flex justify-between items-center py-3.5 cursor-pointer">Grocery <svg class="chev w-5 h-5 transition-transform"><use href="#i-chev"/></svg></summary>
+        <ul class="pb-3 pl-3 grid gap-2.5 font-medium text-[15px]"><li><a href="shop.html">Fresh</a></li><li><a href="shop.html">Pantry</a></li><li><a href="shop.html">Household</a></li></ul></details></li>
+      <li><a href="shop.html" class="block py-3.5">Sports</a></li>
+      <li><a href="shop.html" class="block py-3.5">New in</a></li>
+      <li><a href="wishlist.html" class="block py-3.5">Wishlist</a></li>
+      <li><a href="shop.html" class="block my-3 text-center bg-primary text-white rounded-xl py-3">Flash deals</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================= CART DRAWER ============================= -->
+<div id="cart-drawer" class="fixed inset-0 z-[70] hidden" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="absolute inset-0 bg-ink/60" data-close-cart></div>
+  <aside class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white border-l-4 border-line flex flex-col">
+    <div class="flex items-center justify-between p-4 bg-accent border-b-4 border-line">
+      <h2 class="font-display font-extrabold text-2xl">Your cart <span class="text-base font-bold">(2)</span></h2>
+      <button class="p-2 rounded-lg hover:bg-ink/10" data-close-cart aria-label="Close cart"><svg class="w-6 h-6"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="px-4 py-3 bg-accent/20 text-sm font-medium">
+      Add <b>৳520</b> more for free delivery
+      <div class="h-2.5 rounded-full bg-white border border-line mt-2 overflow-hidden"><div class="h-full w-3/4 bg-accent"></div></div>
+    </div>
+    <ul class="flex-1 overflow-y-auto p-4 grid gap-4 content-start">
+      <li class="flex gap-3 p-3 rounded-2xl border border-line">
+        <div class="w-20 h-20 rounded-xl bg-primary-soft grid place-items-center font-display font-extrabold text-primary text-xl shrink-0">IMG</div>
+        <div class="flex-1 min-w-0">
+          <p class="font-bold leading-snug">Wireless Earbuds Pro</p>
+          <p class="text-sm text-ink/60">Color: Mint</p>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex items-center border border-line rounded-lg font-bold text-sm">
+              <button class="px-2.5 py-1" aria-label="Decrease">−</button><span class="px-2">1</span><button class="px-2.5 py-1" aria-label="Increase">+</button>
+            </div>
+            <span class="font-extrabold">৳1,490</span>
+          </div>
+        </div>
+      </li>
+      <li class="flex gap-3 p-3 rounded-2xl border border-line">
+        <div class="w-20 h-20 rounded-xl bg-accent/40 grid place-items-center font-display font-extrabold text-ink text-xl shrink-0">IMG</div>
+        <div class="flex-1 min-w-0">
+          <p class="font-bold leading-snug">Cotton Panjabi, Navy</p>
+          <p class="text-sm text-ink/60">Size: L</p>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex items-center border border-line rounded-lg font-bold text-sm">
+              <button class="px-2.5 py-1" aria-label="Decrease">−</button><span class="px-2">1</span><button class="px-2.5 py-1" aria-label="Increase">+</button>
+            </div>
+            <span class="font-extrabold">৳1,990</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="p-4 border-t-4 border-line bg-paper">
+      <div class="flex justify-between font-bold text-lg mb-3"><span>Subtotal</span><span>৳3,480</span></div>
+      <a href="checkout.html" class="block text-center bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3.5 shadow-sm">Checkout</a>
+      <a href="cart.html" class="block text-center mt-2.5 font-bold underline underline-offset-4">View full cart</a>
+    </div>
+  </aside>
+</div>
+
+<!-- ============================= MAIN (page content goes here) ============================= -->
+<main id="main"><section class="bg-primary border-b-4 border-line relative overflow-hidden"><span class="absolute -right-10 -top-12 w-56 h-56 rounded-full bg-primary"></span><span class="absolute right-40 -bottom-14 w-40 h-40 rounded-full bg-accent"></span><span class="absolute right-24 top-8 w-8 h-8 rounded-full bg-accent"></span>
+<div class="max-w-7xl mx-auto px-4 lg:px-6 py-9 relative text-white"><nav aria-label="Breadcrumb" class="text-sm"><ol class="flex gap-2"><li><a href="index.html" class="hover:underline">Home</a></li><li aria-hidden="true">/</li><li aria-current="page" class="font-bold">Cart</li></ol></nav>
+<h1 class="font-display font-extrabold text-4xl lg:text-5xl mt-3">Shopping cart</h1><p class="mt-2 max-w-lg opacity-90">Review your items, pick a delivery area and apply a coupon.</p></div></section>
+<div class="max-w-7xl mx-auto px-4 lg:px-6 py-8"><ol class="flex items-center gap-3 max-w-xl bg-white border border-line rounded-2xl px-5 py-3" aria-label="Order progress"><li class="flex items-center gap-2" aria-current="step"><span class="w-9 h-9 rounded-full border border-line grid place-items-center font-extrabold bg-accent">1</span><span class="font-bold ">Cart</span></li><li aria-hidden="true" class="flex-1 h-1 rounded bg-ink/20"></li><li class="flex items-center gap-2"><span class="w-9 h-9 rounded-full border border-line grid place-items-center font-extrabold bg-white">2</span><span class="font-bold text-ink/50">Checkout</span></li><li aria-hidden="true" class="flex-1 h-1 rounded bg-ink/20"></li><li class="flex items-center gap-2"><span class="w-9 h-9 rounded-full border border-line grid place-items-center font-extrabold bg-white">3</span><span class="font-bold text-ink/50">Done</span></li></ol>
+<div class="flex items-end justify-between mt-8"><h2 class="font-display font-extrabold text-2xl">Your items <span id="count" class="text-ink/60 text-lg font-bold"></span></h2><a href="shop.html" class="font-bold underline underline-offset-4">Continue shopping</a></div>
+<div id="cart-wrap" class="grid lg:grid-cols-[1fr_390px] gap-8 mt-5 items-start">
+<ul id="items" class="grid gap-4" aria-label="Cart items"></ul>
+<aside aria-label="Order summary" class="lg:sticky lg:top-48 bg-white border border-line rounded-3xl p-6 shadow-sm">
+<h2 class="font-display font-extrabold text-2xl">Order summary</h2>
+<fieldset class="mt-5"><legend class="font-bold mb-2">Delivery area</legend><div class="grid gap-2"><label class="block"><input type="radio" name="zone" value="dhaka" class="peer sr-only"><span class="flex items-center justify-between gap-3 rounded-xl border border-line px-4 py-3 cursor-pointer bg-white peer-checked:bg-accent peer-checked:shadow-sm peer-focus-visible:ring-4 peer-focus-visible:ring-primary"><span><span class="block font-bold">Inside Dhaka</span><span class="block text-xs text-ink/65">Arrives in 1-2 days</span></span><span class="font-extrabold">৳70</span></span></label><label class="block"><input type="radio" name="zone" value="sub" class="peer sr-only"><span class="flex items-center justify-between gap-3 rounded-xl border border-line px-4 py-3 cursor-pointer bg-white peer-checked:bg-accent peer-checked:shadow-sm peer-focus-visible:ring-4 peer-focus-visible:ring-primary"><span><span class="block font-bold">Sub-Dhaka</span><span class="block text-xs text-ink/65">Savar, Gazipur, Narayanganj and nearby, 2-3 days</span></span><span class="font-extrabold">৳100</span></span></label><label class="block"><input type="radio" name="zone" value="out" class="peer sr-only"><span class="flex items-center justify-between gap-3 rounded-xl border border-line px-4 py-3 cursor-pointer bg-white peer-checked:bg-accent peer-checked:shadow-sm peer-focus-visible:ring-4 peer-focus-visible:ring-primary"><span><span class="block font-bold">Outside Dhaka</span><span class="block text-xs text-ink/65">Rest of Bangladesh, 3-5 days</span></span><span class="font-extrabold">৳150</span></span></label></div></fieldset>
+<div class="mt-5"><label for="coupon" class="font-bold block mb-2">Coupon code</label><div class="flex gap-2"><input id="coupon" type="text" placeholder="Try NEBULA10" class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:shadow-md uppercase"><button type="button" id="apply" class="bg-ink text-white font-bold rounded-xl px-5 hover:bg-primary">Apply</button></div><p id="cmsg" class="text-sm mt-2" role="status"></p></div>
+<dl class="mt-6 grid gap-2.5 border-t-2 border-dashed border-line pt-5">
+<div class="flex justify-between"><dt>Subtotal</dt><dd id="t-sub" class="font-bold"></dd></div>
+<div id="r-save" class="flex justify-between text-ink/70"><dt>Product discounts</dt><dd id="t-save" class="font-bold text-success"></dd></div>
+<div id="r-disc" class="flex justify-between" hidden><dt>Coupon NEBULA10</dt><dd id="t-disc" class="font-bold text-success"></dd></div>
+<div class="flex justify-between"><dt>Delivery</dt><dd id="t-fee" class="font-bold"></dd></div>
+<div class="flex justify-between items-baseline border-t-2 border-line pt-4 mt-1"><dt class="font-display font-extrabold text-xl">Total</dt><dd id="t-total" class="font-display font-extrabold text-3xl text-primary"></dd></div></dl>
+<a href="checkout.html" class="block text-center mt-6 bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-4 border border-line shadow-sm hover:shadow-md transition-all">Proceed to checkout</a>
+<div class="mt-5 flex items-center gap-3"><svg class="w-5 h-5 shrink-0"><use href="#i-shield"/></svg><p class="text-xs text-ink/70">Secure checkout. Pay with bKash, Nagad, card, bank transfer or cash on delivery.</p></div><div class="mt-3"><ul class="flex flex-wrap gap-1.5 text-[11px] font-extrabold" aria-label="Accepted payments"><li class="px-2.5 py-1 rounded-md bg-[#E2136E] text-white">bKash</li><li class="px-2.5 py-1 rounded-md bg-[#F6921E] text-white">Nagad</li><li class="px-2.5 py-1 rounded-md bg-primary text-white">Card</li><li class="px-2.5 py-1 rounded-md bg-ink text-white">Bank</li><li class="px-2.5 py-1 rounded-md bg-accent text-ink">COD</li></ul></div>
+</aside></div>
+<div id="cart-empty" hidden class="mt-8 text-center bg-white border border-line rounded-3xl p-12"><p class="text-6xl" aria-hidden="true">🛒</p><h2 class="font-display font-extrabold text-3xl mt-4">Your cart is empty</h2><p class="mt-2 text-ink/70">Add something and it will show up here.</p><a href="shop.html" class="inline-block mt-6 bg-accent font-extrabold rounded-xl px-8 py-3.5 border border-line shadow-sm">Start shopping</a></div>
+<section class="mt-16" aria-labelledby="h-rec"><h2 id="h-rec" class="font-display font-extrabold text-2xl mb-6">You may also like</h2><ul class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5"><li><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+<div class="relative overflow-hidden bg-primary-soft">
+<a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/smartwatch/600/600" alt="FitPulse 2 Smartwatch, AMOLED Display" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+<span class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-34%</span>
+<button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add FitPulse 2 Smartwatch, AMOLED Display to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
+<div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300">
+<button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" data-name="FitPulse 2 Smartwatch, AMOLED Display" data-price="3,290" data-old="4,990" data-img="https://picsum.photos/seed/smartwatch/600/600" data-href="product.html">Quick view</button>
+<button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" aria-label="Add FitPulse 2 Smartwatch, AMOLED Display to cart">Add to cart</button>
+</div></div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary">Electronics</p>
+<h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">FitPulse 2 Smartwatch, AMOLED Display</a></h3>
+<p class="ldesc hidden text-sm text-ink/70 mt-2">Free delivery over ৳2,000, 7-day returns and official warranty.</p>
+<div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight" aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.5 out of 5</span><span class="text-ink/60">(214)</span></div>
+<div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳3,290</span><s class="text-sm text-ink/50">৳4,990</s></div>
+</div></article></li><li><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+<div class="relative overflow-hidden bg-primary-soft">
+<a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/sneakers/600/600" alt="AirLite Running Sneakers for Men" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+<span class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
+<button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add AirLite Running Sneakers for Men to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
+<div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300">
+<button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" data-name="AirLite Running Sneakers for Men" data-price="2,450" data-old="3,500" data-img="https://picsum.photos/seed/sneakers/600/600" data-href="product.html">Quick view</button>
+<button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" aria-label="Add AirLite Running Sneakers for Men to cart">Add to cart</button>
+</div></div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary">Fashion</p>
+<h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">AirLite Running Sneakers for Men</a></h3>
+<p class="ldesc hidden text-sm text-ink/70 mt-2">Free delivery over ৳2,000, 7-day returns and official warranty.</p>
+<div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight" aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.3 out of 5</span><span class="text-ink/60">(97)</span></div>
+<div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳2,450</span><s class="text-sm text-ink/50">৳3,500</s></div>
+</div></article></li><li><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+<div class="relative overflow-hidden bg-primary-soft">
+<a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/serum/600/600" alt="Vitamin C Brightening Face Serum 30ml" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+<span class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-31%</span>
+<button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add Vitamin C Brightening Face Serum 30ml to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
+<div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300">
+<button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" data-name="Vitamin C Brightening Face Serum 30ml" data-price="890" data-old="1,290" data-img="https://picsum.photos/seed/serum/600/600" data-href="product.html">Quick view</button>
+<button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" aria-label="Add Vitamin C Brightening Face Serum 30ml to cart">Add to cart</button>
+</div></div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary">Beauty</p>
+<h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">Vitamin C Brightening Face Serum 30ml</a></h3>
+<p class="ldesc hidden text-sm text-ink/70 mt-2">Free delivery over ৳2,000, 7-day returns and official warranty.</p>
+<div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight" aria-hidden="true">★★★★★</span><span class="sr-only">Rated 4.7 out of 5</span><span class="text-ink/60">(541)</span></div>
+<div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳890</span><s class="text-sm text-ink/50">৳1,290</s></div>
+</div></article></li><li><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+<div class="relative overflow-hidden bg-primary-soft">
+<a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/cookware/600/600" alt="Non-Stick Cookware Set, 7 Pieces" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+<span class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-31%</span>
+<button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add Non-Stick Cookware Set, 7 Pieces to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart"/></svg></button>
+<div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300">
+<button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" data-name="Non-Stick Cookware Set, 7 Pieces" data-price="3,990" data-old="5,800" data-img="https://picsum.photos/seed/cookware/600/600" data-href="product.html">Quick view</button>
+<button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" aria-label="Add Non-Stick Cookware Set, 7 Pieces to cart">Add to cart</button>
+</div></div>
+<div class="p-4 flex flex-col flex-1">
+<p class="text-xs font-bold text-primary">Home and Living</p>
+<h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">Non-Stick Cookware Set, 7 Pieces</a></h3>
+<p class="ldesc hidden text-sm text-ink/70 mt-2">Free delivery over ৳2,000, 7-day returns and official warranty.</p>
+<div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight" aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.5 out of 5</span><span class="text-ink/60">(76)</span></div>
+<div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳3,990</span><s class="text-sm text-ink/50">৳5,800</s></div>
+</div></article></li></ul></section></div></main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="mt-16 relative">
+
+  <!-- Trust strip -->
+  <div class="max-w-7xl mx-auto px-4 lg:px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 relative z-10 -mb-10">
+      <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
+        <span class="w-11 h-11 rounded-xl bg-accent grid place-items-center shrink-0"><svg class="w-6 h-6"><use href="#i-truck"/></svg></span>
+        <div class="leading-tight"><p class="font-extrabold">Fast delivery</p><p class="text-xs text-ink/65">Dhaka in 24 hours</p></div>
+      </div>
+      <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
+        <span class="w-11 h-11 rounded-xl bg-accent grid place-items-center shrink-0"><svg class="w-6 h-6"><use href="#i-return"/></svg></span>
+        <div class="leading-tight"><p class="font-extrabold">Easy returns</p><p class="text-xs text-ink/65">7 days, no questions</p></div>
+      </div>
+      <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
+        <span class="w-11 h-11 rounded-xl bg-primary grid place-items-center shrink-0 text-white"><svg class="w-6 h-6"><use href="#i-shield"/></svg></span>
+        <div class="leading-tight"><p class="font-extrabold">Secure payment</p><p class="text-xs text-ink/65">bKash, Nagad, cards, COD</p></div>
+      </div>
+      <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
+        <span class="w-11 h-11 rounded-xl bg-primary-200 grid place-items-center shrink-0"><svg class="w-6 h-6"><use href="#i-chat"/></svg></span>
+        <div class="leading-tight"><p class="font-extrabold">Real support</p><p class="text-xs text-ink/65">Chat daily, 9 AM – 10 PM</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="bg-primary pt-20 pb-14 relative overflow-hidden">
+    <span class="absolute -left-16 -top-16 w-56 h-56 rounded-full bg-primary/90"></span>
+    <span class="absolute right-10 -bottom-20 w-64 h-64 rounded-full bg-accent/90"></span>
+    <span class="absolute right-1/3 top-6 w-10 h-10 rounded-full bg-accent"></span>
+    <div class="max-w-7xl mx-auto px-4 lg:px-6 relative grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.05]">Get 10% off your first order</h2>
+        <p class="text-white/85 mt-3 max-w-md">Join for early access to flash deals and new arrivals. One email a week, unsubscribe any time.</p>
+      </div>
+      <form action="/newsletter" method="POST" class="flex flex-col sm:flex-row gap-3">
+        <!-- @csrf -->
+        <label class="sr-only" for="nl-email">Email address</label>
+        <input id="nl-email" type="email" name="email" required placeholder="you@example.com" class="flex-1 rounded-xl border border-line px-4 py-3.5 bg-white placeholder:text-ink/45 focus:outline-none focus:shadow-md">
+        <button type="submit" class="rounded-xl border border-line bg-accent font-extrabold px-6 py-3.5 shadow-sm hover:shadow-md transition-all">Get my code</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Link columns -->
+  <div class="bg-ink text-white">
+    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-14 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="col-span-2 md:col-span-4 lg:col-span-4">
+        <a href="index.html" class="flex items-center gap-2 mb-4">
+          <span class="relative grid place-items-center w-11 h-11 rounded-xl bg-primary -rotate-6">
+            <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-accent border border-line"></span>
+            <span class="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-primary border border-line"></span>
+            <span class="logo-mark font-display font-extrabold">NM</span>
+          </span>
+          <span class="font-display font-extrabold text-3xl tracking-tight">NEBULA MART</span>
+        </a>
+        <p class="text-white/70 max-w-sm leading-relaxed">Fashion, gadgets, home, beauty and groceries from trusted sellers, delivered across Bangladesh.</p>
+        <div class="flex gap-2.5 mt-6">
+          <a href="shop.html" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-primary grid place-items-center transition-colors" aria-label="Facebook"><svg class="w-5 h-5"><use href="#i-fb"/></svg></a>
+          <a href="shop.html" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-primary grid place-items-center transition-colors" aria-label="Instagram"><svg class="w-5 h-5"><use href="#i-ig"/></svg></a>
+          <a href="shop.html" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-accent hover:text-ink grid place-items-center transition-colors" aria-label="YouTube"><svg class="w-5 h-5"><use href="#i-yt"/></svg></a>
+          <a href="shop.html" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-accent hover:text-ink grid place-items-center transition-colors" aria-label="TikTok"><svg class="w-5 h-5"><use href="#i-tt"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="lg:col-span-2" aria-label="Shop">
+        <h3 class="font-display font-extrabold text-lg text-accent mb-4">Shop</h3>
+        <ul class="grid gap-2.5 text-white/75">
+          <li><a href="shop.html" class="hover:text-white">Fashion</a></li>
+          <li><a href="shop.html" class="hover:text-white">Electronics</a></li>
+          <li><a href="shop.html" class="hover:text-white">Home &amp; Living</a></li>
+          <li><a href="shop.html" class="hover:text-white">Beauty</a></li>
+          <li><a href="shop.html" class="hover:text-white">Grocery</a></li>
+          <li><a href="shop.html" class="hover:text-white">Flash deals</a></li>
+        </ul>
+      </nav>
+
+      <nav class="lg:col-span-2" aria-label="Help">
+        <h3 class="font-display font-extrabold text-lg text-accent mb-4">Help</h3>
+        <ul class="grid gap-2.5 text-white/75">
+          <li><a href="track.html" class="hover:text-white">Track order</a></li>
+          <li><a href="shipping.html" class="hover:text-white">Shipping info</a></li>
+          <li><a href="returns.html" class="hover:text-white">Returns &amp; refunds</a></li>
+          <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <nav class="lg:col-span-2" aria-label="Company">
+        <h3 class="font-display font-extrabold text-lg text-accent mb-4">Company</h3>
+        <ul class="grid gap-2.5 text-white/75">
+          <li><a href="about.html" class="hover:text-white">About us</a></li>
+          <li><a href="sell.html" class="hover:text-white">Sell on NEBULA MART</a></li>
+          <li><a href="careers.html" class="hover:text-white">Careers</a></li>
+          <li><a href="privacy.html" class="hover:text-white">Privacy policy</a></li>
+          <li><a href="terms.html" class="hover:text-white">Terms of service</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-span-2 md:col-span-2 lg:col-span-2">
+        <h3 class="font-display font-extrabold text-lg text-accent mb-4">Contact</h3>
+        <ul class="grid gap-2.5 text-white/75 text-[15px]">
+          <li>Hotline: <a href="tel:+8809600000000" class="text-white font-bold">09600-000000</a></li>
+          <li><a href="mailto:hello@nebulamart.com" class="hover:text-white">hello@nebulamart.com</a></li>
+          <li>House 12, Road 5, Dhanmondi, Dhaka 1205</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment + legal -->
+    <div class="border-t border-white/15">
+      <div class="max-w-7xl mx-auto px-4 lg:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-5">
+        <p class="text-sm text-white/60 order-2 md:order-1">© <span id="year">2026</span> NEBULA MART. All rights reserved.</p>
+        <ul class="flex flex-wrap justify-center gap-2 order-1 md:order-2 text-xs font-extrabold" aria-label="Accepted payment methods">
+          <li class="px-3 py-1.5 rounded-lg bg-[#E2136E] text-white">bKash</li>
+          <li class="px-3 py-1.5 rounded-lg bg-[#F6921E] text-white">Nagad</li>
+          <li class="px-3 py-1.5 rounded-lg bg-white text-[#1A1F71]">VISA</li>
+          <li class="px-3 py-1.5 rounded-lg bg-white text-[#EB001B]">Mastercard</li>
+          <li class="px-3 py-1.5 rounded-lg bg-accent text-ink">Cash on delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div id="qv" class="fixed inset-0 z-[80] hidden" role="dialog" aria-modal="true" aria-label="Quick view">
+<div class="absolute inset-0 bg-ink/60" data-close-qv></div>
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] max-w-3xl bg-white border-4 border-line rounded-3xl shadow-sm overflow-hidden grid sm:grid-cols-2">
+<img id="qv-img" src="" alt="" width="600" height="600" class="w-full h-full object-cover aspect-square">
+<div class="p-6 flex flex-col"><button type="button" class="self-end p-1 -mt-2 -mr-2" data-close-qv aria-label="Close quick view"><svg class="w-6 h-6"><use href="#i-x"/></svg></button>
+<h2 id="qv-name" class="font-display font-extrabold text-2xl leading-tight"></h2>
+<div class="mt-3 flex items-baseline gap-2"><span class="text-3xl font-display font-extrabold text-primary">৳<span id="qv-price"></span></span><s class="text-ink/50">৳<span id="qv-old"></span></s></div>
+<p class="mt-3 text-sm text-ink/70">In stock. Free delivery over ৳2,000 and 7-day returns.</p>
+<div class="mt-auto pt-6 grid gap-2"><button type="button" class="addcart bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3 border border-line">Add to cart</button><a id="qv-link" href="product.html" class="text-center font-bold underline underline-offset-4">View full details</a></div></div></div></div>
+<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[90] bg-ink text-white font-bold px-5 py-3 rounded-xl border border-accent opacity-0 pointer-events-none transition-opacity" role="status" aria-live="polite"></div>
+
+
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

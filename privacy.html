@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages/icons.css">
+  <link rel="stylesheet" href="assets/css/pages/common.css">
+  <link rel="stylesheet" href="assets/css/pages/info.css">
 </head>
 
 <body class="antialiased" data-page="privacy">
@@ -712,50 +715,110 @@
   </div>
 
   <!-- ============================= MAIN (page content goes here) ============================= -->
-  <main id="main">
-    <section class="bg-ink relative overflow-hidden"><span
-        class="absolute -right-10 -top-12 w-56 h-56 rounded-full bg-primary/40"></span><span
-        class="absolute right-40 -bottom-14 w-40 h-40 rounded-full bg-accent/80"></span>
-      <div class="max-w-7xl mx-auto px-4 lg:px-6 py-10 relative text-white">
-        <nav aria-label="Breadcrumb" class="text-sm">
-          <ol class="flex gap-2">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li aria-hidden="true">/</li>
-            <li aria-current="page" class="font-bold">Privacy policy</li>
-          </ol>
-        </nav>
-        <h1 class="font-display text-4xl lg:text-5xl mt-3">Privacy policy</h1>
-        <p class="mt-2 max-w-xl opacity-90">How we collect, use and protect your information.</p>
+  <main id="main" class="pg">
+    <section class="ph ph--tight">
+      <div class="wrap ph__in">
+        <div>
+          <nav aria-label="Breadcrumb" class="crumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Privacy policy</li>
+            </ol>
+          </nav>
+          <h1>Privacy policy</h1>
+          <p class="ph__sub">How we collect, use and protect your information.</p>
+          <div class="meta-row"><span><span class="ic ic-clock" aria-hidden="true"></span>Last updated: 1 January
+              2026</span><span><span class="ic ic-check" aria-hidden="true"></span>Plain language</span></div>
+        </div>
+        <div class="ph__badge" aria-hidden="true"><span class="ic ic-lock" aria-hidden="true"></span></div>
       </div>
     </section>
-    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-10">
-      <article class="bg-white border border-line rounded-3xl p-6 lg:p-8 max-w-4xl">
-        <h2 class="font-display text-2xl mt-8 first:mt-0">Information we collect</h2>
-        <div class="mt-3 text-ink/75 leading-relaxed grid gap-3">
-          <p>We collect your name, phone number, email and delivery address when you place an order or create an
-            account.</p>
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="keys">
+          <div class="key"><span class="key__ic"><span class="ic ic-lock" aria-hidden="true"></span></span>
+            <div>
+              <h3>Your data stays safe</h3>
+              <p>We protect it with industry-standard measures.</p>
+            </div>
+          </div>
+          <div class="key"><span class="key__ic"><span class="ic ic-wallet" aria-hidden="true"></span></span>
+            <div>
+              <h3>No card numbers stored</h3>
+              <p>Payments are handled by our partners.</p>
+            </div>
+          </div>
+          <div class="key"><span class="key__ic"><span class="ic ic-user" aria-hidden="true"></span></span>
+            <div>
+              <h3>You are in control</h3>
+              <p>Ask us to correct or delete your data.</p>
+            </div>
+          </div>
         </div>
-        <h2 class="font-display text-2xl mt-8 first:mt-0">How we use it</h2>
-        <div class="mt-3 text-ink/75 leading-relaxed grid gap-3">
-          <ul class="list-disc pl-5 grid gap-1.5">
-            <li>To process and deliver your orders</li>
-            <li>To send order updates by SMS or email</li>
-            <li>To improve our website and services</li>
-          </ul>
+        <div class="lg" style="margin-top:2.5rem">
+          <aside class="toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>
+              <li><a href="#collect">Information we collect</a></li>
+              <li><a href="#use">How we use it</a></li>
+              <li><a href="#share">Who we share it with</a></li>
+              <li><a href="#payments">Payments</a></li>
+              <li><a href="#cookies">Cookies</a></li>
+              <li><a href="#choices">Your choices</a></li>
+            </ol>
+            <div class="toc__bar" aria-hidden="true"><i></i></div>
+          </aside>
+          <div class="doc">
+            <article class="clause" id="collect">
+              <h2>Information we collect</h2>
+              <p>We collect your name, phone number, email and delivery address when you place an order or create an
+                account.</p>
+            </article>
+            <article class="clause" id="use">
+              <h2>How we use it</h2>
+              <ul>
+                <li>To process and deliver your orders</li>
+                <li>To send order updates by SMS or email</li>
+                <li>To improve our website and services</li>
+              </ul>
+            </article>
+            <article class="clause" id="share">
+              <h2>Who we share it with</h2>
+              <p>We share only what is needed with delivery partners and payment providers to complete your order. We
+                never sell your personal data.</p>
+            </article>
+            <article class="clause" id="payments">
+              <h2>Payments</h2>
+              <p>Card and mobile banking details are handled by our payment partners. We never store your full card
+                number.</p>
+            </article>
+            <article class="clause" id="cookies">
+              <h2>Cookies</h2>
+              <p>We use small files to remember your cart, wishlist and preferences. You can clear them anytime in your
+                browser settings.</p>
+            </article>
+            <article class="clause" id="choices">
+              <h2>Your choices</h2>
+              <p>You may ask us to correct or delete your personal data at any time by writing to <a
+                  href="mailto:hello@nebulamart.com">hello@nebulamart.com</a>.</p>
+            </article>
+          </div>
         </div>
-        <h2 class="font-display text-2xl mt-8 first:mt-0">Your choices</h2>
-        <div class="mt-3 text-ink/75 leading-relaxed grid gap-3">
-          <p>You may ask us to correct or delete your personal data at any time by writing to <a
-              class="text-primary font-bold hover:underline"
-              href="mailto:hello@nebulamart.com">hello@nebulamart.com</a>.</p>
+      </div>
+    </section>
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Need help with your data?</h2>
+            <p>Write to us and we will respond within one working day.</p>
+          </div>
+          <div class="cta__act"><a href="contact.html" class="btn btn--accent">Contact us <span class="ic ic-arrow"
+                aria-hidden="true"></span></a><a href="faq.html" class="btn btn--line">Read FAQ</a></div>
         </div>
-        <h2 class="font-display text-2xl mt-8 first:mt-0">Payments</h2>
-        <div class="mt-3 text-ink/75 leading-relaxed grid gap-3">
-          <p>Card and mobile banking details are handled by our payment partners. We never store your full card number.
-          </p>
-        </div>
-      </article>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- ============================= FOOTER ============================= -->
@@ -958,6 +1021,7 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/pages/info.js" defer></script>
 </body>
 
 </html>

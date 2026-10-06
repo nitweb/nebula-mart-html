@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages/icons.css">
+  <link rel="stylesheet" href="assets/css/pages/common.css">
+  <link rel="stylesheet" href="assets/css/pages/info.css">
 </head>
 
 <body class="antialiased" data-page="sell">
@@ -712,73 +715,158 @@
   </div>
 
   <!-- ============================= MAIN (page content goes here) ============================= -->
-  <main id="main">
-    <section class="bg-ink relative overflow-hidden"><span
-        class="absolute -right-10 -top-12 w-56 h-56 rounded-full bg-primary/40"></span><span
-        class="absolute right-40 -bottom-14 w-40 h-40 rounded-full bg-accent/80"></span>
-      <div class="max-w-7xl mx-auto px-4 lg:px-6 py-10 relative text-white">
-        <nav aria-label="Breadcrumb" class="text-sm">
-          <ol class="flex gap-2">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li aria-hidden="true">/</li>
-            <li aria-current="page" class="font-bold">Sell on NEBULA MART</li>
-          </ol>
-        </nav>
-        <h1 class="font-display text-4xl lg:text-5xl mt-3">Sell on NEBULA MART</h1>
-        <p class="mt-2 max-w-xl opacity-90">Reach customers across Bangladesh. Start selling in two days.</p>
+  <main id="main" class="pg">
+    <section class="ph ph--tight">
+      <div class="wrap ph__in">
+        <div>
+          <nav aria-label="Breadcrumb" class="crumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Sell on NEBULA MART</li>
+            </ol>
+          </nav>
+          <h1>Sell on NEBULA MART</h1>
+          <p class="ph__sub">Reach customers across Bangladesh. Start selling in two days.</p>
+          <div class="sstats">
+            <div class="sstat"><b>0৳</b><span>Setup fee</span></div>
+            <div class="sstat"><b>2</b><span>Days to start</span></div>
+            <div class="sstat"><b>Weekly</b><span>Payouts</span></div>
+          </div>
+        </div>
+        <div class="ph__badge" aria-hidden="true"><span class="ic ic-box" aria-hidden="true"></span></div>
       </div>
     </section>
-    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-10">
-      <div class="grid lg:grid-cols-[1fr_1.2fr] gap-8 items-start">
-        <article class="bg-white border border-line rounded-3xl p-6 lg:p-8 max-w-4xl">
-          <h2 class="font-display text-2xl mt-8 first:mt-0">Why sell with us</h2>
-          <div class="mt-3 text-ink/75 leading-relaxed grid gap-3">
-            <ul class="list-disc pl-5 grid gap-1.5">
-              <li>Zero setup fee</li>
-              <li>Payments to your bKash or bank every week</li>
-              <li>Pickup and delivery handled by us</li>
-              <li>Free seller training and support</li>
-            </ul>
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec__head">
+          <h2>Why sell with us</h2>
+          <p>Everything you need to grow your shop, in one place.</p>
+        </div>
+        <div class="perks">
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-wallet" aria-hidden="true"></span></div>
+            <h3>Zero setup fee</h3>
+            <p>Start selling without paying anything upfront.</p>
           </div>
-        </article>
-        <form data-demo data-msg="s-msg" novalidate
-          class="bg-white border border-line rounded-3xl p-6 lg:p-8 grid gap-4">
-          <h2 class="font-display text-2xl">Become a seller</h2>
-          <div><label for="s-shop" class="block font-bold text-sm mb-1.5">Shop name <span
-                class="text-primary">*</span></label><input id="s-shop" name="s-shop" type="text" required
-              placeholder="Your shop name"
-              class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:border-primary focus:shadow-md">
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-send" aria-hidden="true"></span></div>
+            <h3>Weekly payouts</h3>
+            <p>Money goes to your bKash or bank every week.</p>
           </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div><label for="s-name" class="block font-bold text-sm mb-1.5">Your name <span
-                  class="text-primary">*</span></label><input id="s-name" name="s-name" type="text" required
-                placeholder="Full name"
-                class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:border-primary focus:shadow-md">
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-truck" aria-hidden="true"></span></div>
+            <h3>We handle delivery</h3>
+            <p>Pickup and delivery are taken care of by us.</p>
+          </div>
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-star" aria-hidden="true"></span></div>
+            <h3>Free training</h3>
+            <p>Seller training and support whenever you need it.</p>
+          </div>
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-users" aria-hidden="true"></span></div>
+            <h3>Millions of shoppers</h3>
+            <p>Reach customers across Bangladesh.</p>
+          </div>
+          <div class="perk">
+            <div class="perk__ic"><span class="ic ic-shield" aria-hidden="true"></span></div>
+            <h3>Secure payments</h3>
+            <p>Safe checkout builds trust in your shop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec--tint">
+      <div class="wrap">
+        <div class="sec__head">
+          <h2>Start in four steps</h2>
+          <p>From application to your first order.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <h3>Apply</h3>
+            <p>Fill in the short form below.</p>
+          </li>
+          <li class="step">
+            <h3>Get verified</h3>
+            <p>We check your details within a day.</p>
+          </li>
+          <li class="step">
+            <h3>List products</h3>
+            <p>Add photos, prices and stock.</p>
+          </li>
+          <li class="step">
+            <h3>Sell and get paid</h3>
+            <p>We deliver, you receive weekly payouts.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="sec sec--dark" id="apply">
+      <div class="wrap apply">
+        <div>
+          <div class="sec__head" style="margin-bottom:0">
+            <h2>Become a seller</h2>
+            <p>Tell us about your shop and we will reach out within one working day.</p>
+          </div>
+          <ul class="checks">
+            <li><span class="ic ic-check" aria-hidden="true"></span>
+              <div><b>Zero setup fee</b><span class="d">No hidden costs to join.</span></div>
+            </li>
+            <li><span class="ic ic-check" aria-hidden="true"></span>
+              <div><b>Weekly payments</b><span class="d">To your bKash or bank account.</span></div>
+            </li>
+            <li><span class="ic ic-check" aria-hidden="true"></span>
+              <div><b>Pickup and delivery</b><span class="d">Handled by us.</span></div>
+            </li>
+            <li><span class="ic ic-check" aria-hidden="true"></span>
+              <div><b>Free seller support</b><span class="d">Training and help when you need it.</span></div>
+            </li>
+          </ul>
+        </div>
+        <form data-demo data-msg="s-msg" novalidate class="card apply__form" style="color:var(--ink)">
+          <h2>Apply now</h2>
+          <div class="fld"><label class="lbl" for="s-shop">Shop name <i>*</i></label>
+            <div class="fld__box"><span class="ic ic-tag" aria-hidden="true"></span><input id="s-shop" name="s-shop"
+                type="text" required placeholder="Your shop name"></div>
+          </div>
+          <div class="row">
+            <div class="fld"><label class="lbl" for="s-name">Your name <i>*</i></label>
+              <div class="fld__box"><span class="ic ic-user" aria-hidden="true"></span><input id="s-name" name="s-name"
+                  type="text" required placeholder="Full name"></div>
             </div>
-            <div><label for="s-phone" class="block font-bold text-sm mb-1.5">Mobile number <span
-                  class="text-primary">*</span></label><input id="s-phone" name="s-phone" type="tel" required
-                placeholder="01XXXXXXXXX"
-                class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:border-primary focus:shadow-md">
+            <div class="fld"><label class="lbl" for="s-phone">Mobile number <i>*</i></label>
+              <div class="fld__box"><span class="ic ic-phone" aria-hidden="true"></span><input id="s-phone"
+                  name="s-phone" type="tel" required placeholder="01XXXXXXXXX"></div>
             </div>
           </div>
-          <div><label for="s-email" class="block font-bold text-sm mb-1.5">Email address <span
-                class="text-primary">*</span></label><input id="s-email" name="s-email" type="email" required
-              placeholder="you@example.com"
-              class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:border-primary focus:shadow-md">
+          <div class="fld"><label class="lbl" for="s-email">Email address <i>*</i></label>
+            <div class="fld__box"><span class="ic ic-mail" aria-hidden="true"></span><input id="s-email" name="s-email"
+                type="email" required placeholder="you@example.com"></div>
           </div>
-          <div><label for="s-cat" class="block font-bold text-sm mb-1.5">What do you sell? <span
-                class="text-primary">*</span></label><input id="s-cat" name="s-cat" type="text" required
-              placeholder="e.g. Panjabi, electronics"
-              class="w-full rounded-xl border border-line px-4 py-3 bg-white focus:outline-none focus:border-primary focus:shadow-md">
+          <div class="fld"><label class="lbl" for="s-cat">What do you sell? <i>*</i></label>
+            <div class="fld__box"><span class="ic ic-box" aria-hidden="true"></span><input id="s-cat" name="s-cat"
+                type="text" required placeholder="e.g. Panjabi, electronics"></div>
           </div>
-          <div><button type="submit"
-              class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-ink font-extrabold rounded-xl px-6 py-3.5 transition-colors">Apply
-              now</button></div>
-          <p id="s-msg" role="status" hidden
-            class="mt-4 rounded-xl bg-primary-soft border border-primary-200 px-4 py-3 text-sm font-bold"></p>
+          <button type="submit" class="btn btn--accent">Apply now <span class="ic ic-arrow"
+              aria-hidden="true"></span></button>
+          <p id="s-msg" class="note is-ok" role="status" hidden></p>
         </form>
       </div>
-    </div>
+    </section>
+    <section class="sec">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Have questions first?</h2>
+            <p>Talk to our seller team. We are happy to walk you through it.</p>
+          </div>
+          <div class="cta__act"><a href="contact.html" class="btn btn--accent">Contact us <span class="ic ic-arrow"
+                aria-hidden="true"></span></a><a href="faq.html" class="btn btn--line">Read FAQ</a></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ============================= FOOTER ============================= -->
@@ -981,6 +1069,7 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/pages/info.js" defer></script>
 </body>
 
 </html>

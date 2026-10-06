@@ -70,7 +70,7 @@
    position: relative;
    overflow: hidden;
    color: #fff;
-   padding: 2.25rem 0 4.5rem;
+   padding: 2.25rem 0 3rem;
    background: linear-gradient(115deg, rgb(var(--color-ink)) 0%, rgb(var(--color-primary-dark)) 50%, rgb(var(--color-primary)) 100%)
 }
 
@@ -146,7 +146,7 @@
    }
 
    .ph {
-      padding: 3rem 0 5.2rem
+      padding: 3rem 0 3.6rem
    }
 }
 
@@ -164,54 +164,6 @@
 
 .crumbs [aria-current] {
    font-weight: 700;
-   color: #fff
-}
-
-/* ---------- support nav ---------- */
-.sn {
-   position: relative;
-   z-index: 5;
-   margin-top: -1.8rem
-}
-
-.sn__list {
-   display: flex;
-   gap: .25rem;
-   overflow-x: auto;
-   padding: .4rem;
-   background: #fff;
-   border: 1px solid var(--line);
-   border-radius: 1.1rem;
-   box-shadow: 0 18px 40px -22px rgb(15 26 58/.45);
-   scrollbar-width: none
-}
-
-.sn__list::-webkit-scrollbar {
-   display: none
-}
-
-.sn a {
-   flex: 1 0 auto;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: .5rem;
-   padding: .8rem 1.05rem;
-   border-radius: .8rem;
-   white-space: nowrap;
-   font-weight: 700;
-   font-size: .92rem;
-   color: rgb(var(--color-ink)/.75);
-   transition: background .15s, color .15s
-}
-
-.sn a:hover {
-   background: var(--soft);
-   color: var(--navy)
-}
-
-.sn a[aria-current=page] {
-   background: var(--navy);
    color: #fff
 }
 

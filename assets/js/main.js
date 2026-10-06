@@ -49,9 +49,9 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')cq()})})();
 /* store */
 if(true){run('store',function(){
 window.RD=(function(){
-var DEF=[{id:'wireless-earbuds-pro',name:'Wireless Earbuds Pro with Noise Cancelling',img:'https://picsum.photos/seed/earbuds1/300/300',variant:'Color: Mint',price:1490,old:2490,qty:1},
-{id:'cotton-panjabi-navy',name:'Premium Cotton Panjabi, Navy Blue',img:'https://picsum.photos/seed/panjabi/300/300',variant:'Size: L',price:1990,old:2790,qty:1},
-{id:'vitamin-c-face-serum',name:'Vitamin C Brightening Face Serum 30ml',img:'https://picsum.photos/seed/serum/300/300',variant:'30ml',price:890,old:1290,qty:2}];
+var DEF=[{id:'wireless-earbuds-pro',name:'Wireless Earbuds Pro with Noise Cancelling',img:'assets/images/products/earbuds1.svg',variant:'Color: Mint',price:1490,old:2490,qty:1},
+{id:'cotton-panjabi-navy',name:'Premium Cotton Panjabi, Navy Blue',img:'assets/images/products/panjabi.svg',variant:'Size: L',price:1990,old:2790,qty:1},
+{id:'vitamin-c-face-serum',name:'Vitamin C Brightening Face Serum 30ml',img:'assets/images/products/serum.svg',variant:'30ml',price:890,old:1290,qty:2}];
 var ZONES={dhaka:{label:'Inside Dhaka',fee:70,eta:'1-2 days',days:2},sub:{label:'Sub-Dhaka',fee:100,eta:'2-3 days',days:3},out:{label:'Outside Dhaka',fee:150,eta:'3-5 days',days:5}};
 function get(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
 function set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}

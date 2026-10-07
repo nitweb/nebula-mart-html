@@ -105,23 +105,15 @@
     <div class="bg-ink text-white overflow-hidden text-[13px] font-medium">
       <div class="flex whitespace-nowrap marquee w-max py-2">
         <div class="flex gap-10 pr-10 items-center">
-          <span><b class="text-accent">Free delivery</b> on orders over ৳2,000</span>
-          <span class="text-primary">●</span>
           <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
           <span class="text-primary">●</span>
           <span>7-day easy returns on everything</span>
-          <span class="text-primary">●</span>
-          <span>Use code <b class="text-accent">NEBULA10</b> for 10% off your first order</span>
           <span class="text-primary">●</span>
         </div>
         <div class="flex gap-10 pr-10 items-center" aria-hidden="true">
-          <span><b class="text-accent">Free delivery</b> on orders over ৳2,000</span>
-          <span class="text-primary">●</span>
           <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
           <span class="text-primary">●</span>
           <span>7-day easy returns on everything</span>
-          <span class="text-primary">●</span>
-          <span>Use code <b class="text-accent">NEBULA10</b> for 10% off your first order</span>
           <span class="text-primary">●</span>
         </div>
       </div>
@@ -665,12 +657,6 @@
             <use href="#i-x" />
           </svg></button>
       </div>
-      <div class="px-4 py-3 bg-accent/20 text-sm font-medium">
-        Add <b>৳520</b> more for free delivery
-        <div class="h-2.5 rounded-full bg-white border border-line mt-2 overflow-hidden">
-          <div class="h-full w-3/4 bg-accent"></div>
-        </div>
-      </div>
       <ul class="flex-1 overflow-y-auto p-4 grid gap-4 content-start">
         <li class="flex gap-3 p-3 rounded-2xl border border-line">
           <div
@@ -824,73 +810,6 @@
   <!-- ============================= FOOTER ============================= -->
   <footer class="mt-16 relative">
 
-    <!-- Trust strip -->
-    <div class="max-w-7xl mx-auto px-4 lg:px-6">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 relative z-10 -mb-10">
-        <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
-          <span class="w-11 h-11 rounded-xl bg-accent grid place-items-center shrink-0"><svg class="w-6 h-6">
-              <use href="#i-truck" />
-            </svg></span>
-          <div class="leading-tight">
-            <p class="font-extrabold">Fast delivery</p>
-            <p class="text-xs text-ink/65">Dhaka in 24 hours</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
-          <span class="w-11 h-11 rounded-xl bg-accent grid place-items-center shrink-0"><svg class="w-6 h-6">
-              <use href="#i-return" />
-            </svg></span>
-          <div class="leading-tight">
-            <p class="font-extrabold">Easy returns</p>
-            <p class="text-xs text-ink/65">7 days, no questions</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
-          <span class="w-11 h-11 rounded-xl bg-primary grid place-items-center shrink-0 text-white"><svg
-              class="w-6 h-6">
-              <use href="#i-shield" />
-            </svg></span>
-          <div class="leading-tight">
-            <p class="font-extrabold">Secure payment</p>
-            <p class="text-xs text-ink/65">bKash, Nagad, cards, COD</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 bg-white border border-line rounded-2xl p-4 shadow-sm">
-          <span class="w-11 h-11 rounded-xl bg-primary-200 grid place-items-center shrink-0"><svg class="w-6 h-6">
-              <use href="#i-chat" />
-            </svg></span>
-          <div class="leading-tight">
-            <p class="font-extrabold">Real support</p>
-            <p class="text-xs text-ink/65">Chat daily, 9 AM – 10 PM</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="bg-primary pt-20 pb-14 relative overflow-hidden">
-      <span class="absolute -left-16 -top-16 w-56 h-56 rounded-full bg-primary/90"></span>
-      <span class="absolute right-10 -bottom-20 w-64 h-64 rounded-full bg-accent/90"></span>
-      <span class="absolute right-1/3 top-6 w-10 h-10 rounded-full bg-accent"></span>
-      <div class="max-w-7xl mx-auto px-4 lg:px-6 relative grid lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.05]">Get 10% off
-            your first order</h2>
-          <p class="text-white/85 mt-3 max-w-md">Join for early access to flash deals and new arrivals. One email a
-            week, unsubscribe any time.</p>
-        </div>
-        <form action="/newsletter" method="POST" class="flex flex-col sm:flex-row gap-3">
-          <!-- @csrf -->
-          <label class="sr-only" for="nl-email">Email address</label>
-          <input id="nl-email" type="email" name="email" required placeholder="you@example.com"
-            class="flex-1 rounded-xl border border-line px-4 py-3.5 bg-white placeholder:text-ink/45 focus:outline-none focus:shadow-md">
-          <button type="submit"
-            class="rounded-xl border border-line bg-accent font-extrabold px-6 py-3.5 shadow-sm hover:shadow-md transition-all">Get
-            my code</button>
-        </form>
-      </div>
-    </div>
-
     <!-- Link columns -->
     <div class="bg-ink text-white">
       <div
@@ -1007,7 +926,7 @@
         <div class="mt-3 flex items-baseline gap-2"><span
             class="text-3xl font-display font-extrabold text-primary">৳<span id="qv-price"></span></span><s
             class="text-ink/50">৳<span id="qv-old"></span></s></div>
-        <p class="mt-3 text-sm text-ink/70">In stock. Free delivery over ৳2,000 and 7-day returns.</p>
+        <p class="mt-3 text-sm text-ink/70">In stock. 7-day returns.</p>
         <div class="mt-auto pt-6 grid gap-2"><button type="button"
             class="addcart bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3 border border-line">Add
             to cart</button><a id="qv-link" href="product.html"

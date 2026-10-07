@@ -443,6 +443,7 @@ form[role=search] input[type=search] {
   font-size: 12px;
   font-weight: 800;
   line-height: 1;
+  color: #fff;
 }
 
 #float-cart .fc-total {

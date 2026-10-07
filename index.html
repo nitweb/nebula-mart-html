@@ -247,6 +247,12 @@
       <div class="max-w-7xl mx-auto px-6">
         <ul class="flex items-center gap-1 py-2">
 
+          <!-- Medical -->
+          <li>
+            <a href="shop.html"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[15px] transition-colors hover:bg-primary-soft">Medical</a>
+          </li>
+
           <!-- Fashion -->
           <li class="mega-item static">
             <button
@@ -580,6 +586,7 @@
         <a href="register.html" class="text-center bg-accent font-bold rounded-xl py-2.5">Register</a>
       </div>
       <ul class="px-4 pb-6 divide-y-2 divide-line font-bold">
+        <li><a href="shop.html" class="block py-3.5">Medical</a></li>
         <li>
           <details>
             <summary class="flex justify-between items-center py-3.5 cursor-pointer">Fashion <svg
@@ -1056,6 +1063,14 @@
             <button type="button" class="addcart card-cart" aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to cart">Add to cart</button></article>
         </li>
       </ul>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 lg:px-6 mt-14" aria-labelledby="h-medical">
+      <div class="flex items-end justify-between mb-6 gap-4">
+        <h2 id="h-medical" class="font-display font-extrabold text-3xl">Medical</h2>
+        <a href="shop.html" class="font-bold underline underline-offset-4 shrink-0">View all</a>
+      </div>
+      <ul id="medical-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5" aria-live="polite"></ul>
     </section>
 
     <section class="max-w-7xl mx-auto px-4 lg:px-6 mt-14" aria-labelledby="h-new">
@@ -1914,6 +1929,7 @@
 
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/pages/electronics-api.js" defer></script>
+  <script src="assets/js/pages/medical-api.js" defer></script>
 </body>
 
 </html>

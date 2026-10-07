@@ -44,7 +44,7 @@
         function cq() { qv.classList.add('hidden') }
         document.addEventListener('click', function (e) {
           var b;
-          if (b = e.target.closest('.qv')) { var d = b.dataset; qv.querySelector('#qv-img').src = d.img; qv.querySelector('#qv-img').alt = d.name; qv.querySelector('#qv-name').textContent = d.name; qv.querySelector('#qv-price').textContent = d.price; qv.querySelector('#qv-old').textContent = d.old; qv.querySelector('#qv-link').href = d.href; qv.classList.remove('hidden') }
+          if (b = e.target.closest('.qv')) { var d = b.dataset; qv.querySelector('#qv-img').src = d.img; qv.querySelector('#qv-img').alt = d.name; qv.querySelector('#qv-name').textContent = d.name; qv.querySelector('#qv-price').textContent = d.price; qv.querySelector('#qv-old').textContent = d.old; qv.querySelector('#qv-old').parentElement.classList.toggle('hidden', !d.old); qv.querySelector('#qv-link').href = d.href; qv.classList.remove('hidden') }
           else if (e.target.closest('[data-close-qv]')) cq();
           else if (b = e.target.closest('.addcart')) { var q = b.id === 'add-main' ? +document.getElementById('qty').value : 1; if (cb) cb.textContent = +cb.textContent + q; toast('Added to cart') }
           else if (b = e.target.closest('.wish')) { var on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); b.classList.toggle('bg-primary', on); b.classList.toggle('text-white', on); toast(on ? 'Saved to wishlist' : 'Removed from wishlist') }

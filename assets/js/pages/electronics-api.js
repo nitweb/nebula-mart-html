@@ -36,13 +36,11 @@
         '<a href="' + href + '" class="block aspect-square" tabindex="-1" aria-hidden="true">' +
           '<img src="' + img + '" alt="' + name + '" width="600" height="600" loading="lazy" ' +
           'class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>' +
-        '<button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" ' +
-          'aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button>' +
-        '<div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300">' +
-          '<button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" ' +
-            'data-name="' + name + '" data-price="' + price + '" data-old="" data-img="' + img + '" data-href="' + href + '">Quick view</button>' +
-          '<button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" ' +
-            'aria-label="Add ' + name + ' to cart">Add to cart</button>' +
+        '<div class="card-actions">' +
+          '<button type="button" class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" ' +
+            'aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button>' +
+          '<button type="button" class="qv" aria-label="Quick view ' + name + '" ' +
+            'data-name="' + name + '" data-price="' + price + '" data-old="" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button>' +
         '</div>' +
       '</div>' +
       '<div class="p-4 flex flex-col flex-1">' +
@@ -50,7 +48,9 @@
         '<h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="' + href + '" class="hover:text-primary">' + name + '</a></h3>' +
         '<p class="ldesc hidden text-sm text-ink/70 mt-2">' + esc(p.description) + '</p>' +
         '<div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳' + price + '</span></div>' +
-      '</div></article></li>';
+      '</div>' +
+      '<button type="button" class="addcart card-cart" aria-label="Add ' + name + ' to cart">Add to cart</button>' +
+      '</article></li>';
   }
 
   function render(list) {

@@ -46,7 +46,7 @@
           var b;
           if (b = e.target.closest('.qv')) { var d = b.dataset; qv.querySelector('#qv-img').src = d.img; qv.querySelector('#qv-img').alt = d.name; qv.querySelector('#qv-name').textContent = d.name; qv.querySelector('#qv-price').textContent = d.price; qv.querySelector('#qv-old').textContent = d.old; qv.querySelector('#qv-old').parentElement.classList.toggle('hidden', !d.old); qv.querySelector('#qv-link').href = d.href; qv.classList.remove('hidden') }
           else if (e.target.closest('[data-close-qv]')) cq();
-          else if (b = e.target.closest('.addcart')) { var q = b.id === 'add-main' ? +document.getElementById('qty').value : 1; if (cb) cb.textContent = +cb.textContent + q; toast('Added to cart') }
+          else if (b = e.target.closest('.addcart')) { var q = b.id === 'add-main' ? +document.getElementById('qty').value : 1; if (window.RD && RD.add) RD.add(b, q); toast('Added to cart') }
           else if (b = e.target.closest('.wish')) { var on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); b.classList.toggle('bg-primary', on); b.classList.toggle('text-white', on); toast(on ? 'Saved to wishlist' : 'Removed from wishlist') }
         });
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cq() })
@@ -58,9 +58,9 @@
   if (true) {
     run('store', function () {
       window.RD = (function () {
-        var DEF = [{ id: 'wireless-earbuds-pro', name: 'Wireless Earbuds Pro with Noise Cancelling', img: 'assets/images/products/earbuds1.svg', variant: 'Color: Mint', price: 1490, old: 2490, qty: 1 },
-        { id: 'cotton-panjabi-navy', name: 'Premium Cotton Panjabi, Navy Blue', img: 'assets/images/products/panjabi.svg', variant: 'Size: L', price: 1990, old: 2790, qty: 1 },
-        { id: 'vitamin-c-face-serum', name: 'Vitamin C Brightening Face Serum 30ml', img: 'assets/images/products/serum.svg', variant: '30ml', price: 890, old: 1290, qty: 2 }];
+        var DEF = [{ id: 'axis-y-glow-serum', name: 'AXIS-Y Dark Spot Correcting Glow Serum – 50ml', img: 'https://bk.shajgoj.com/storage/2023/09/AXIS-Y_Dark_Spot_Correcting_Glow_Serum_aa3016a8-b55b-4300-9c6f-0e268d4d09dd_1000x.jpg', variant: 'Size: 50ml', price: 1299, old: 2000, qty: 1 },
+        { id: 'cotton-panjabi-oxxo', name: 'OXXO Premium Cotton Panjabi for Men', img: 'https://static-01.daraz.com.bd/p/cd3f9075872dc0870834f28ba6c2d397.jpg', variant: 'Size: L', price: 946, old: 1300, qty: 1 },
+        { id: 'the-ordinary-niacinamide', name: 'The Ordinary Niacinamide 10% + Zinc 1% – 30ml', img: 'https://bk.shajgoj.com/storage/2026/05/4559.jpg', variant: '30ml', price: 1099, old: 1650, qty: 2 }];
         var ZONES = { dhaka: { label: 'Inside Dhaka', fee: 70, eta: '1-2 days', days: 2 }, sub: { label: 'Sub-Dhaka', fee: 100, eta: '2-3 days', days: 3 }, out: { label: 'Outside Dhaka', fee: 150, eta: '3-5 days', days: 5 } };
         function get(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d } catch (e) { return d } }
         function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) { } }
@@ -71,6 +71,62 @@
       })();
     });
   }
+
+  /* floating cart + live mini cart drawer */
+  run('floatcart', function () {
+    var orig = RD.hdr, drawer = document.getElementById('cart-drawer');
+    function money(n) { return '৳' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }
+    function num(v) { return +String(v || 0).replace(/,/g, '') || 0 }
+    var fab = null;
+    if (['cart', 'checkout', 'success'].indexOf(PAGE) < 0) {
+      fab = document.createElement('button');
+      fab.type = 'button'; fab.id = 'float-cart';
+      fab.setAttribute('aria-label', 'Open cart');
+      fab.innerHTML = '<span class="fc-top"><svg class="fc-ico" aria-hidden="true"><use href="#i-bag"/></svg><span class="fc-n">0 Items</span></span><span class="fc-total">৳0.00</span>';
+      document.body.appendChild(fab);
+      fab.addEventListener('click', function () { var b = document.getElementById('open-cart'); if (b) b.click() });
+    }
+    var list = drawer && drawer.querySelector('ul'), head = drawer && drawer.querySelector('h2 span'), sub = drawer && drawer.querySelector('.border-t-4 .flex span:last-child');
+    function paintDrawer(c, q, s) {
+      if (!drawer) return;
+      if (head) head.textContent = '(' + q + ')';
+      if (sub) sub.textContent = RD.tk(s);
+      if (list) list.innerHTML = c.length ? c.map(function (i, k) {
+        return '<li class="flex gap-3 p-3 rounded-2xl border border-line"><img referrerpolicy="no-referrer" src="' + i.img + '" alt="' + i.name + '" width="80" height="80" class="w-20 h-20 rounded-xl object-cover border border-line shrink-0"><div class="flex-1 min-w-0"><div class="flex justify-between gap-2"><p class="font-bold leading-snug">' + i.name + '</p><button type="button" data-frm="' + k + '" class="self-start p-1 rounded-lg hover:bg-primary hover:text-white" aria-label="Remove ' + i.name + '"><svg class="w-4 h-4"><use href="#i-x"/></svg></button></div><p class="text-sm text-ink/60">' + i.variant + '</p><div class="flex items-center justify-between mt-2"><div class="flex items-center border border-line rounded-lg font-bold text-sm"><button type="button" data-fq="' + k + '" data-fd="-1" class="px-2.5 py-1" aria-label="Decrease">−</button><span class="px-2">' + i.qty + '</span><button type="button" data-fq="' + k + '" data-fd="1" class="px-2.5 py-1" aria-label="Increase">+</button></div><span class="font-extrabold">' + RD.tk(i.price * i.qty) + '</span></div></div></li>'
+      }).join('') : '<li class="text-center py-10 font-bold text-ink/60">Your cart is empty.</li>';
+    }
+    RD.hdr = function (c) {
+      orig(c);
+      var q = 0, s = 0; c.forEach(function (i) { q += i.qty; s += i.qty * i.price });
+      if (fab) { fab.querySelector('.fc-n').textContent = q + (q === 1 ? ' Item' : ' Items'); fab.querySelector('.fc-total').textContent = money(s) }
+      var ob = document.getElementById('open-cart'); if (ob) ob.setAttribute('aria-label', 'Open cart, ' + q + (q === 1 ? ' item' : ' items'));
+      paintDrawer(c, q, s)
+    };
+    RD.add = function (b, q) {
+      if (PAGE === 'cart') return;
+      var c = RD.cart(), a = b.closest('article'), qv = a && a.querySelector('.qv'), p = null, main = b.id === 'add-main';
+      if (qv) { var d = qv.dataset; p = { id: d.name, name: d.name, img: d.img, variant: 'Standard', price: num(d.price), old: num(d.old) || num(d.price) } }
+      else if (main) {
+        var B = RD.DEF[0], col = document.querySelector('input[name=color]:checked'), lb = col && col.nextElementSibling;
+        p = { id: B.id, name: B.name, img: B.img, variant: lb ? 'Size: ' + lb.textContent.trim() : B.variant, price: B.price, old: B.old }
+      }
+      if (!p) return;
+      var f = c.filter(function (x) { return x.name === p.name && (!main || x.variant === p.variant) })[0];
+      if (f) f.qty = Math.min(10, f.qty + (q || 1)); else { p.qty = Math.min(10, q || 1); c.push(p) }
+      RD.saveCart(c); RD.hdr(c);
+      if (fab) { fab.classList.remove('fc-pulse'); void fab.offsetWidth; fab.classList.add('fc-pulse') }
+    };
+    if (drawer) drawer.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-frm],[data-fq]'); if (!b) return;
+      var c = RD.cart();
+      if (b.hasAttribute('data-frm')) c.splice(+b.dataset.frm, 1);
+      else { var i = c[+b.dataset.fq]; if (i) i.qty = Math.max(1, Math.min(10, i.qty + +b.dataset.fd)) }
+      RD.saveCart(c);
+      if (PAGE === 'cart') { location.reload(); return }
+      RD.hdr(c)
+    });
+    RD.hdr(RD.cart())
+  });
 
   /* hero */
   if (PAGE === 'home') {
@@ -92,7 +148,7 @@
     run('product', function () {
       (function () {
         var m = document.getElementById('main-img'), ts = document.querySelectorAll('.thumb');
-        ts.forEach(function (t, i) { t.onclick = function () { m.src = t.dataset.full; m.alt = 'Wireless Earbuds Pro, view ' + (i + 1); ts.forEach(function (x) { x.classList.replace('border-primary', 'border-line') }); t.classList.replace('border-line', 'border-primary') } });
+        ts.forEach(function (t, i) { t.onclick = function () { m.src = t.dataset.full; m.alt = 'AXIS-Y Glow Serum, view ' + (i + 1); ts.forEach(function (x) { x.classList.replace('border-primary', 'border-line') }); t.classList.replace('border-line', 'border-primary') } });
         var q = document.getElementById('qty');
         document.getElementById('q-').onclick = function () { q.value = Math.max(1, +q.value - 1) }; document.getElementById('q+').onclick = function () { q.value = Math.min(10, +q.value + 1) };
         var r = document.getElementById('rel-track');
@@ -108,13 +164,52 @@
     });
   }
 
+  /* shop: merge API electronics into the static real products */
+  function shopApi(done) {
+    var grid = document.getElementById('shop-grid'), fin = false;
+    function finish() { if (fin) return; fin = true; counts(); done() }
+    function esc(t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] }) }
+    function counts() {
+      var lis = [].slice.call(grid.children);
+      ['cat', 'brand'].forEach(function (n) {
+        document.querySelectorAll('input[name="' + n + '"]').forEach(function (i) {
+          var c = lis.filter(function (li) { return li.dataset[n] === i.value }).length, lb = i.closest('label'), sp = lb && lb.querySelector('span:last-child');
+          if (sp) sp.textContent = c; if (lb) lb.hidden = c === 0
+        })
+      })
+    }
+    function li(p, k) {
+      var name = esc(p.name), price = Math.round(+p.price) || 0, img = esc(p.image || 'assets/images/placeholder.svg'), href = 'product.html?id=' + encodeURIComponent(p.id), pf = price.toLocaleString('en-US');
+      return '<li data-cat="Electronics" data-brand="" data-color="" data-size="" data-price="' + price + '" data-rating="4.0" data-n="' + (10 + k) + '" data-idx="' + (100 + k) + '"><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full"><div class="relative overflow-hidden bg-primary-soft"><a href="' + href + '" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="' + img + '" referrerpolicy="no-referrer" alt="' + name + '" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a><button type="button" class="wish absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button><div class="absolute inset-x-3 bottom-3 flex gap-2 translate-y-[150%] group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0 transition-transform duration-300"><button type="button" class="qv flex-1 bg-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-accent" data-name="' + name + '" data-price="' + pf + '" data-old="" data-img="' + img + '" data-href="' + href + '">Quick view</button><button type="button" class="addcart flex-1 bg-primary text-white border border-line rounded-xl py-2 text-sm font-bold hover:bg-primary-dark" aria-label="Add ' + name + ' to cart">Add to cart</button></div></div><div class="p-4 flex flex-col flex-1"><p class="text-xs font-bold text-primary">Electronics</p><h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="' + href + '" class="hover:text-primary">' + name + '</a></h3><p class="ldesc hidden text-sm text-ink/70 mt-2">' + esc(p.description) + '</p><div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳' + pf + '</span></div></div></article></li>'
+    }
+    var t = setTimeout(finish, 10000);
+    fetch('https://api.graphicdesigncourse.net/api/products', { headers: { 'Accept': 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json() })
+      .then(function (j) {
+        var list = Array.isArray(j) ? j : j && (Array.isArray(j.data) ? j.data : j.data && Array.isArray(j.data.data) ? j.data.data : Array.isArray(j.products) ? j.products : null);
+        if (!list) throw new Error('Unexpected API response');
+        j = { data: list.map(function (p) { return { id: p.id != null ? p.id : p._id, name: p.name || p.title, price: p.price != null ? p.price : p.sale_price, image: p.image || p.thumbnail || (p.images && p.images[0]) || '', description: p.description || '' } }) };
+        if (j.data.length && !fin) {
+          grid.insertAdjacentHTML('beforeend', j.data.map(li).join(''));
+          var mx = Math.max.apply(null, j.data.map(function (p) { return +p.price || 0 })), top = Math.max(5000, Math.ceil(mx / 100) * 100), pr = document.getElementById('prange'), pm = document.getElementById('pmax');
+          if (pr) { pr.max = top; pr.value = top } if (pm) pm.value = top;
+          grid.querySelectorAll('img').forEach(function (im) { im.addEventListener('error', function () { if (im.src.indexOf('placeholder.svg') < 0) im.src = 'assets/images/placeholder.svg' }, { once: true }) })
+        }
+      })
+      .catch(function (e) {
+        console.error('[shop-api]', e);
+        if (!document.getElementById('api-note')) grid.insertAdjacentHTML('beforebegin', '<p id="api-note" class="mt-4 bg-accent/40 border border-line rounded-xl px-4 py-3 font-bold">Electronics products load kora jaini (' + esc(e && e.message) + '). <button type="button" class="underline" onclick="location.reload()">Try again</button></p>')
+      })
+      .then(function () { clearTimeout(t); finish() })
+  }
+
   /* shop */
   if (PAGE === 'shop') {
-    run('shop', function () {
+    run('shop', function () { shopApi(function () {
       (function () {
         var grid = document.getElementById('shop-grid'), items = [].slice.call(grid.children), panel = document.getElementById('filter-panel'), ov = document.getElementById('f-ov'),
           pmin = document.getElementById('pmin'), pmax = document.getElementById('pmax'), pr = document.getElementById('prange'), chipsEl = document.getElementById('chips'),
-          more = document.getElementById('more'), shown = 12, step = 6, PM = 5000, st = {};
+          more = document.getElementById('more'), shown = 12, step = 6, PM = +document.getElementById('prange').max || 5000, st = {};
         var sorters = { pop: function (a, b) { return b.dataset.n - a.dataset.n }, new: function (a, b) { return b.dataset.idx - a.dataset.idx }, lo: function (a, b) { return a.dataset.price - b.dataset.price }, hi: function (a, b) { return b.dataset.price - a.dataset.price }, top: function (a, b) { return b.dataset.rating - a.dataset.rating } };
         function vals(n) { return [].map.call(document.querySelectorAll('input[name="' + n + '"]:checked'), function (i) { return i.value }) }
         function read() { st.cat = vals('cat'); st.brand = vals('brand'); st.color = vals('color'); st.size = vals('size'); st.rating = +vals('rating')[0] || 0; st.min = +pmin.value || 0; st.max = pmax.value === '' ? 1e9 : +pmax.value }
@@ -162,7 +257,7 @@
         vg.onclick = function () { view(false) }; vl.onclick = function () { view(true) };
         apply()
       })();
-    });
+    }); });
   }
 
   /* cart */
@@ -174,7 +269,7 @@
         function draw() {
           $('cart-wrap').hidden = !c.length; $('cart-empty').hidden = c.length > 0;
           $('count').textContent = '(' + c.reduce(function (a, i) { return a + i.qty }, 0) + ' items)';
-          ul.innerHTML = c.map(function (i, k) { return '<li class="flex gap-4 bg-white border border-line rounded-2xl p-4"><a href="product.html" class="shrink-0"><img src="' + i.img + '" alt="' + i.name + '" width="300" height="300" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover border border-line"></a><div class="flex-1 min-w-0"><div class="flex justify-between gap-3"><div><h3 class="font-bold leading-snug"><a href="product.html" class="hover:text-primary">' + i.name + '</a></h3><p class="text-sm text-ink/60 mt-0.5">' + i.variant + '</p></div><button type="button" data-rm="' + k + '" class="self-start p-1.5 rounded-lg hover:bg-primary hover:text-white" aria-label="Remove ' + i.name + '"><svg class="w-5 h-5"><use href="#i-x"/></svg></button></div><div class="flex flex-wrap items-end justify-between gap-3 mt-3"><div class="flex items-center border border-line rounded-xl font-bold"><button type="button" data-q="' + k + '" data-d="-1" class="px-3.5 py-2" aria-label="Decrease quantity">−</button><span class="px-3 min-w-8 text-center">' + i.qty + '</span><button type="button" data-q="' + k + '" data-d="1" class="px-3.5 py-2" aria-label="Increase quantity">+</button></div><div class="text-right"><p class="font-display font-extrabold text-xl">' + RD.tk(i.price * i.qty) + '</p><p class="text-xs text-ink/55">' + RD.tk(i.price) + ' each <s class="ml-1">' + RD.tk(i.old) + '</s></p></div></div></div></li>' }).join('');
+          ul.innerHTML = c.map(function (i, k) { return '<li class="flex gap-4 bg-white border border-line rounded-2xl p-4"><a href="product.html" class="shrink-0"><img referrerpolicy="no-referrer" src="' + i.img + '" alt="' + i.name + '" width="300" height="300" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover border border-line"></a><div class="flex-1 min-w-0"><div class="flex justify-between gap-3"><div><h3 class="font-bold leading-snug"><a href="product.html" class="hover:text-primary">' + i.name + '</a></h3><p class="text-sm text-ink/60 mt-0.5">' + i.variant + '</p></div><button type="button" data-rm="' + k + '" class="self-start p-1.5 rounded-lg hover:bg-primary hover:text-white" aria-label="Remove ' + i.name + '"><svg class="w-5 h-5"><use href="#i-x"/></svg></button></div><div class="flex flex-wrap items-end justify-between gap-3 mt-3"><div class="flex items-center border border-line rounded-xl font-bold"><button type="button" data-q="' + k + '" data-d="-1" class="px-3.5 py-2" aria-label="Decrease quantity">−</button><span class="px-3 min-w-8 text-center">' + i.qty + '</span><button type="button" data-q="' + k + '" data-d="1" class="px-3.5 py-2" aria-label="Increase quantity">+</button></div><div class="text-right"><p class="font-display font-extrabold text-xl">' + RD.tk(i.price * i.qty) + '</p><p class="text-xs text-ink/55">' + RD.tk(i.price) + ' each <s class="ml-1">' + RD.tk(i.old) + '</s></p></div></div></div></li>' }).join('');
           var t = RD.totals(c, o);
           $('t-sub').textContent = RD.tk(t.sub); $('t-save').textContent = '-' + RD.tk(t.save); $('r-save').hidden = !t.save;
           $('r-disc').hidden = !t.disc; $('t-disc').textContent = '-' + RD.tk(t.disc); $('t-fee').textContent = RD.tk(t.fee); $('t-total').textContent = RD.tk(t.total);
@@ -213,7 +308,7 @@
         function zone() { var d = dt.value, a = as.hidden ? at.value : as.value; if (!d) return null; if (d === 'Dhaka') return a ? (CITY.indexOf(a) >= 0 ? 'dhaka' : 'sub') : null; return (d === 'Gazipur' || d === 'Narayanganj') ? 'sub' : 'out' }
         function money() {
           var t = RD.totals(c, o);
-          $('mini').innerHTML = c.map(function (i) { return '<li class="flex items-center gap-3"><span class="relative shrink-0"><img src="' + i.img + '" alt="" width="300" height="300" class="w-14 h-14 rounded-lg object-cover border border-line"><span class="absolute -top-2 -right-2 min-w-5 h-5 px-1 rounded-full bg-ink text-white text-xs font-bold grid place-items-center">' + i.qty + '</span></span><span class="flex-1 min-w-0 text-sm font-bold leading-snug">' + i.name + '</span><span class="font-bold text-sm">' + RD.tk(i.price * i.qty) + '</span></li>' }).join('');
+          $('mini').innerHTML = c.map(function (i) { return '<li class="flex items-center gap-3"><span class="relative shrink-0"><img referrerpolicy="no-referrer" src="' + i.img + '" alt="" width="300" height="300" class="w-14 h-14 rounded-lg object-cover border border-line"><span class="absolute -top-2 -right-2 min-w-5 h-5 px-1 rounded-full bg-ink text-white text-xs font-bold grid place-items-center">' + i.qty + '</span></span><span class="flex-1 min-w-0 text-sm font-bold leading-snug">' + i.name + '</span><span class="font-bold text-sm">' + RD.tk(i.price * i.qty) + '</span></li>' }).join('');
           $('t-sub').textContent = RD.tk(t.sub); $('r-disc').hidden = !t.disc; $('t-disc').textContent = '-' + RD.tk(t.disc); $('t-fee').textContent = RD.tk(t.fee); $('t-zone').textContent = '(' + RD.ZONES[o.zone].label + ')'; $('t-total').textContent = RD.tk(t.total);
           document.querySelectorAll('.pay-amt').forEach(function (e) { e.textContent = RD.tk(t.total) });
           $('zone-msg').textContent = RD.ZONES[o.zone].label + ' delivery: ' + RD.tk(t.fee) + ', arrives in ' + RD.ZONES[o.zone].eta + '.'; RD.hdr(c)
@@ -251,7 +346,7 @@
         var Z = RD.ZONES[L.zone] || RD.ZONES.dhaka, PN = { cod: 'Cash on delivery', bkash: 'bKash', nagad: 'Nagad', card: 'Debit or credit card', bank: 'Bank transfer' };
         $('who').textContent = L.name.split(' ')[0]; $('no').textContent = L.no;
         $('sent').textContent = 'We sent a confirmation to ' + L.email + ' and will text ' + L.phone + ' when your order ships.';
-        $('items').innerHTML = L.items.map(function (i) { return '<li class="flex items-center gap-4"><img src="' + i.img + '" alt="' + i.name + '" width="300" height="300" class="w-16 h-16 rounded-xl object-cover border border-line"><div class="flex-1 min-w-0"><p class="font-bold leading-snug">' + i.name + '</p><p class="text-sm text-ink/60">' + i.variant + ' · Qty ' + i.qty + '</p></div><p class="font-bold">' + RD.tk(i.price * i.qty) + '</p></li>' }).join('');
+        $('items').innerHTML = L.items.map(function (i) { return '<li class="flex items-center gap-4"><img referrerpolicy="no-referrer" src="' + i.img + '" alt="' + i.name + '" width="300" height="300" class="w-16 h-16 rounded-xl object-cover border border-line"><div class="flex-1 min-w-0"><p class="font-bold leading-snug">' + i.name + '</p><p class="text-sm text-ink/60">' + i.variant + ' · Qty ' + i.qty + '</p></div><p class="font-bold">' + RD.tk(i.price * i.qty) + '</p></li>' }).join('');
         var t = L.t; $('t-sub').textContent = RD.tk(t.sub); $('r-disc').hidden = !t.disc; $('t-disc').textContent = '-' + RD.tk(t.disc); $('t-fee').textContent = RD.tk(t.fee); $('t-total').textContent = RD.tk(t.total);
         $('a-name').textContent = L.name; $('a-addr').textContent = L.address + ', ' + L.area + ', ' + L.district + ', ' + L.division; $('a-phone').textContent = L.phone;
         if (L.note) { $('a-note').hidden = false; $('a-note').textContent = 'Note: ' + L.note }

@@ -751,6 +751,24 @@
         </div>
         <details class="border-b-2 border-line py-4" open>
           <summary class="flex justify-between items-center cursor-pointer font-display font-extrabold text-lg">
+            Price<svg class="chev w-5 h-5 transition-transform">
+              <use href="#i-chev" />
+            </svg></summary>
+          <div class="mt-3">
+            <div class="flex items-center gap-2"><label class="sr-only" for="pmin">Minimum price</label><input id="pmin"
+                type="number" min="0" max="6000" value="0"
+                class="w-full rounded-xl border border-line px-3 py-2 font-bold focus:outline-none focus:shadow-md"><span
+                class="font-bold">to</span><label class="sr-only" for="pmax">Maximum price</label><input id="pmax"
+                type="number" min="0" max="6000" value="6000"
+                class="w-full rounded-xl border border-line px-3 py-2 font-bold focus:outline-none focus:shadow-md">
+            </div>
+            <input id="prange" type="range" min="0" max="6000" step="100" value="6000"
+              class="w-full mt-4 accent-primary" aria-label="Maximum price slider">
+            <p class="text-xs text-ink/60 mt-1">Prices in ৳ (BDT)</p>
+          </div>
+        </details>
+        <details class="border-b-2 border-line py-4" open>
+          <summary class="flex justify-between items-center cursor-pointer font-display font-extrabold text-lg">
             Category<svg class="chev w-5 h-5 transition-transform">
               <use href="#i-chev" />
             </svg></summary>
@@ -765,25 +783,10 @@
                 class="text-xs text-ink/50">6</span></label><label
               class="flex items-center gap-3 py-1.5 cursor-pointer text-[15px]"><input type="checkbox" name="cat"
                 value="Home and Living" class="w-5 h-5 accent-primary"><span class="flex-1">Home and Living</span><span
-                class="text-xs text-ink/50">6</span></label></div>
-        </details>
-        <details class="border-b-2 border-line py-4" open>
-          <summary class="flex justify-between items-center cursor-pointer font-display font-extrabold text-lg">
-            Price<svg class="chev w-5 h-5 transition-transform">
-              <use href="#i-chev" />
-            </svg></summary>
-          <div class="mt-3">
-            <div class="flex items-center gap-2"><label class="sr-only" for="pmin">Minimum price</label><input id="pmin"
-                type="number" min="0" max="5000" value="0"
-                class="w-full rounded-xl border border-line px-3 py-2 font-bold focus:outline-none focus:shadow-md"><span
-                class="font-bold">to</span><label class="sr-only" for="pmax">Maximum price</label><input id="pmax"
-                type="number" min="0" max="5000" value="5000"
-                class="w-full rounded-xl border border-line px-3 py-2 font-bold focus:outline-none focus:shadow-md">
-            </div>
-            <input id="prange" type="range" min="0" max="5000" step="100" value="5000"
-              class="w-full mt-4 accent-primary" aria-label="Maximum price slider">
-            <p class="text-xs text-ink/60 mt-1">Prices in ৳ (BDT)</p>
-          </div>
+                class="text-xs text-ink/50">6</span></label><label
+              class="flex items-center gap-3 py-1.5 cursor-pointer text-[15px]"><input type="checkbox" name="cat"
+                value="Medical" class="w-5 h-5 accent-primary"><span class="flex-1">Medical</span><span
+                class="text-xs text-ink/50">8</span></label></div>
         </details>
         <details class="border-b-2 border-line py-4" open>
           <summary class="flex justify-between items-center cursor-pointer font-display font-extrabold text-lg">
@@ -1176,6 +1179,326 @@
                 </div>
               </div>
             <button type="button" class="addcart card-cart" aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to cart">Add to cart</button></article>
+          </li>
+                  <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="3252" data-rating="3.8" data-n="20" data-idx="8">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDYyMFwvNjA2MjAtQWNjdWNoZWstSW5zdGFudC1NZXRlci1rZTV6NWkucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" width="600" height="600"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Accu-Chek Instant Blood Glucose Meter (Bluetooth)"
+                  data-name="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" data-price="946" data-old="1,300"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDYyMFwvNjA2MjAtQWNjdWNoZWstSW5zdGFudC1NZXRlci1rZTV6NWkucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Medical</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Accu-Chek Instant Blood Glucose Meter (Bluetooth)</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 3.8 out of 5</span><span
+                  class="text-ink/60">(20)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳3,252</span><s class="text-sm text-ink/50">৳3,285</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="105" data-rating="4.0" data-n="156" data-idx="9">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC8yNzU5N1wvMjc1OTctNC04ZWQ5OHEud2VicCIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Digital Thermometer LCD" width="600"
+                  height="600" loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-35%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Digital Thermometer LCD to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Digital Thermometer LCD"
+                  data-name="Digital Thermometer LCD" data-price="1,299" data-old="2,000"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC8yNzU5N1wvMjc1OTctNC04ZWQ5OHEud2VicCIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Medical</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Digital Thermometer LCD</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.0 out of 5</span><span
+                  class="text-ink/60">(156)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳105</span><s class="text-sm text-ink/50">৳150</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Digital Thermometer LCD to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="3155" data-rating="3.8" data-n="209" data-idx="10">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Mjc0OVwvNTI3NDktT21yb24tSE4tMjg5LWNvcHktaTM1bXlnLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0%3D&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Omron HN-289 Digital Personal Body Weight Scale" width="600"
+                  height="600" loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to wishlist"
+                  aria-pressed="false"><svg class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Omron HN-289 Digital Personal Body Weight Scale"
+                  data-name="Omron HN-289 Digital Personal Body Weight Scale" data-price="999" data-old="1,800"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Mjc0OVwvNTI3NDktT21yb24tSE4tMjg5LWNvcHktaTM1bXlnLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0%3D&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Medical</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2">
+                <a href="product.html" class="hover:text-primary">Omron HN-289 Digital Personal Body Weight Scale</a>
+              </h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 3.8 out of 5</span><span
+                  class="text-ink/60">(209)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳3,155</span><s class="text-sm text-ink/50">৳3,506</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="5674" data-rating="4.9" data-n="262" data-idx="11">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MTQ3OFwvNjE0NzgtT01ST04tTkUtQzI4LXo3MW5tei5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Omron NE-C28 Compressor Nebulizer Machine" width="600"
+                  height="600" loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to wishlist"
+                  aria-pressed="false"><svg class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Omron NE-C28 Compressor Nebulizer Machine"
+                  data-name="Omron NE-C28 Compressor Nebulizer Machine" data-price="135" data-old="199"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MTQ3OFwvNjE0NzgtT01ST04tTkUtQzI4LXo3MW5tei5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Medical</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Omron NE-C28 Compressor Nebulizer Machine</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★★</span><span class="sr-only">Rated 4.9 out of 5</span><span
+                  class="text-ink/60">(262)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳5674</span><s class="text-sm text-ink/50">৳6400</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="1600" data-rating="4.7" data-n="315" data-idx="12">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzFcLzMxMjgyLUp1bXBlci1KUEQtNTAwRC1PTEVELVZlcnNpb24tRmluZ2VydGlwLVB1bHNlLU94aW1ldGVyLUNFLUZEQS1BcHByb3ZlZC1tOXZvLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0%3D&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" width="600" height="600"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-18%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Fingertip Pulse Oximeter OLED Version Jumper JPD-500D"
+                  data-name="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" data-price="799" data-old="980"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzFcLzMxMjgyLUp1bXBlci1KUEQtNTAwRC1PTEVELVZlcnNpb24tRmluZ2VydGlwLVB1bHNlLU94aW1ldGVyLUNFLUZEQS1BcHByb3ZlZC1tOXZvLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0%3D&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Beauty</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Fingertip Pulse Oximeter OLED Version Jumper JPD-500D</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★★</span><span class="sr-only">Rated 4.7 out of 5</span><span
+                  class="text-ink/60">(315)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳1,600</span><s class="text-sm text-ink/50">৳1,650</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="5572" data-rating="4.5" data-n="368" data-idx="13">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81NDc3OVwvNTQ3NzktVHVzaGFyLTItaXM3cThiLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" width="600" height="600"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth"
+                  data-name="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" data-price="749" data-old="950"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81NDc3OVwvNTQ3NzktVHVzaGFyLTItaXM3cThiLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Beauty</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.5 out of 5</span><span
+                  class="text-ink/60">(368)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳5,572</span><s class="text-sm text-ink/50">৳7,388</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="400" data-rating="4.3" data-n="421" data-idx="14">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC8yNzM0M1wvMjczNDMtUGhvdG8tMS10cGM5a2EuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="Novopen 4 Silver Reusable Insulin Pen" width="600"
+                  height="600" loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add Novopen 4 Silver Reusable Insulin Pen to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view Novopen 4 Silver Reusable Insulin Pen"
+                  data-name="Novopen 4 Silver Reusable Insulin Pen" data-price="489" data-old="700"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC8yNzM0M1wvMjczNDMtUGhvdG8tMS10cGM5a2EuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ%3D%3D&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Beauty</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Novopen 4 Silver Reusable Insulin Pen</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.3 out of 5</span><span
+                  class="text-ink/60">(421)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳400</span><s class="text-sm text-ink/50">৳400</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add Novopen 4 Silver Reusable Insulin Pen to cart">Add to cart</button>
+          </article>
+          </li>
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="952" data-rating="4.0" data-n="156" data-idx="15">
+            <article
+            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="relative overflow-hidden bg-primary-soft">
+              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                  src="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzVcLzM1OTM2LUFiZG9taW5hbC1TdXBwb3J0LTktQS0wMS1TaXplLUwtN3AxeS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600"
+                  height="600" loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+              <span
+                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
+              <div class="card-actions"><button type="button"
+                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                  aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
+                    <use href="#i-heart" />
+                  </svg></button><button type="button" class="qv"
+                  aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml"
+                  data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
+                  data-img="https://www.arogga.com/_next/image?url=https%3A%2F%2Fcdn2.arogga.com%2FeyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzVcLzM1OTM2LUFiZG9taW5hbC1TdXBwb3J0LTktQS0wMS1TaXplLUwtN3AxeS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19&w=1280&q=75"
+                  data-href="product.html"><svg class="w-5 h-5">
+                    <use href="#i-eye" />
+                  </svg></button></div>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <p class="text-xs font-bold text-primary">Beauty</p>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">The Ordinary Niacinamide 10% + Zinc 1% – 30ml</a></h3>
+              <p class="ldesc hidden text-sm text-ink/70 mt-2">Tynor Abdominal Support 9″ L (A-01)</p>
+              <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
+                  aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.0 out of 5</span><span
+                  class="text-ink/60">(156)</span></div>
+              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                  class="font-display font-extrabold text-xl">৳952</span><s class="text-sm text-ink/50">৳1,097</s>
+              </div>
+            </div>
+            <button type="button" class="addcart card-cart"
+              aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to cart">Add to cart</button>
+          </article>
           </li>
         </ul>
         <div id="empty" hidden class="mt-5 text-center bg-white border border-line rounded-3xl p-10">

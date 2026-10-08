@@ -28,10 +28,10 @@
   /* #FFF6DE */
 
   /* Neutrals */
-  --color-ink: 15 26 58;
-  /* #0F1A3A  text, dark sections, footer */
-  --color-paper: 255 255 255;
-  /* #FFFFFF  page background */
+  --color-ink: 30 41 59;
+  /* #1E293B  text, dark sections, footer */
+  --color-paper: 250 250 247;
+  /* #FAFAF7  page background (soft, eye-comfort) */
   --color-line: 222 230 243;
   /* #DEE6F3  borders, dividers */
 
@@ -44,7 +44,7 @@
   /* #DC2626 */
 
   /* Fonts (files are in assets/fonts, declared in style.css) */
-  --font-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   /* headings */
-  --font-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }

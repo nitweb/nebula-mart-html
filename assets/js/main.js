@@ -132,13 +132,22 @@
   if (PAGE === 'home') {
     run('hero', function () {
       (function () {
-        var h = document.getElementById('hero'); if (!h) return; var t = document.getElementById('hero-track'), sl = t.children, n = sl.length, i = 0, tm, dots = h.querySelectorAll('[data-dot]');
-        function go(k) { i = (k + n) % n; t.style.transform = 'translateX(-' + i * 100 + '%)';[].forEach.call(sl, function (s, j) { s.setAttribute('aria-hidden', j !== i) }); dots.forEach(function (d, j) { d.setAttribute('aria-current', j === i); d.classList.toggle('w-10', j === i); d.classList.toggle('w-3', j !== i) }) }
+        var h = document.getElementById('hero'); if (!h) return;
+        var t = document.getElementById('hero-track'), sl = [].slice.call(t.children), n = sl.length, i = 0, tm, nt, dots = h.querySelectorAll('[data-dot]');
+        /* endless loop: a copy of the last slide before the first, a copy of the first after the last */
+        function cl(el) { var c = el.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.setAttribute('tabindex', '-1'); c.removeAttribute('role'); c.removeAttribute('aria-label'); [].forEach.call(c.querySelectorAll('img'), function (im) { im.removeAttribute('fetchpriority'); im.loading = 'eager' }); return c }
+        t.insertBefore(cl(sl[n - 1]), t.firstChild); t.appendChild(cl(sl[0]));
+        function place() { t.style.transform = 'translateX(-' + (i + 1) * 100 + '%)' }
+        function mark() { var a = ((i % n) + n) % n; sl.forEach(function (s, j) { s.setAttribute('aria-hidden', j !== a) }); dots.forEach(function (d, j) { d.setAttribute('aria-current', j === a); d.classList.toggle('w-10', j === a); d.classList.toggle('w-3', j !== a) }) }
+        function jump(k) { t.style.transition = 'none'; i = k; place(); void t.offsetWidth; t.style.transition = ''; mark() }   /* invisible reposition */
+        function fix() { clearTimeout(nt); if (i >= n) jump(0); else if (i < 0) jump(n - 1) }
+        function go(k) { if (k > n || k < -1) return; i = k; place(); mark(); clearTimeout(nt); nt = setTimeout(fix, 800) }
+        t.addEventListener('transitionend', function (e) { if (e.target === t) fix() });
         function stop() { clearInterval(tm) }
         function play() { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; stop(); tm = setInterval(function () { go(i + 1) }, 5000) }
         h.querySelector('[data-prev]').onclick = function () { go(i - 1) }; h.querySelector('[data-next]').onclick = function () { go(i + 1) };
-        dots.forEach(function (d, j) { d.onclick = function () { go(j) } });
-        h.addEventListener('mouseenter', stop); h.addEventListener('mouseleave', play); h.addEventListener('focusin', stop); h.addEventListener('focusout', play); go(0); play()
+        dots.forEach(function (d, j) { d.onclick = function () { fix(); go(j) } });
+        h.addEventListener('mouseenter', stop); h.addEventListener('mouseleave', play); h.addEventListener('focusin', stop); h.addEventListener('focusout', play); jump(0); play()
       })();
     });
   }
@@ -151,11 +160,6 @@
         ts.forEach(function (t, i) { t.onclick = function () { m.src = t.dataset.full; m.alt = 'AXIS-Y Glow Serum, view ' + (i + 1); ts.forEach(function (x) { x.classList.replace('border-primary', 'border-line') }); t.classList.replace('border-line', 'border-primary') } });
         var q = document.getElementById('qty');
         document.getElementById('q-').onclick = function () { q.value = Math.max(1, +q.value - 1) }; document.getElementById('q+').onclick = function () { q.value = Math.min(10, +q.value + 1) };
-        var r = document.getElementById('rel-track');
-        document.getElementById('rel-prev').onclick = function () { r.scrollBy({ left: -r.clientWidth * 0.8 }) }; document.getElementById('rel-next').onclick = function () { r.scrollBy({ left: r.clientWidth * 0.8 }) };
-        var tm; function stop() { clearInterval(tm) }
-        function play() { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; stop(); tm = setInterval(function () { if (r.scrollLeft >= r.scrollWidth - r.clientWidth - 4) r.scrollTo({ left: 0 }); else r.scrollBy({ left: r.firstElementChild.offsetWidth + 16 }) }, 3000) }
-        ['mouseenter', 'focusin', 'touchstart'].forEach(function (e) { r.addEventListener(e, stop, { passive: true }) });['mouseleave', 'focusout', 'touchend'].forEach(function (e) { r.addEventListener(e, play, { passive: true }) }); play();
         var tabs = [].slice.call(document.querySelectorAll('.tab'));
         function sel(x0) { tabs.forEach(function (x) { var on = x === x0; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; x.classList.toggle('bg-primary', on); x.classList.toggle('text-white', on); x.classList.toggle('bg-white', !on); document.getElementById(x.getAttribute('aria-controls')).hidden = !on }) }
         tabs.forEach(function (x, i) { x.onclick = function () { sel(x) }; x.onkeydown = function (e) { var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (k) { var n = tabs[(i + k + tabs.length) % tabs.length]; sel(n); n.focus() } } });

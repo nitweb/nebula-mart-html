@@ -773,7 +773,7 @@
             </svg></button>
         </div>
       </div>
-      <ul id="cat-track" class="cat-track">
+      <ul id="cat-track" class="cat-track" data-loop="3500" data-loop-prev="[data-cat-prev]" data-loop-next="[data-cat-next]">
 
         <li class="cat-slide">
           <a href="shop.html"
@@ -851,20 +851,6 @@
         }
       }
     </style>
-    <script>
-      (function () {
-        var t = document.getElementById('cat-track'); if (!t) return;
-        var p = document.querySelector('[data-cat-prev]'), n = document.querySelector('[data-cat-next]'), h = false, tm;
-        function step() { return t.clientWidth * 0.8 }
-        function next() { if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 4) t.scrollTo({ left: 0 }); else t.scrollBy({ left: step() }) }
-        function prev() { if (t.scrollLeft <= 4) t.scrollTo({ left: t.scrollWidth }); else t.scrollBy({ left: -step() }) }
-        n.addEventListener('click', next); p.addEventListener('click', prev);
-        function play() { clearInterval(tm); tm = setInterval(function () { if (!h) next() }, 3500) }
-        t.addEventListener('mouseenter', function () { h = true }); t.addEventListener('mouseleave', function () { h = false });
-        t.addEventListener('touchstart', function () { h = true }, { passive: true }); t.addEventListener('touchend', function () { h = false }, { passive: true });
-        play();
-      })();
-    </script>
 
 
     <section class="max-w-7xl mx-auto px-4 lg:px-6 mt-14" aria-labelledby="h-flash">
@@ -2460,6 +2446,7 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/loop-slider.js" defer></script>
   <script src="assets/js/pages/electronics-api.js" defer></script>
   <script src="assets/js/pages/medical-api.js" defer></script>
 </body>

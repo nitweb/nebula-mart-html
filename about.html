@@ -12,7 +12,7 @@
   <meta property="og:title" content="NEBULA MART | Online Shopping in Bangladesh: Fashion, Electronics, Beauty">
   <meta property="og:description"
     content="Shop fashion, electronics, home, beauty and grocery online in Bangladesh. Pay with cash on delivery. Fast delivery and 7-day returns.">
-  <meta property="og:url" content="https://www.nebulamart.com/">
+  <meta property="og:url" content="https://nitweb.github.io/nebula-mart-html/">
   <meta property="og:image" content="assets/images/hero/fashion.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="rgb(var(--color-primary))">
@@ -20,11 +20,14 @@
   <meta name="theme-color" content="#0B3A8C">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/pages/icons.css">
   <link rel="stylesheet" href="assets/css/pages/common.css">
   <link rel="stylesheet" href="assets/css/pages/about.css">
   <link rel="stylesheet" href="assets/css/refresh.css">
+  <link rel="stylesheet" href="assets/css/pages/extras.css">
 </head>
 
 <body class="antialiased" data-page="about">
@@ -145,7 +148,7 @@
           </a>
 
           <!-- Search (desktop) -->
-          <form action="/search" method="GET" role="search" class="hidden lg:flex flex-1 max-w-2xl mx-auto">
+          <form action="shop.html" method="GET" role="search" class="hidden lg:flex flex-1 max-w-2xl mx-auto">
             <div
               class="flex w-full rounded-2xl border border-line bg-paper overflow-hidden focus-within:shadow-md transition-shadow">
               <label class="sr-only" for="search-q">Search products</label>
@@ -221,7 +224,7 @@
         </div>
 
         <!-- Search (mobile) -->
-        <form action="/search" method="GET" role="search" class="lg:hidden pb-3">
+        <form action="shop.html" method="GET" role="search" class="lg:hidden pb-3">
           <div class="flex rounded-xl border border-line bg-paper overflow-hidden">
             <label class="sr-only" for="search-m">Search products</label>
             <input id="search-m" type="search" name="q" placeholder="Search products…"
@@ -551,8 +554,8 @@
 
           <li><a href="shop.html"
               class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">Sports</a></li>
-          <li class="ml-auto"><a href="shop.html"
-              class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">New in</a></li>
+          <li class="ml-auto"><a href="track.html"
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Track order</a></li>
           <li>
             <a href="shop.html"
               class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[15px] bg-primary text-white hover:brightness-95">
@@ -648,7 +651,7 @@
           </details>
         </li>
         <li><a href="shop.html" class="block py-3.5">Sports</a></li>
-        <li><a href="shop.html" class="block py-3.5">New in</a></li>
+        <li><a href="track.html" class="block py-3.5">Track order</a></li>
         <li><a href="wishlist.html" class="block py-3.5">Wishlist</a></li>
         <li><a href="shop.html" class="block my-3 text-center bg-primary text-white rounded-xl py-3">Flash deals</a>
         </li>
@@ -722,14 +725,12 @@
             </ol>
           </nav>
           <h1>A Bangladeshi marketplace built on honest prices and fast delivery.</h1>
-          <p class="abt-hero__sub">NEBULA MART brings fashion, electronics, beauty, home and grocery from trusted
-            sellers to your door, anywhere in the country.</p>
+          <p class="abt-hero__sub">NEBULA MART brings fashion, electronics, beauty, home and grocery from trusted brands to your door, anywhere in the country.</p>
           <div class="abt-hero__act"><a href="shop.html" class="btn btn--accent">Start shopping <span
-                class="ic ic-arrow" aria-hidden="true"></span></a><a href="sell.html" class="btn btn--line">Sell with
-              us</a></div>
+                class="ic ic-arrow" aria-hidden="true"></span></a></div>
         </div>
         <figure class="abt-photo"><img
-            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1000&q=80" referrerpolicy="no-referrer"
+            src="assets/images/about/photo-1607082348824-0a96f2a4b9da.webp" referrerpolicy="no-referrer"
             alt="Shopping bags from a day of shopping" width="1000" height="800" fetchpriority="high">
           <figcaption><span class="ic ic-pin" aria-hidden="true"></span> Made in Dhaka</figcaption>
         </figure>
@@ -739,20 +740,20 @@
       <div class="stats">
         <div class="stat"><b data-to="50" data-dec="0" data-suf="K+">50K+</b><span>Orders delivered</span></div>
         <div class="stat"><b data-to="64" data-dec="0" data-suf="">64</b><span>Districts covered</span></div>
-        <div class="stat"><b data-to="2000" data-dec="0" data-suf="+">2,000+</b><span>Verified sellers</span></div>
+        <div class="stat"><b data-to="5000" data-dec="0" data-suf="+">5,000+</b><span>Products available</span></div>
       </div>
     </div>
     <section class="sec">
       <div class="wrap story">
         <div class="story__img"><img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" referrerpolicy="no-referrer"
+            src="assets/images/about/photo-1586528116311-ad8dd3c8310d.webp" referrerpolicy="no-referrer"
             alt="Orders being packed in a warehouse" width="900" height="1100" loading="lazy">
           <div class="tag"><b>64</b>districts, one marketplace</div>
         </div>
         <div>
           <h2>Who we are</h2>
           <p>NEBULA MART is an online marketplace based in Dhaka. We bring fashion, electronics, beauty, home and
-            grocery products from trusted sellers to your door, anywhere in Bangladesh.</p>
+            grocery products from trusted brands to your door, anywhere in Bangladesh.</p>
           <p>We keep things simple: clear prices in taka, cash on delivery, and an easy return
             policy.</p>
           <ul>
@@ -775,7 +776,7 @@
           <article class="mv__card mv__card--v"><span class="ic ic-eye" aria-hidden="true"></span>
             <h3>Our vision</h3>
             <p>To become the most trusted marketplace in Bangladesh, where every district is as well served as the
-              capital and every good seller can reach every buyer.</p>
+              capital and every buyer can find what they need.</p>
           </article>
         </div>
       </div>
@@ -804,12 +805,12 @@
             <p>Friendly support in Bangla and English, and a return policy that is easy to use.</p>
           </article>
           <article class="card val"><span class="ic ic-users" aria-hidden="true"></span>
-            <h3>Respect for sellers</h3>
-            <p>We work with verified sellers and help local businesses grow online.</p>
+            <h3>Respect for partners</h3>
+            <p>We work with verified brands and help local businesses grow online.</p>
           </article>
           <article class="card val"><span class="ic ic-gem" aria-hidden="true"></span>
             <h3>Quality you can trust</h3>
-            <p>Products come from trusted sellers, and we act quickly when something is not right.</p>
+            <p>Products come from trusted brands, and we act quickly when something is not right.</p>
           </article>
         </div>
       </div>
@@ -818,12 +819,12 @@
       <div class="wrap">
         <div class="sec__head">
           <h2>How an order reaches you</h2>
-          <p>A simple, careful process from the seller to your door.</p>
+          <p>A simple, careful process from the warehouse to your door.</p>
         </div>
         <ol class="how">
           <li>
-            <h3>Trusted sellers</h3>
-            <p>We bring on verified sellers so you can shop with confidence.</p>
+            <h3>Trusted brands</h3>
+            <p>We bring on verified brands so you can shop with confidence.</p>
           </li>
           <li>
             <h3>Careful checks</h3>
@@ -847,12 +848,12 @@
         </div>
         <div class="gal">
           <figure><img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" referrerpolicy="no-referrer"
+              src="assets/images/about/photo-1522202176988-66273c2fd55f.webp" referrerpolicy="no-referrer"
               alt="Our team working together" width="900" height="600" loading="lazy"></figure>
           <figure><img
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer"
+              src="assets/images/about/photo-1578575437130-527eed3abbec.webp" referrerpolicy="no-referrer"
               alt="Packages ready to ship" width="600" height="600" loading="lazy"></figure>
-          <figure><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer"
+          <figure><img src="assets/images/about/photo-1556742049-0cfed4f6a45d.webp" referrerpolicy="no-referrer"
               alt="A customer shopping" width="600" height="600" loading="lazy"></figure>
         </div>
       </div>
@@ -861,11 +862,11 @@
       <div class="wrap">
         <div class="cta">
           <div>
-            <h2>Shop with confidence, or grow with us.</h2>
-            <p>Find something you love today, or open your own shop on NEBULA MART.</p>
+            <h2>Shop with confidence.</h2>
+            <p>Find something you love today.</p>
           </div>
           <div class="cta__act"><a href="shop.html" class="btn btn--accent">Shop now <span class="ic ic-arrow"
-                aria-hidden="true"></span></a><a href="sell.html" class="btn btn--line">Become a seller</a></div>
+                aria-hidden="true"></span></a></div>
         </div>
       </div>
     </section>
@@ -889,7 +890,7 @@
             <span class="font-display font-extrabold text-3xl tracking-tight">NEBULA MART</span>
           </a>
           <p class="text-white/70 max-w-sm leading-relaxed">Fashion, gadgets, home, beauty and groceries from trusted
-            sellers, delivered across Bangladesh.</p>
+            brands, delivered across Bangladesh.</p>
           <div class="flex gap-2.5 mt-6">
             <a href="shop.html"
               class="w-11 h-11 rounded-xl bg-white/10 hover:bg-primary grid place-items-center transition-colors"
@@ -941,7 +942,6 @@
           <h3 class="font-display font-extrabold text-lg text-accent mb-4">Company</h3>
           <ul class="grid gap-2.5 text-white/75">
             <li><a href="about.html" class="hover:text-white">About us</a></li>
-            <li><a href="sell.html" class="hover:text-white">Sell on NEBULA MART</a></li>
             <li><a href="careers.html" class="hover:text-white">Careers</a></li>
             <li><a href="privacy.html" class="hover:text-white">Privacy policy</a></li>
             <li><a href="terms.html" class="hover:text-white">Terms of service</a></li>
@@ -951,9 +951,9 @@
         <div class="col-span-2 md:col-span-2 lg:col-span-2">
           <h3 class="font-display font-extrabold text-lg text-accent mb-4">Contact</h3>
           <ul class="grid gap-2.5 text-white/75 text-[15px]">
-            <li>Hotline: <a href="tel:+8809600000000" class="text-white font-bold">09600-000000</a></li>
+            <li>Hotline: <a href="tel:+8801711927829" class="text-white font-bold">01711-927829</a></li>
             <li><a href="mailto:hello@nebulamart.com" class="hover:text-white">hello@nebulamart.com</a></li>
-            <li>House 12, Road 5, Dhanmondi, Dhaka 1205</li>
+            <li>4th floor, Razia Plaza, 184, Senpara Parbata, Dhaka 1216</li>
           </ul>
         </div>
       </div>
@@ -963,10 +963,16 @@
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-5">
           <p class="text-sm text-white/60 order-2 md:order-1">© <span id="year">2026</span> NEBULA MART. All rights
             reserved.</p>
-          <ul class="flex flex-wrap justify-center gap-2 order-1 md:order-2 text-xs font-extrabold"
-            aria-label="Accepted payment methods">
-            <li class="px-3 py-1.5 rounded-lg bg-accent text-ink">Cash on delivery</li>
-          </ul>
+          <div class="ft-badges order-1 md:order-2">
+            <ul class="ft-badges__row" aria-label="Accepted payment method">
+              <li class="ft-badge ft-badge--cod">Cash on delivery</li>
+            </ul>
+            <ul class="ft-badges__row" aria-label="Delivery partners">
+              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Pathao</li>
+              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Steadfast</li>
+              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>RedX</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1001,8 +1007,10 @@
     role="status" aria-live="polite"></div>
 
 
+  <script src="assets/js/search-index.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/pages/about.js" defer></script>
+  <script src="assets/js/chat.js" defer></script>
 </body>
 
 </html>

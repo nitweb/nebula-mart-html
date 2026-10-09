@@ -12,7 +12,7 @@
   <meta property="og:title" content="NEBULA MART | Online Shopping in Bangladesh: Fashion, Electronics, Beauty">
   <meta property="og:description"
     content="Shop fashion, electronics, home, beauty and grocery online in Bangladesh. Pay with cash on delivery. Fast delivery and 7-day returns.">
-  <meta property="og:url" content="https://www.nebulamart.com/">
+  <meta property="og:url" content="https://nitweb.github.io/nebula-mart-html/">
   <meta property="og:image" content="assets/images/hero/fashion.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="rgb(var(--color-primary))">
@@ -20,11 +20,14 @@
   <meta name="theme-color" content="#0B3A8C">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/pages/icons.css">
   <link rel="stylesheet" href="assets/css/pages/common.css">
   <link rel="stylesheet" href="assets/css/pages/info.css">
   <link rel="stylesheet" href="assets/css/refresh.css">
+  <link rel="stylesheet" href="assets/css/pages/extras.css">
 </head>
 
 <body class="antialiased" data-page="privacy">
@@ -145,7 +148,7 @@
           </a>
 
           <!-- Search (desktop) -->
-          <form action="/search" method="GET" role="search" class="hidden lg:flex flex-1 max-w-2xl mx-auto">
+          <form action="shop.html" method="GET" role="search" class="hidden lg:flex flex-1 max-w-2xl mx-auto">
             <div
               class="flex w-full rounded-2xl border border-line bg-paper overflow-hidden focus-within:shadow-md transition-shadow">
               <label class="sr-only" for="search-q">Search products</label>
@@ -221,7 +224,7 @@
         </div>
 
         <!-- Search (mobile) -->
-        <form action="/search" method="GET" role="search" class="lg:hidden pb-3">
+        <form action="shop.html" method="GET" role="search" class="lg:hidden pb-3">
           <div class="flex rounded-xl border border-line bg-paper overflow-hidden">
             <label class="sr-only" for="search-m">Search products</label>
             <input id="search-m" type="search" name="q" placeholder="Search products…"
@@ -551,8 +554,8 @@
 
           <li><a href="shop.html"
               class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">Sports</a></li>
-          <li class="ml-auto"><a href="shop.html"
-              class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">New in</a></li>
+          <li class="ml-auto"><a href="track.html"
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Track order</a></li>
           <li>
             <a href="shop.html"
               class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[15px] bg-primary text-white hover:brightness-95">
@@ -648,7 +651,7 @@
           </details>
         </li>
         <li><a href="shop.html" class="block py-3.5">Sports</a></li>
-        <li><a href="shop.html" class="block py-3.5">New in</a></li>
+        <li><a href="track.html" class="block py-3.5">Track order</a></li>
         <li><a href="wishlist.html" class="block py-3.5">Wishlist</a></li>
         <li><a href="shop.html" class="block my-3 text-center bg-primary text-white rounded-xl py-3">Flash deals</a>
         </li>
@@ -785,8 +788,7 @@
             </article>
             <article class="clause" id="payments">
               <h2>Payments</h2>
-              <p>Card and mobile banking details are handled by our payment partners. We never store your full card
-                number.</p>
+              <p>We accept cash on delivery only, so we do not collect or store any card or mobile banking details.</p>
             </article>
             <article class="clause" id="cookies">
               <h2>Cookies</h2>
@@ -834,7 +836,7 @@
             <span class="font-display font-extrabold text-3xl tracking-tight">NEBULA MART</span>
           </a>
           <p class="text-white/70 max-w-sm leading-relaxed">Fashion, gadgets, home, beauty and groceries from trusted
-            sellers, delivered across Bangladesh.</p>
+            brands, delivered across Bangladesh.</p>
           <div class="flex gap-2.5 mt-6">
             <a href="shop.html"
               class="w-11 h-11 rounded-xl bg-white/10 hover:bg-primary grid place-items-center transition-colors"
@@ -886,7 +888,6 @@
           <h3 class="font-display font-extrabold text-lg text-accent mb-4">Company</h3>
           <ul class="grid gap-2.5 text-white/75">
             <li><a href="about.html" class="hover:text-white">About us</a></li>
-            <li><a href="sell.html" class="hover:text-white">Sell on NEBULA MART</a></li>
             <li><a href="careers.html" class="hover:text-white">Careers</a></li>
             <li><a href="privacy.html" class="hover:text-white">Privacy policy</a></li>
             <li><a href="terms.html" class="hover:text-white">Terms of service</a></li>
@@ -896,9 +897,9 @@
         <div class="col-span-2 md:col-span-2 lg:col-span-2">
           <h3 class="font-display font-extrabold text-lg text-accent mb-4">Contact</h3>
           <ul class="grid gap-2.5 text-white/75 text-[15px]">
-            <li>Hotline: <a href="tel:+8809600000000" class="text-white font-bold">09600-000000</a></li>
+            <li>Hotline: <a href="tel:+8801711927829" class="text-white font-bold">01711-927829</a></li>
             <li><a href="mailto:hello@nebulamart.com" class="hover:text-white">hello@nebulamart.com</a></li>
-            <li>House 12, Road 5, Dhanmondi, Dhaka 1205</li>
+            <li>4th floor, Razia Plaza, 184, Senpara Parbata, Dhaka 1216</li>
           </ul>
         </div>
       </div>
@@ -908,10 +909,16 @@
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-5">
           <p class="text-sm text-white/60 order-2 md:order-1">© <span id="year">2026</span> NEBULA MART. All rights
             reserved.</p>
-          <ul class="flex flex-wrap justify-center gap-2 order-1 md:order-2 text-xs font-extrabold"
-            aria-label="Accepted payment methods">
-            <li class="px-3 py-1.5 rounded-lg bg-accent text-ink">Cash on delivery</li>
-          </ul>
+          <div class="ft-badges order-1 md:order-2">
+            <ul class="ft-badges__row" aria-label="Accepted payment method">
+              <li class="ft-badge ft-badge--cod">Cash on delivery</li>
+            </ul>
+            <ul class="ft-badges__row" aria-label="Delivery partners">
+              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Pathao</li>
+              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Steadfast</li>
+              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>RedX</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -946,8 +953,10 @@
     role="status" aria-live="polite"></div>
 
 
+  <script src="assets/js/search-index.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/pages/info.js" defer></script>
+  <script src="assets/js/chat.js" defer></script>
 </body>
 
 </html>

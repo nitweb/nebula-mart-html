@@ -1,0 +1,90 @@
+/* NEBULA MART: chat buttons, flash countdown, footer badges, PDP zoom */
+:root { --chat-bottom: 1.25rem; }
+
+/* Floating contact launcher (one button -> Call / WhatsApp / Messenger / Hide) */
+:root { --chat-color: 155 61 240; --cart-gap: 4.5rem; }
+.chat-fab { position: fixed; right: 1rem; bottom: var(--chat-bottom); z-index: 60; display: flex; flex-direction: column; align-items: center; gap: .75rem; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.chat-fab__list { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+.chat-fab__item, .chat-fab__toggle { position: relative; width: 3.5rem; height: 3.5rem; border-radius: 9999px; border: 0; padding: 0; display: grid; place-items: center; color: #fff; cursor: pointer; box-shadow: 0 8px 22px rgb(0 0 0 / .3); transition: transform .2s ease, box-shadow .2s ease; }
+.chat-fab__item:hover, .chat-fab__item:focus-visible, .chat-fab__toggle:hover { transform: scale(1.07); }
+.chat-fab__item:focus-visible, .chat-fab__toggle:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 5px rgb(var(--color-primary)); }
+.chat-fab svg { width: 1.6rem; height: 1.6rem; }
+.chat-fab__call { background: #3b82f6; }
+.chat-fab__wa { background: #25d366; }
+.chat-fab__ms { background: linear-gradient(135deg, #00b2ff, #006aff 55%, #a334fa); }
+.chat-fab__toggle { background: rgb(var(--chat-color)); }
+.chat-fab__dot { position: absolute; top: -1px; right: -1px; width: .8rem; height: .8rem; border-radius: 9999px; background: #34d399; border: 2px solid #fff; box-sizing: border-box; }
+.chat-fab__ic { grid-area: 1 / 1; display: grid; place-items: center; transition: opacity .15s ease, transform .2s ease; }
+.chat-fab__ic--close { opacity: 0; transform: rotate(-90deg) scale(.6); }
+/* soft pulse ring while collapsed */
+.chat-fab__toggle::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: rgb(var(--chat-color)); opacity: .45; z-index: -1; animation: chat-ring 2.4s ease-out infinite; }
+@keyframes chat-ring { to { transform: scale(1.7); opacity: 0; } }
+/* labels */
+.chat-fab__tip { position: absolute; right: calc(100% + .65rem); top: 50%; transform: translateY(-50%) translateX(4px); padding: .4rem .8rem; border-radius: .6rem; background: #111827; color: #fff; font-size: .8125rem; font-weight: 600; line-height: 1; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .15s ease, transform .15s ease; }
+.chat-fab__item:hover .chat-fab__tip, .chat-fab__item:focus-visible .chat-fab__tip { opacity: 1; transform: translateY(-50%); }
+/* closed vs open */
+.chat-fab__list { display: none; }
+.chat-fab.is-open .chat-fab__list { display: flex; }
+.chat-fab.is-open .chat-fab__item { animation: chat-pop .22s ease both; }
+.chat-fab.is-open .chat-fab__item:nth-child(3) { animation-delay: 0s; }
+.chat-fab.is-open .chat-fab__item:nth-child(2) { animation-delay: .05s; }
+.chat-fab.is-open .chat-fab__item:nth-child(1) { animation-delay: .1s; }
+@keyframes chat-pop { from { opacity: 0; transform: translateY(12px) scale(.7); } }
+.chat-fab.is-open .chat-fab__toggle { background: #e11d2e; }
+.chat-fab.is-open .chat-fab__toggle::before, .chat-fab.is-open .chat-fab__toggle .chat-fab__dot { display: none; }
+.chat-fab.is-open .chat-fab__ic--open { opacity: 0; transform: rotate(90deg) scale(.6); }
+.chat-fab.is-open .chat-fab__ic--close { opacity: 1; transform: none; }
+.chat-fab.is-open .chat-fab__tip--hide { opacity: 1; transform: translateY(-50%); }
+@media (max-width: 640px) { .chat-fab__item, .chat-fab__toggle { width: 3.25rem; height: 3.25rem; } .chat-fab { right: .75rem; } }
+@media (prefers-reduced-motion: reduce) { .chat-fab__toggle::before { animation: none; display: none; } .chat-fab.is-open .chat-fab__item { animation: none; } .chat-fab__item, .chat-fab__toggle, .chat-fab__ic, .chat-fab__tip { transition: none; } }
+@media print { .chat-fab { display: none; } }
+
+/* Floating cart: original right-edge tab on big screens (style.css).
+   On laptop widths it moves down so it never covers the hero slider's arrows,
+   and sits just above the contact button. Slider arrows stay where they were. */
+@media (min-width: 769px) and (max-width: 1520px) {
+  #float-cart { top: 35%; bottom: auto; transform: none; }
+  #float-cart.fc-pulse { animation-name: fc-pulse-m; }
+}
+/* Phones/tablets: cart sits in the bottom-right stack, above the contact button */
+@media (max-width: 768px) {
+  #float-cart { bottom: calc(var(--chat-bottom) + var(--cart-gap) + env(safe-area-inset-bottom, 0px)); right: .75rem; }
+}
+/* the opened contact list takes the cart's spot while it is open */
+@media (max-width: 1520px) {
+  body:has(.chat-fab.is-open) #float-cart { opacity: 0; pointer-events: none; transition: opacity .15s ease; }
+}
+
+/* Flash deals countdown: single-row premium capsule */
+.flash-side { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; justify-content: flex-end; }
+.fc { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .4rem .35rem .95rem; border-radius: 999px; color: #fff; white-space: nowrap;
+  background: linear-gradient(135deg, rgb(var(--color-primary-dark)), rgb(var(--color-primary)) 70%);
+  box-shadow: 0 10px 24px -12px rgb(var(--color-primary) / .8), inset 0 0 0 1px rgb(255 255 255 / .1), inset 0 1px 0 rgb(255 255 255 / .18); }
+.fc__label { display: inline-flex; align-items: center; gap: .35rem; margin-right: .3rem; font-size: .75rem; font-weight: 700; letter-spacing: .02em; color: rgb(var(--color-accent)); }
+.fc__label svg { filter: drop-shadow(0 0 6px rgb(var(--color-accent) / .7)); }
+.fc__box { position: relative; display: inline-flex; align-items: baseline; justify-content: center; gap: .15rem; min-width: 2.9rem; padding: .4rem .55rem; border-radius: .7rem; line-height: 1;
+  background: rgb(255 255 255 / .12); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .1); }
+.fc__box::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgb(0 0 0 / .22); pointer-events: none; }
+.fc__box b { font-family: var(--font-display, inherit); font-size: 1.1rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.fc__box small { font-size: .625rem; font-weight: 700; opacity: .7; }
+.fc__box--s { background: rgb(var(--color-accent)); color: rgb(var(--color-ink)); box-shadow: none; }
+.fc__box--s small { opacity: .7; }
+.fc__sep { width: 4px; height: 12px; background: radial-gradient(circle, rgb(255 255 255 / .75) 1.5px, transparent 2px) 50% 20% / 4px 6px repeat-y; animation: fc-blink 1s steps(2, jump-none) infinite; }
+@keyframes fc-blink { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .fc__sep { animation: none; } }
+@media (max-width: 640px) { .flash-side { width: 100%; justify-content: space-between; } .fc { padding-left: .7rem; } .fc__box { min-width: 2.5rem; padding: .35rem .4rem; } .fc__label { margin-right: .1rem; } }
+
+/* Footer badges */
+.ft-badges { display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+@media (min-width: 768px) { .ft-badges { align-items: flex-end; } }
+.ft-badges__row { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; font-size: .75rem; font-weight: 800; }
+.ft-badge { display: inline-flex; align-items: center; gap: .35rem; padding: .375rem .75rem; border-radius: .5rem; }
+.ft-badge--cod { background: rgb(var(--color-accent)); color: rgb(var(--color-ink)); }
+.ft-badge--courier { background: rgb(255 255 255 / .1); color: #fff; border: 1px solid rgb(255 255 255 / .25); }
+
+/* PDP image zoom */
+[data-zoom] { cursor: zoom-in; touch-action: pan-y; }
+[data-zoom] img { transition: transform .25s ease; transform-origin: 50% 50%; will-change: transform; }
+[data-zoom].is-zoomed { cursor: zoom-out; }
+[data-zoom].is-zoomed img { transform: scale(2.2); transition: transform .12s ease-out; }
+@media (prefers-reduced-motion: reduce) { [data-zoom] img, .chat-fab a { transition: none; } }

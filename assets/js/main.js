@@ -58,9 +58,9 @@
   if (true) {
     run('store', function () {
       window.RD = (function () {
-        var DEF = [{ id: 'axis-y-glow-serum', name: 'AXIS-Y Dark Spot Correcting Glow Serum – 50ml', img: 'https://bk.shajgoj.com/storage/2023/09/AXIS-Y_Dark_Spot_Correcting_Glow_Serum_aa3016a8-b55b-4300-9c6f-0e268d4d09dd_1000x.jpg', variant: 'Size: 50ml', price: 1299, old: 2000, qty: 1 },
-        { id: 'cotton-panjabi-oxxo', name: 'OXXO Premium Cotton Panjabi for Men', img: 'https://static-01.daraz.com.bd/p/cd3f9075872dc0870834f28ba6c2d397.jpg', variant: 'Size: L', price: 946, old: 1300, qty: 1 },
-        { id: 'the-ordinary-niacinamide', name: 'The Ordinary Niacinamide 10% + Zinc 1% – 30ml', img: 'https://bk.shajgoj.com/storage/2026/05/4559.jpg', variant: '30ml', price: 1099, old: 1650, qty: 2 }];
+        var DEF = [{ id: 'axis-y-glow-serum', name: 'AXIS-Y Dark Spot Correcting Glow Serum – 50ml', img: 'assets/images/products/axis-y-dark-spot-correcting-glow-serum-50ml.webp', variant: 'Size: 50ml', price: 1299, old: 2000, qty: 1 },
+        { id: 'cotton-panjabi-oxxo', name: 'OXXO Premium Cotton Panjabi for Men', img: 'assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp', variant: 'Size: L', price: 946, old: 1300, qty: 1 },
+        { id: 'the-ordinary-niacinamide', name: 'The Ordinary Niacinamide 10% + Zinc 1% – 30ml', img: 'assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp', variant: '30ml', price: 1099, old: 1650, qty: 2 }];
         var ZONES = { dhaka: { label: 'Inside Dhaka', fee: 70, eta: '1-2 days', days: 2 }, sub: { label: 'Sub-Dhaka', fee: 100, eta: '2-3 days', days: 3 }, out: { label: 'Outside Dhaka', fee: 150, eta: '3-5 days', days: 5 } };
         function get(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d } catch (e) { return d } }
         function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) { } }
@@ -167,7 +167,7 @@
     });
   }
 
-  /* shop: merge API electronics into the static real products */
+  /* shop: merge static electronics (assets/js/electronics-data.js) into the real products */
   function shopApi(done) {
     var grid = document.getElementById('shop-grid'), fin = false;
     function finish() { if (fin) return; fin = true; counts(); done() }
@@ -186,8 +186,7 @@
       return '<li data-cat="Electronics" data-brand="" data-color="" data-size="" data-price="' + price + '" data-n="' + (10 + k) + '" data-idx="' + (100 + k) + '"><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full"><div class="relative overflow-hidden bg-primary-soft"><a href="' + href + '" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="' + img + '" referrerpolicy="no-referrer" alt="' + name + '" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a><div class="card-actions"><button type="button" class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button><button type="button" class="qv" aria-label="Quick view ' + name + '" data-name="' + name + '" data-price="' + pf + '" data-old="" data-desc="' + esc(p.description) + '" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div></div><div class="p-4 flex flex-col flex-1"><p class="text-xs font-bold text-primary">Electronics</p><h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="' + href + '" class="hover:text-primary">' + name + '</a></h3><p class="ldesc hidden text-sm text-ink/70 mt-2">' + esc(p.description) + '</p><div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳' + pf + '</span></div></div><button type="button" class="addcart card-cart" aria-label="Add ' + name + ' to cart">Add to cart</button></article></li>'
     }
     var t = setTimeout(finish, 10000);
-    fetch('https://api.graphicdesigncourse.net/api/products', { headers: { 'Accept': 'application/json' } })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json() })
+    Promise.resolve({ data: window.NM_ELECTRONICS || [] })
       .then(function (j) {
         var list = Array.isArray(j) ? j : j && (Array.isArray(j.data) ? j.data : j.data && Array.isArray(j.data.data) ? j.data.data : Array.isArray(j.products) ? j.products : null);
         if (!list) throw new Error('Unexpected API response');
@@ -362,7 +361,7 @@
       (function () {
         var $ = function (i) { return document.getElementById(i) }, D = RD.DEF;
         var L = RD.last() || { no: 'RD26100312345', at: new Date().toISOString(), name: 'Rahim Uddin', phone: '01712345678', email: 'rahim@example.com', division: 'Dhaka', district: 'Dhaka', area: 'Dhanmondi', address: 'House 12, Road 5', note: '', pay: 'cod', trx: '', zone: 'dhaka', items: D, t: RD.totals(D, { zone: 'dhaka', coupon: '' }) };
-        var Z = RD.ZONES[L.zone] || RD.ZONES.dhaka, PN = { cod: 'Cash on delivery', bkash: 'bKash', nagad: 'Nagad', card: 'Debit or credit card', bank: 'Bank transfer' };
+        var Z = RD.ZONES[L.zone] || RD.ZONES.dhaka, PN = { cod: 'Cash on delivery' };
         $('who').textContent = L.name.split(' ')[0]; $('no').textContent = L.no;
         $('sent').textContent = 'We sent a confirmation to ' + L.email + ' and will text ' + L.phone + ' when your order ships.';
         $('items').innerHTML = L.items.map(function (i) { return '<li class="flex items-center gap-4"><img referrerpolicy="no-referrer" src="' + i.img + '" alt="' + i.name + '" width="300" height="300" class="w-16 h-16 rounded-xl object-cover border border-line"><div class="flex-1 min-w-0"><p class="font-bold leading-snug">' + i.name + '</p><p class="text-sm text-ink/60">' + i.variant + ' · Qty ' + i.qty + '</p></div><p class="font-bold">' + RD.tk(i.price * i.qty) + '</p></li>' }).join('');
@@ -371,8 +370,8 @@
         if (L.note) { $('a-note').hidden = false; $('a-note').textContent = 'Note: ' + L.note }
         var d = new Date(L.at); d.setDate(d.getDate() + Z.days);
         $('eta').textContent = Z.label + ', within ' + Z.eta + ' (by ' + d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }) + ')';
-        $('p-name').textContent = PN[L.pay];
-        $('p-status').textContent = L.pay === 'cod' ? 'Please pay ' + RD.tk(t.total) + ' in cash on delivery.' : L.pay === 'card' ? 'Complete your card payment on the secure gateway to confirm the order.' : 'We are verifying your payment' + (L.trx ? ' (ref ' + L.trx + ')' : '') + '. You will get a message once it is confirmed.';
+        $('p-name').textContent = PN[L.pay] || PN.cod;
+        $('p-status').textContent = 'Please pay ' + RD.tk(t.total) + ' in cash on delivery.';
         $('copy').onclick = function () { try { navigator.clipboard.writeText(L.no) } catch (e) { } this.textContent = 'Copied' };
         RD.hdr(RD.cart())
       })();
@@ -423,7 +422,8 @@
     }
     function load() {
       if (cache) return Promise.resolve(cache);
-      if (!loading) loading = fetch('shop.html', { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text() }).then(function (t) { return (cache = parse(t)) }).catch(function () { loading = null; return [] });
+      if (window.NM_SEARCH && window.NM_SEARCH.length) return Promise.resolve((cache = window.NM_SEARCH));
+      if (!loading) loading = fetch('shop.html', { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text() }).then(function (t) { return (cache = parse(t)) }).catch(function () { loading = null; return null });
       return loading;
     }
     forms.forEach(function (form) {
@@ -440,6 +440,7 @@
         show('<div class="s-msg">Searching…</div>');
         load().then(function (all) {
           if (id !== seq) return;
+          if (!all) { show('<a class="s-all" href="shop.html?q=' + encodeURIComponent(q) + '">Search for “' + esc(q) + '” in shop</a>'); return }
           var toks = q.toLowerCase().split(/\s+/).filter(Boolean), re = new RegExp('(' + toks.map(rx).join('|') + ')', 'gi');
           var hit = all.filter(function (p) { var h = (p.name + ' ' + p.cat + ' ' + p.brand).toLowerCase(); return toks.every(function (t) { return h.indexOf(t) >= 0 }) });
           if (!hit.length) { show('<div class="s-msg">No products found for “' + esc(q) + '”</div>'); return }

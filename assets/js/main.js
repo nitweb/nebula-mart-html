@@ -44,7 +44,7 @@
         function cq() { qv.classList.add('hidden') }
         document.addEventListener('click', function (e) {
           var b;
-          if (b = e.target.closest('.qv')) { var d = b.dataset; qv.querySelector('#qv-img').src = d.img; qv.querySelector('#qv-img').alt = d.name; qv.querySelector('#qv-name').textContent = d.name; qv.querySelector('#qv-price').textContent = d.price; qv.querySelector('#qv-old').textContent = d.old; qv.querySelector('#qv-old').parentElement.classList.toggle('hidden', !d.old); qv.querySelector('#qv-link').href = d.href; qv.classList.remove('hidden') }
+          if (b = e.target.closest('.qv')) { var d = b.dataset; qv.querySelector('#qv-img').src = d.img; qv.querySelector('#qv-img').alt = d.name; qv.querySelector('#qv-name').textContent = d.name; qv.querySelector('#qv-price').textContent = d.price; qv.querySelector('#qv-old').textContent = d.old; qv.querySelector('#qv-old').parentElement.classList.toggle('hidden', !d.old); qv.querySelector('#qv-link').href = d.href; var qc = qv.querySelector('#qv-cat'), qa = b.closest('article'), qe = qa && qa.querySelector('p.text-xs'); qc.textContent = qe ? qe.textContent.trim() : ''; qc.hidden = !qc.textContent; var qd = qv.querySelector('#qv-desc'); qd.textContent = d.desc || ''; qd.hidden = !d.desc; qv.classList.remove('hidden') }
           else if (e.target.closest('[data-close-qv]')) cq();
           else if (b = e.target.closest('.addcart')) { var q = b.id === 'add-main' ? +document.getElementById('qty').value : 1; if (window.RD && RD.add) RD.add(b, q); toast('Added to cart') }
           else if (b = e.target.closest('.wish')) { var on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); b.classList.toggle('bg-primary', on); b.classList.toggle('text-white', on); toast(on ? 'Saved to wishlist' : 'Removed from wishlist') }
@@ -159,7 +159,6 @@
         var tabs = [].slice.call(document.querySelectorAll('.tab'));
         function sel(x0) { tabs.forEach(function (x) { var on = x === x0; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; x.classList.toggle('bg-primary', on); x.classList.toggle('text-white', on); x.classList.toggle('bg-white', !on); document.getElementById(x.getAttribute('aria-controls')).hidden = !on }) }
         tabs.forEach(function (x, i) { x.onclick = function () { sel(x) }; x.onkeydown = function (e) { var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (k) { var n = tabs[(i + k + tabs.length) % tabs.length]; sel(n); n.focus() } } });
-        document.querySelector('a[href="#reviews"]').addEventListener('click', function () { sel(document.getElementById('tab-rev')) })
       })();
     });
   }
@@ -180,7 +179,7 @@
     }
     function li(p, k) {
       var name = esc(p.name), price = Math.round(+p.price) || 0, img = esc(p.image || 'assets/images/placeholder.svg'), href = 'product.html?id=' + encodeURIComponent(p.id), pf = price.toLocaleString('en-US');
-      return '<li data-cat="Electronics" data-brand="" data-color="" data-size="" data-price="' + price + '" data-rating="4.0" data-n="' + (10 + k) + '" data-idx="' + (100 + k) + '"><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full"><div class="relative overflow-hidden bg-primary-soft"><a href="' + href + '" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="' + img + '" referrerpolicy="no-referrer" alt="' + name + '" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a><div class="card-actions"><button type="button" class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button><button type="button" class="qv" aria-label="Quick view ' + name + '" data-name="' + name + '" data-price="' + pf + '" data-old="" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div></div><div class="p-4 flex flex-col flex-1"><p class="text-xs font-bold text-primary">Electronics</p><h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="' + href + '" class="hover:text-primary">' + name + '</a></h3><p class="ldesc hidden text-sm text-ink/70 mt-2">' + esc(p.description) + '</p><div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳' + pf + '</span></div></div><button type="button" class="addcart card-cart" aria-label="Add ' + name + ' to cart">Add to cart</button></article></li>'
+      return '<li data-cat="Electronics" data-brand="" data-color="" data-size="" data-price="' + price + '" data-n="' + (10 + k) + '" data-idx="' + (100 + k) + '"><article class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full"><div class="relative overflow-hidden bg-primary-soft"><a href="' + href + '" class="block aspect-square" tabindex="-1" aria-hidden="true"><img src="' + img + '" referrerpolicy="no-referrer" alt="' + name + '" width="600" height="600" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a><div class="card-actions"><button type="button" class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button><button type="button" class="qv" aria-label="Quick view ' + name + '" data-name="' + name + '" data-price="' + pf + '" data-old="" data-desc="' + esc(p.description) + '" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div></div><div class="p-4 flex flex-col flex-1"><p class="text-xs font-bold text-primary">Electronics</p><h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="' + href + '" class="hover:text-primary">' + name + '</a></h3><p class="ldesc hidden text-sm text-ink/70 mt-2">' + esc(p.description) + '</p><div class="mt-auto pt-3 flex items-baseline gap-2"><span class="font-display font-extrabold text-xl">৳' + pf + '</span></div></div><button type="button" class="addcart card-cart" aria-label="Add ' + name + ' to cart">Add to cart</button></article></li>'
     }
     var t = setTimeout(finish, 10000);
     fetch('https://api.graphicdesigncourse.net/api/products', { headers: { 'Accept': 'application/json' } })
@@ -210,11 +209,11 @@
         var grid = document.getElementById('shop-grid'), items = [].slice.call(grid.children), panel = document.getElementById('filter-panel'), ov = document.getElementById('f-ov'),
           pmin = document.getElementById('pmin'), pmax = document.getElementById('pmax'), pr = document.getElementById('prange'), chipsEl = document.getElementById('chips'),
           more = document.getElementById('more'), shown = 12, step = 6, PM = +document.getElementById('prange').max || 5000, st = {};
-        var sorters = { pop: function (a, b) { return b.dataset.n - a.dataset.n }, new: function (a, b) { return b.dataset.idx - a.dataset.idx }, lo: function (a, b) { return a.dataset.price - b.dataset.price }, hi: function (a, b) { return b.dataset.price - a.dataset.price }, top: function (a, b) { return b.dataset.rating - a.dataset.rating } };
+        var sorters = { pop: function (a, b) { return b.dataset.n - a.dataset.n }, new: function (a, b) { return b.dataset.idx - a.dataset.idx }, lo: function (a, b) { return a.dataset.price - b.dataset.price }, hi: function (a, b) { return b.dataset.price - a.dataset.price } };
         function vals(n) { return [].map.call(document.querySelectorAll('input[name="' + n + '"]:checked'), function (i) { return i.value }) }
-        function read() { st.cat = vals('cat'); st.brand = vals('brand'); st.color = vals('color'); st.size = vals('size'); st.rating = +vals('rating')[0] || 0; st.min = +pmin.value || 0; st.max = pmax.value === '' ? 1e9 : +pmax.value }
+        function read() { st.cat = vals('cat'); st.brand = vals('brand'); st.color = vals('color'); st.size = vals('size'); st.min = +pmin.value || 0; st.max = pmax.value === '' ? 1e9 : +pmax.value }
         function chip(f, v, l) { return '<button type="button" data-f="' + f + '" data-v="' + v + '" class="flex items-center gap-1.5 bg-accent border border-line rounded-full pl-3 pr-2 py-1 text-sm font-bold">' + l + ' <span aria-hidden="true">×</span><span class="sr-only">remove filter</span></button>' }
-        function chips() { var h = '';['cat', 'brand', 'color', 'size'].forEach(function (f) { st[f].forEach(function (v) { h += chip(f, v, v) }) }); if (st.rating) h += chip('rating', '0', st.rating + '★ &amp; up'); if (st.min > 0 || st.max < PM) h += chip('price', '', '৳' + st.min + ' to ৳' + st.max); chipsEl.innerHTML = h ? h + '<button type="button" data-clear-all class="underline font-bold text-sm px-2">Clear all</button>' : '' }
+        function chips() { var h = '';['cat', 'brand', 'color', 'size'].forEach(function (f) { st[f].forEach(function (v) { h += chip(f, v, v) }) }); if (st.min > 0 || st.max < PM) h += chip('price', '', '৳' + st.min + ' to ৳' + st.max); chipsEl.innerHTML = h ? h + '<button type="button" data-clear-all class="underline font-bold text-sm px-2">Clear all</button>' : '' }
         var Q = (new URLSearchParams(location.search).get('q') || '').trim().toLowerCase();
         function apply() {
           read();
@@ -225,7 +224,6 @@
             if (st.brand.length && st.brand.indexOf(d.brand) < 0) return false;
             if (st.color.length && st.color.indexOf(d.color) < 0) return false;
             if (st.size.length && !st.size.some(function (s) { return (' ' + d.size + ' ').indexOf(' ' + s + ' ') >= 0 })) return false;
-            if (+d.rating < st.rating) return false;
             if (+d.price < st.min || +d.price > st.max) return false; return true
           });
           list.sort(sorters[document.getElementById('sort').value]);
@@ -237,7 +235,7 @@
           document.getElementById('empty').hidden = n > 0; document.getElementById('more-wrap').hidden = n === 0; more.hidden = shown >= n;
           chips()
         }
-        function clearAll() { document.querySelectorAll('#filter-panel input[type=checkbox]').forEach(function (i) { i.checked = false }); document.querySelector('input[name=rating][value="0"]').checked = true; pmin.value = 0; pmax.value = PM; pr.value = PM; shown = 12; apply() }
+        function clearAll() { document.querySelectorAll('#filter-panel input[type=checkbox]').forEach(function (i) { i.checked = false }); pmin.value = 0; pmax.value = PM; pr.value = PM; shown = 12; apply() }
         panel.addEventListener('change', function () { shown = 12; apply() });
         pmin.addEventListener('input', function () { shown = 12; apply() });
         pmax.addEventListener('input', function () { pr.value = pmax.value; shown = 12; apply() });
@@ -248,7 +246,7 @@
         document.addEventListener('click', function (e) {
           if (e.target.closest('[data-clear-all]')) clearAll();
           var b = e.target.closest('#chips [data-f]');
-          if (b) { var f = b.dataset.f; if (f === 'rating') document.querySelector('input[name=rating][value="0"]').checked = true; else if (f === 'price') { pmin.value = 0; pmax.value = PM; pr.value = PM } else document.querySelector('input[name=' + f + '][value="' + b.dataset.v + '"]').checked = false; shown = 12; apply() }
+          if (b) { var f = b.dataset.f; if (f === 'price') { pmin.value = 0; pmax.value = PM; pr.value = PM } else document.querySelector('input[name=' + f + '][value="' + b.dataset.v + '"]').checked = false; shown = 12; apply() }
           if (e.target.closest('[data-close-f]')) { panel.classList.remove('open'); ov.classList.add('hidden'); document.body.style.overflow = '' }
         });
         document.getElementById('open-filters').addEventListener('click', function () { panel.classList.add('open'); ov.classList.remove('hidden'); document.body.style.overflow = 'hidden' });

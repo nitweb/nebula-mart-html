@@ -111,7 +111,7 @@
 
 @media(min-width:768px) {
     .stats {
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat(3, 1fr)
     }
 }
 
@@ -455,4 +455,10 @@
 
 .gal figure {
     position: relative
+}
+/* three stats: last one spans the full row on small screens */
+@media(max-width:767px) {
+    .stat:last-child:nth-child(odd) {
+        grid-column: 1 / -1
+    }
 }

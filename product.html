@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="rgb(var(--color-primary))">
   <script
-    type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Wireless Earbuds Pro with Noise Cancelling", "image": ["assets/images/products/earbuds1.svg", "assets/images/products/earbuds2.svg", "assets/images/products/earbuds3.svg", "assets/images/products/earbuds4.svg", "assets/images/products/earbuds5.svg"], "description": "Buy Wireless Earbuds Pro with active noise cancelling, 32-hour battery and IPX5 water resistance for ৳1,490. 1 year warranty, fast delivery in Bangladesh.", "sku": "RD-EBP-001", "brand": {"@type": "Brand", "name": "Nebula Audio"}, "offers": {"@type": "Offer", "url": "https://www.nebulamart.com/product/wireless-earbuds-pro", "priceCurrency": "BDT", "price": "1490", "priceValidUntil": "2026-12-31", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "328"}, "review": [{"@type": "Review", "author": {"@type": "Person", "name": "Tanvir A."}, "datePublished": "2026-09-12", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "name": "Great sound for the price", "reviewBody": "Noise cancelling works well on the bus. Battery lasts the whole day."}, {"@type": "Review", "author": {"@type": "Person", "name": "Nusrat J."}, "datePublished": "2026-09-12", "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"}, "name": "Comfortable fit", "reviewBody": "Fits well and pairs fast. The case is a little bulky."}, {"@type": "Review", "author": {"@type": "Person", "name": "Rafi H."}, "datePublished": "2026-09-12", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "name": "Worth every taka", "reviewBody": "Delivered in one day, original product with warranty card."}]}</script>
+    type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Wireless Earbuds Pro with Noise Cancelling", "image": ["assets/images/products/earbuds1.svg", "assets/images/products/earbuds2.svg", "assets/images/products/earbuds3.svg", "assets/images/products/earbuds4.svg", "assets/images/products/earbuds5.svg"], "description": "Buy Wireless Earbuds Pro with active noise cancelling, 32-hour battery and IPX5 water resistance for ৳1,490. 1 year warranty, fast delivery in Bangladesh.", "sku": "RD-EBP-001", "brand": {"@type": "Brand", "name": "Nebula Audio"}, "offers": {"@type": "Offer", "url": "https://www.nebulamart.com/product/wireless-earbuds-pro", "priceCurrency": "BDT", "price": "1490", "priceValidUntil": "2026-12-31", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}}</script>
   <script
     type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nebulamart.com/"}, {"@type": "ListItem", "position": 2, "name": "Electronics", "item": "https://www.nebulamart.com/category/electronics"}, {"@type": "ListItem", "position": 3, "name": "Wireless Earbuds Pro", "item": "https://www.nebulamart.com/product/wireless-earbuds-pro"}]}</script>
 
@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/pages/product.css">
+  <link rel="stylesheet" href="assets/css/refresh.css">
 </head>
 
 <body class="antialiased" data-page="product">
@@ -769,9 +770,7 @@
           <p class="font-bold text-primary">Electronics</p>
           <h1 class="font-display font-extrabold text-3xl lg:text-4xl leading-tight mt-1">Wireless Earbuds Pro with
             Noise Cancelling</h1>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3"><span class="text-star text-lg"
-              aria-hidden="true">★★★★★</span><span class="font-bold">4.6</span><a href="#reviews"
-              class="underline underline-offset-4 text-ink/70">328 reviews</a><span
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3"><span
               class="px-2.5 py-1 rounded-lg bg-accent text-ink text-sm font-bold">In stock</span></div>
           <div class="mt-5 flex flex-wrap items-baseline gap-3"><span
               class="font-display font-extrabold text-4xl text-primary">৳1,490</span><s
@@ -842,9 +841,6 @@
             class="tab px-6 py-3 font-bold rounded-t-xl border border-b-0 border-line whitespace-nowrap bg-primary text-white">Description</button>
           <button type="button" role="tab" id="tab-spec" aria-controls="panel-spec" aria-selected="false" tabindex="-1"
             class="tab px-6 py-3 font-bold rounded-t-xl border border-b-0 border-line whitespace-nowrap bg-white">Specifications</button>
-          <button type="button" role="tab" id="tab-rev" aria-controls="panel-rev" aria-selected="false" tabindex="-1"
-            class="tab px-6 py-3 font-bold rounded-t-xl border border-b-0 border-line whitespace-nowrap bg-white">Reviews
-            (328)</button>
         </div>
         <div id="panel-desc" role="tabpanel" aria-labelledby="tab-desc" class="pt-8">
           <h2 class="font-display font-extrabold text-2xl mb-4">Description</h2>
@@ -891,72 +887,9 @@
             </tbody>
           </table>
         </div>
-        <div id="panel-rev" role="tabpanel" aria-labelledby="tab-rev" class="pt-8" hidden>
-          <h2 class="font-display font-extrabold text-2xl mb-6">Customer reviews</h2>
-          <div class="grid lg:grid-cols-3 gap-6">
-            <div class="border border-line rounded-2xl p-6 bg-accent/40 h-fit">
-              <p class="font-display font-extrabold text-5xl">4.6</p>
-              <p class="text-star text-xl" aria-hidden="true">★★★★★</p>
-              <p class="text-sm mb-4">Based on 328 reviews</p>
-              <div class="grid gap-2">
-                <div class="flex items-center gap-3 text-sm"><span class="w-10">5 star</span>
-                  <div class="flex-1 h-3 rounded-full bg-primary-soft border border-line overflow-hidden">
-                    <div class="h-full bg-accent u-93e37d"></div>
-                  </div><span class="w-10 text-right">72%</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm"><span class="w-10">4 star</span>
-                  <div class="flex-1 h-3 rounded-full bg-primary-soft border border-line overflow-hidden">
-                    <div class="h-full bg-accent u-100829"></div>
-                  </div><span class="w-10 text-right">20%</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm"><span class="w-10">3 star</span>
-                  <div class="flex-1 h-3 rounded-full bg-primary-soft border border-line overflow-hidden">
-                    <div class="h-full bg-accent u-0aad7a"></div>
-                  </div><span class="w-10 text-right">5%</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm"><span class="w-10">2 star</span>
-                  <div class="flex-1 h-3 rounded-full bg-primary-soft border border-line overflow-hidden">
-                    <div class="h-full bg-accent u-c40096"></div>
-                  </div><span class="w-10 text-right">2%</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm"><span class="w-10">1 star</span>
-                  <div class="flex-1 h-3 rounded-full bg-primary-soft border border-line overflow-hidden">
-                    <div class="h-full bg-accent u-f162d0"></div>
-                  </div><span class="w-10 text-right">1%</span>
-                </div>
-              </div>
-            </div>
-            <div class="lg:col-span-2 grid gap-4">
-              <article class="border border-line rounded-2xl p-5 bg-white">
-                <div class="flex items-center justify-between gap-3">
-                  <p class="font-bold">Tanvir A.</p><time class="text-sm text-ink/60">12 September 2026</time>
-                </div>
-                <p class="text-star mt-1" aria-hidden="true">★★★★★</p><span class="sr-only">Rated 5 out of 5</span>
-                <h3 class="font-bold mt-2">Great sound for the price</h3>
-                <p class="text-ink/75 mt-1">Noise cancelling works well on the bus. Battery lasts the whole day.</p>
-              </article>
-              <article class="border border-line rounded-2xl p-5 bg-white">
-                <div class="flex items-center justify-between gap-3">
-                  <p class="font-bold">Nusrat J.</p><time class="text-sm text-ink/60">28 August 2026</time>
-                </div>
-                <p class="text-star mt-1" aria-hidden="true">★★★★☆</p><span class="sr-only">Rated 4 out of 5</span>
-                <h3 class="font-bold mt-2">Comfortable fit</h3>
-                <p class="text-ink/75 mt-1">Fits well and pairs fast. The case is a little bulky.</p>
-              </article>
-              <article class="border border-line rounded-2xl p-5 bg-white">
-                <div class="flex items-center justify-between gap-3">
-                  <p class="font-bold">Rafi H.</p><time class="text-sm text-ink/60">3 August 2026</time>
-                </div>
-                <p class="text-star mt-1" aria-hidden="true">★★★★★</p><span class="sr-only">Rated 5 out of 5</span>
-                <h3 class="font-bold mt-2">Worth every taka</h3>
-                <p class="text-ink/75 mt-1">Delivered in one day, original product with warranty card.</p>
-              </article>
-            </div>
-          </div>
-        </div>
       </section>
 
-      <section class="mt-14 mb-4" aria-labelledby="h-rel">
+      <section class="mt-14 mb-4" aria-labelledby="h-rel" style="padding-bottom: 4.75rem;">
         <div class="flex items-end justify-between mb-6">
           <h2 id="h-rel" class="font-display font-extrabold text-2xl">Related products</h2>
           <div class="flex gap-2"><button type="button" id="rel-prev"
@@ -993,9 +926,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">Premium Cotton Panjabi, Navy Blue</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.4 out of 5</span><span
-                    class="text-ink/60">(152)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳1,990</span><s class="text-sm text-ink/50">৳2,790</s>
                 </div>
@@ -1025,9 +955,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">FitPulse 2 Smartwatch, AMOLED Display</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.5 out of 5</span><span
-                    class="text-ink/60">(214)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳3,290</span><s class="text-sm text-ink/50">৳4,990</s>
                 </div>
@@ -1057,9 +984,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">AirLite Running Sneakers for Men</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.3 out of 5</span><span
-                    class="text-ink/60">(97)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳2,450</span><s class="text-sm text-ink/50">৳3,500</s>
                 </div>
@@ -1089,9 +1013,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">Vitamin C Brightening Face Serum 30ml</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★★</span><span class="sr-only">Rated 4.7 out of 5</span><span
-                    class="text-ink/60">(541)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳890</span><s class="text-sm text-ink/50">৳1,290</s>
                 </div>
@@ -1121,9 +1042,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">Non-Stick Cookware Set, 7 Pieces</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.5 out of 5</span><span
-                    class="text-ink/60">(76)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳3,990</span><s class="text-sm text-ink/50">৳5,800</s>
                 </div>
@@ -1153,9 +1071,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">Boom Portable Bluetooth Speaker, Waterproof</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★☆</span><span class="sr-only">Rated 4.2 out of 5</span><span
-                    class="text-ink/60">(189)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳1,850</span><s class="text-sm text-ink/50">৳2,600</s>
                 </div>
@@ -1184,9 +1099,6 @@
                 <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
                     class="hover:text-primary">Rose Leather Handbag for Women</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-                <div class="flex items-center gap-1.5 mt-2 text-sm"><span class="text-star tracking-tight"
-                    aria-hidden="true">★★★★★</span><span class="sr-only">Rated 4.6 out of 5</span><span
-                    class="text-ink/60">(63)</span></div>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                     class="font-display font-extrabold text-xl">৳2,790</span><s class="text-sm text-ink/50">৳3,990</s>
                 </div>
@@ -1313,11 +1225,13 @@
           aria-label="Close quick view"><svg class="w-6 h-6">
             <use href="#i-x" />
           </svg></button>
+        <p id="qv-cat" class="qv-cat" hidden></p>
         <h2 id="qv-name" class="font-display font-extrabold text-2xl leading-tight"></h2>
         <div class="mt-3 flex items-baseline gap-2"><span
             class="text-3xl font-display font-extrabold text-primary">৳<span id="qv-price"></span></span><s
             class="text-ink/50">৳<span id="qv-old"></span></s></div>
-        <p class="mt-3 text-sm text-ink/70">In stock. 7-day returns.</p>
+        <p id="qv-desc" class="qv-desc" hidden></p>
+        <ul class="qv-trust" aria-label="Availability and returns"><li>In stock</li><li>7-day returns</li></ul>
         <div class="mt-auto pt-6 grid gap-2"><button type="button"
             class="addcart bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3 border border-line">Add
             to cart</button><a id="qv-link" href="product.html"

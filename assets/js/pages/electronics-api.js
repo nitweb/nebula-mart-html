@@ -40,7 +40,7 @@
           '<button type="button" class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white" ' +
             'aria-label="Add ' + name + ' to wishlist" aria-pressed="false"><svg class="w-5 h-5"><use href="#i-heart" /></svg></button>' +
           '<button type="button" class="qv" aria-label="Quick view ' + name + '" ' +
-            'data-name="' + name + '" data-price="' + price + '" data-old="" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button>' +
+            'data-name="' + name + '" data-price="' + price + '" data-old="" data-desc="' + esc(p.description) + '" data-img="' + img + '" data-href="' + href + '"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button>' +
         '</div>' +
       '</div>' +
       '<div class="p-4 flex flex-col flex-1">' +

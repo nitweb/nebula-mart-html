@@ -424,7 +424,7 @@ form[role=search] input[type=search] {
   overflow: hidden;
   cursor: pointer;
   background: rgb(var(--color-paper));
-  border: 1px solid rgb(var(--color-line));
+  /* border: 1px solid rgb(var(--color-line)); */
   border-right: 0;
   box-shadow: 0 8px 24px rgb(var(--color-ink) / .18);
   font-family: inherit;

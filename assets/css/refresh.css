@@ -695,3 +695,48 @@ main section a.font-bold.underline.underline-offset-4:hover::after { transform: 
   .cat-slide > a > span:first-child { width: 3.25rem; height: 3.25rem; font-size: 1.6rem; }
   .cat-slide > a > span.font-bold { font-size: 12.5px; }
 }
+
+
+/* ==========================================================================
+   SHOP LIST VIEW — image left, details + button right (grid layout)
+   ========================================================================== */
+#shop-grid.is-list article.group {
+  display: grid;
+  grid-template-columns: minmax(130px, 240px) 1fr;
+  grid-template-rows: 1fr auto;
+  column-gap: 16px;
+  align-items: stretch;
+  padding: 10px;
+}
+#shop-grid.is-list article.group > div:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: auto;
+  max-width: none;
+  align-self: start;
+}
+#shop-grid.is-list article.group > .p-4 {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 8px 6px 0 0;
+  min-width: 0;
+}
+#shop-grid.is-list article.group > .p-4 h3 { font-size: 1.0625rem; }
+#shop-grid.is-list article.group > .card-cart {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
+  justify-self: start;
+  width: 100%;
+  max-width: 240px;
+  margin: 12px 0 4px;
+}
+@media (max-width: 640px) {
+  #shop-grid.is-list article.group {
+    grid-template-columns: 110px 1fr;
+    column-gap: 10px;
+  }
+  #shop-grid.is-list article.group > .p-4 { padding: 4px 4px 0 0; }
+  #shop-grid.is-list article.group > .p-4 h3 { font-size: 14px; }
+  #shop-grid.is-list article.group > .card-cart { max-width: none; margin: 8px 0 2px; }
+}

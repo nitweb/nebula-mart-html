@@ -218,7 +218,8 @@
         function read() { st.cat = vals('cat'); st.brand = vals('brand'); st.color = vals('color'); st.size = vals('size'); st.min = +pmin.value || 0; st.max = pmax.value === '' ? 1e9 : +pmax.value }
         function chip(f, v, l) { return '<button type="button" data-f="' + f + '" data-v="' + v + '" class="flex items-center gap-1.5 bg-accent border border-line rounded-full pl-3 pr-2 py-1 text-sm font-bold">' + l + ' <span aria-hidden="true">×</span><span class="sr-only">remove filter</span></button>' }
         function chips() { var h = '';['cat', 'brand', 'color', 'size'].forEach(function (f) { st[f].forEach(function (v) { h += chip(f, v, v) }) }); if (st.min > 0 || st.max < PM) h += chip('price', '', '৳' + st.min + ' to ৳' + st.max); chipsEl.innerHTML = h ? h + '<button type="button" data-clear-all class="underline font-bold text-sm px-2">Clear all</button>' : '' }
-        var Q = (new URLSearchParams(location.search).get('q') || '').trim().toLowerCase();
+        var Q = (new URLSearchParams(location.search).get('q') || '').trim().toLowerCase(), sq = document.getElementById('shop-q'), sqc = document.getElementById('shop-q-clear'), sqt;
+        if (sq) sq.value = new URLSearchParams(location.search).get('q') || '';
         function apply() {
           read();
           var list = items.filter(function (li) {
@@ -234,17 +235,33 @@
           items.forEach(function (li) { li.classList.add('hidden') });
           list.forEach(function (li, i) { grid.appendChild(li); li.classList.toggle('hidden', i >= shown) });
           var n = list.length, s = Math.min(shown, n);
-          document.getElementById('count').textContent = n + (n === 1 ? ' product found' : ' products found');
+          document.getElementById('count').innerHTML = '<span class="shop-count__n">' + n + '</span><span class="shop-count__t">' + (n === 1 ? 'product found' : 'products found') + '</span>';
           document.getElementById('note').textContent = 'Showing ' + s + ' of ' + n + ' products';
           document.getElementById('empty').hidden = n > 0; document.getElementById('more-wrap').hidden = n === 0; more.hidden = shown >= n;
           chips()
         }
-        function clearAll() { document.querySelectorAll('#filter-panel input[type=checkbox]').forEach(function (i) { i.checked = false }); pmin.value = 0; pmax.value = PM; pr.value = PM; shown = 12; apply() }
+        function setQ(v) { Q = v.trim().toLowerCase(); if (sqc) sqc.hidden = !v; shown = 12; apply(); try { var u = new URL(location.href); if (v.trim()) u.searchParams.set('q', v.trim()); else u.searchParams.delete('q'); history.replaceState(null, '', u) } catch (e) { } }
+        if (sq) {
+          if (sqc) sqc.hidden = !sq.value;
+          sq.addEventListener('input', function () { clearTimeout(sqt); sqt = setTimeout(function () { setQ(sq.value) }, 120) });
+          sq.addEventListener('keydown', function (e) { if (e.key === 'Escape' && sq.value) { sq.value = ''; setQ('') } });
+          sqc.addEventListener('click', function () { sq.value = ''; setQ(''); sq.focus() });
+        }
+        function clearAll() { if (sq) { sq.value = ''; setQ('') } document.querySelectorAll('#filter-panel input[type=checkbox]').forEach(function (i) { i.checked = false }); pmin.value = 0; pmax.value = PM; pr.value = PM; shown = 12; apply() }
         panel.addEventListener('change', function () { shown = 12; apply() });
         pmin.addEventListener('input', function () { shown = 12; apply() });
         pmax.addEventListener('input', function () { pr.value = pmax.value; shown = 12; apply() });
         pr.addEventListener('input', function () { pmax.value = pr.value; shown = 12; apply() });
         document.getElementById('sort').addEventListener('change', apply);
+        (function () {
+          var dd = document.getElementById('sort-dd'), btn = document.getElementById('sort-btn'), menu = document.getElementById('sort-menu'), val = document.getElementById('sort-val'), sel = document.getElementById('sort'), opts = [].slice.call(menu.children);
+          function open(o) { menu.hidden = !o; btn.setAttribute('aria-expanded', o); dd.classList.toggle('is-open', o) }
+          function pick(li) { opts.forEach(function (x) { x.setAttribute('aria-selected', x === li) }); val.textContent = li.textContent; sel.value = li.dataset.v; sel.dispatchEvent(new Event('change')); open(false); btn.focus() }
+          btn.addEventListener('click', function () { open(menu.hidden) });
+          menu.addEventListener('click', function (e) { var li = e.target.closest('[data-v]'); if (li) pick(li) });
+          document.addEventListener('click', function (e) { if (!dd.contains(e.target)) open(false) });
+          dd.addEventListener('keydown', function (e) { if (e.key === 'Escape') { open(false); btn.focus() } });
+        })();
         more.addEventListener('click', function () { shown += step; apply() });
         document.getElementById('clear').addEventListener('click', clearAll);
         document.addEventListener('click', function (e) {
@@ -253,7 +270,7 @@
           if (b) { var f = b.dataset.f; if (f === 'price') { pmin.value = 0; pmax.value = PM; pr.value = PM } else document.querySelector('input[name=' + f + '][value="' + b.dataset.v + '"]').checked = false; shown = 12; apply() }
           if (e.target.closest('[data-close-f]')) { panel.classList.remove('open'); ov.classList.add('hidden'); document.body.style.overflow = '' }
         });
-        document.getElementById('open-filters').addEventListener('click', function () { panel.classList.add('open'); ov.classList.remove('hidden'); document.body.style.overflow = 'hidden' });
+        var of = document.getElementById('open-filters'); if (of) of.addEventListener('click', function () { panel.classList.add('open'); ov.classList.remove('hidden'); document.body.style.overflow = 'hidden' });
         var vg = document.getElementById('v-grid'), vl = document.getElementById('v-list');
         function view(list) { grid.classList.toggle('is-list', list);[[vg, !list], [vl, list]].forEach(function (p) { p[0].setAttribute('aria-pressed', p[1]); p[0].classList.toggle('bg-ink', p[1]); p[0].classList.toggle('text-white', p[1]); p[0].classList.toggle('bg-white', !p[1]) }) }
         vg.onclick = function () { view(false) }; vl.onclick = function () { view(true) };

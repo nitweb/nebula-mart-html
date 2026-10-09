@@ -108,13 +108,13 @@
     <div class="bg-ink text-white overflow-hidden text-[13px] font-medium">
       <div class="flex whitespace-nowrap marquee w-max py-2">
         <div class="flex gap-10 pr-10 items-center">
-          <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
+          <span>Pay with <b class="text-accent">cash on delivery</b></span>
           <span class="text-primary">●</span>
           <span>7-day easy returns on everything</span>
           <span class="text-primary">●</span>
         </div>
         <div class="flex gap-10 pr-10 items-center" aria-hidden="true">
-          <span>Pay with <b class="text-accent">bKash</b>, <b class="text-accent">Nagad</b> or cash on delivery</span>
+          <span>Pay with <b class="text-accent">cash on delivery</b></span>
           <span class="text-primary">●</span>
           <span>7-day easy returns on everything</span>
           <span class="text-primary">●</span>
@@ -802,6 +802,7 @@
                     class="w-16 text-center py-2 rounded-lg text-xs font-extrabold shrink-0 text-ink u-ef28f7">COD</span><span><span
                       class="block font-bold">Cash on delivery</span><span class="block text-sm text-ink/65">Pay in cash
                       when your order arrives</span></span></span></label>
+              <!-- Other payment options are hidden for now (only COD). To enable again, remove the comment markers around this block and the panels block below.
               <label class="block"><input type="radio" name="pay" value="bkash" class="peer sr-only"><span
                   class="flex items-center gap-4 p-4 rounded-2xl border border-line bg-white cursor-pointer peer-checked:bg-primary-soft peer-checked:shadow-sm peer-focus-visible:ring-4 peer-focus-visible:ring-primary"><span
                     class="w-16 text-center py-2 rounded-lg text-xs font-extrabold shrink-0 text-white u-85842e">bKash</span><span><span
@@ -822,10 +823,11 @@
                     class="w-16 text-center py-2 rounded-lg text-xs font-extrabold shrink-0 text-white u-1126c2">Bank</span><span><span
                       class="block font-bold">Bank transfer</span><span class="block text-sm text-ink/65">Pay by direct
                       deposit or online transfer</span></span></span></label>
+              -->
             </div>
             <div data-pay-panel="cod" class="mt-4 rounded-2xl border border-line bg-accent/25 p-5 text-sm">Pay <b
                 class="pay-amt"></b> in cash to our delivery person. Please keep the exact amount ready.</div>
-            <div data-pay-panel="bkash" hidden class="mt-4 rounded-2xl border border-line p-5 u-7aeab9">
+            <!-- <div data-pay-panel="bkash" hidden class="mt-4 rounded-2xl border border-line p-5 u-7aeab9">
               <ol class="list-decimal pl-5 grid gap-1.5 text-sm">
                 <li>Open the bKash app and choose <b>Send Money</b>.</li>
                 <li>Send <b class="pay-amt"></b> to <b>01700-000000</b> (Personal).</li>
@@ -883,6 +885,7 @@
                 </div>
               </div>
             </div>
+            -->
           </section>
 
           <label class="flex items-start gap-3 cursor-pointer"><input id="terms" type="checkbox" required
@@ -1024,10 +1027,6 @@
             reserved.</p>
           <ul class="flex flex-wrap justify-center gap-2 order-1 md:order-2 text-xs font-extrabold"
             aria-label="Accepted payment methods">
-            <li class="px-3 py-1.5 rounded-lg bg-[#E2136E] text-white">bKash</li>
-            <li class="px-3 py-1.5 rounded-lg bg-[#F6921E] text-white">Nagad</li>
-            <li class="px-3 py-1.5 rounded-lg bg-white text-[#1A1F71]">VISA</li>
-            <li class="px-3 py-1.5 rounded-lg bg-white text-[#EB001B]">Mastercard</li>
             <li class="px-3 py-1.5 rounded-lg bg-accent text-ink">Cash on delivery</li>
           </ul>
         </div>

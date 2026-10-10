@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ALL.sort(function (a, b) { return a.n.localeCompare(b.n) });
     RD.ZONES.dhaka.fee = 70; RD.ZONES.sub.fee = 100; RD.ZONES.out.fee = 130;
     var c = RD.cart(), o = RD.order(), $ = function (i) { return document.getElementById(i) };
+    if (!$('co')) return; // not the checkout page
     if (!c.length) { location.replace('cart.html'); return }
     var form = $('co'), dt = $('district'), at = $('area-txt'), ls = $('district-list'), idx = -1, shown = [];
     function find(v) { v = (v || '').trim().toLowerCase(); return ALL.filter(function (x) { return x.n.toLowerCase() === v })[0] || null }

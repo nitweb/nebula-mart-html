@@ -32,7 +32,8 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2"
+    crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/pages/shop.css">
   <link rel="stylesheet" href="assets/css/refresh.css">
@@ -56,7 +57,11 @@
       <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2.2"
         stroke-linecap="round" />
     </symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linejoin="round" />
+      <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8" />
+    </symbol>
     <symbol id="i-heart" viewBox="0 0 24 24">
       <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor"
         stroke-width="2.2" stroke-linejoin="round" />
@@ -564,7 +569,12 @@
           <li><a href="shop.html"
               class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">Sports</a></li>
           <li class="ml-auto"><a href="track.html"
-              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Track order</a></li>
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg
+                viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true">
+                <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                <circle cx="7" cy="17" r="2" fill="currentColor" />
+                <circle cx="17" cy="17" r="2" fill="currentColor" />
+              </svg>Track order</a></li>
           <li>
             <a href="shop.html"
               class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[15px] bg-primary text-white hover:brightness-95">
@@ -673,7 +683,8 @@
     <div class="absolute inset-0 bg-ink/60" data-close-cart></div>
     <aside class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white border-l-4 border-line flex flex-col">
       <div class="flex items-center justify-between p-4 bg-accent border-b-4 border-line">
-        <h2 class="font-display font-extrabold text-2xl text-white">Your cart <span class="text-base font-bold">(2)</span></h2>
+        <h2 class="font-display font-extrabold text-2xl text-white">Your cart <span
+            class="text-base font-bold">(2)</span></h2>
         <button class="p-2 rounded-lg hover:bg-ink/10" data-close-cart aria-label="Close cart"><svg class="w-6 h-6">
             <use href="#i-x" />
           </svg></button>
@@ -890,9 +901,15 @@
       <section aria-label="Products">
         <div class="shop-search">
           <label for="shop-q" class="sr-only">Search products</label>
-          <svg class="shop-search__ic" aria-hidden="true"><use href="#i-search" /></svg>
-          <input type="text" id="shop-q" class="shop-search__input" placeholder="Search products, brands or categories" autocomplete="off" enterkeyhint="search">
-          <button type="button" id="shop-q-clear" class="shop-search__clear" aria-label="Clear search" hidden><svg class="w-4 h-4" aria-hidden="true"><use href="#i-x" /></svg></button>
+          <svg class="shop-search__ic" aria-hidden="true">
+            <use href="#i-search" />
+          </svg>
+          <input type="text" id="shop-q" class="shop-search__input" placeholder="Search products, brands or categories"
+            autocomplete="off" enterkeyhint="search">
+          <button type="button" id="shop-q-clear" class="shop-search__clear" aria-label="Clear search" hidden><svg
+              class="w-4 h-4" aria-hidden="true">
+              <use href="#i-x" />
+            </svg></button>
         </div>
         <div class="shop-bar">
           <p id="count" class="shop-count" aria-live="polite"></p>
@@ -907,7 +924,10 @@
             <div class="sort" id="sort-dd">
               <button type="button" class="sort__btn" id="sort-btn" aria-haspopup="listbox" aria-expanded="false">
                 <span class="sort__lbl">Sort by</span><span class="sort__val" id="sort-val">Most popular</span>
-                <svg class="sort__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                <svg class="sort__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
               </button>
               <ul class="sort__menu" id="sort-menu" role="listbox" aria-label="Sort by" hidden>
                 <li role="option" data-v="pop" aria-selected="true">Most popular</li>
@@ -916,28 +936,45 @@
                 <li role="option" data-v="hi" aria-selected="false">Price: high to low</li>
               </ul>
             </div>
-            <div class="view-toggle"><button type="button" id="v-grid" aria-pressed="true" aria-label="Grid view" class="p-2.5 bg-ink text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="1.5" /><rect x="13" y="3" width="8" height="8" rx="1.5" /><rect x="3" y="13" width="8" height="8" rx="1.5" /><rect x="13" y="13" width="8" height="8" rx="1.5" /></svg></button><button type="button" id="v-list" aria-pressed="false" aria-label="List view" class="p-2.5 bg-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="4" rx="1.5" /><rect x="3" y="10" width="18" height="4" rx="1.5" /><rect x="3" y="16" width="18" height="4" rx="1.5" /></svg></button></div>
+            <div class="view-toggle"><button type="button" id="v-grid" aria-pressed="true" aria-label="Grid view"
+                class="p-2.5 bg-ink text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                  <rect x="13" y="3" width="8" height="8" rx="1.5" />
+                  <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                  <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                </svg></button><button type="button" id="v-list" aria-pressed="false" aria-label="List view"
+                class="p-2.5 bg-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="4" width="18" height="4" rx="1.5" />
+                  <rect x="3" y="10" width="18" height="4" rx="1.5" />
+                  <rect x="3" y="16" width="18" height="4" rx="1.5" />
+                </svg></button></div>
           </div>
         </div>
         <div id="chips" class="flex flex-wrap items-center gap-2 mt-4"></div>
         <ul id="shop-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mt-5">
-          <li data-cat="Fashion" data-brand="OXXO" data-color="Black" data-size="S M L" data-price="946"
-            data-n="20" data-idx="0">
+          <li data-cat="Fashion" data-brand="OXXO" data-color="Black" data-size="S M L" data-price="946" data-n="20"
+            data-idx="0">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" referrerpolicy="no-referrer" alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" referrerpolicy="no-referrer"
+                    alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add OXXO Premium Cotton Panjabi for Men to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view OXXO Premium Cotton Panjabi for Men" data-name="OXXO Premium Cotton Panjabi for Men" data-price="946" data-old="1,300"
-                    data-img="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add OXXO Premium Cotton Panjabi for Men to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view OXXO Premium Cotton Panjabi for Men"
+                    data-name="OXXO Premium Cotton Panjabi for Men" data-price="946" data-old="1,300"
+                    data-img="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Fashion</p>
@@ -945,27 +982,37 @@
                     class="hover:text-primary">OXXO Premium Cotton Panjabi for Men</a></h3>
                 <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
                 <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                    class="font-display font-extrabold text-xl">৳946</span><s class="text-sm text-ink/50">৳1,300</s></div>
+                    class="font-display font-extrabold text-xl">৳946</span><s class="text-sm text-ink/50">৳1,300</s>
+                </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add OXXO Premium Cotton Panjabi for Men to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add OXXO Premium Cotton Panjabi for Men to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="AXIS-Y" data-color="Pink" data-size="" data-price="1299"
-            data-n="156" data-idx="1">
+          <li data-cat="Beauty" data-brand="AXIS-Y" data-color="Pink" data-size="" data-price="1299" data-n="156"
+            data-idx="1">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/axis-y-dark-spot-correcting-glow-serum-50ml.webp" referrerpolicy="no-referrer" alt="AXIS-Y Dark Spot Correcting Glow Serum – 50ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/axis-y-dark-spot-correcting-glow-serum-50ml.webp"
+                    referrerpolicy="no-referrer" alt="AXIS-Y Dark Spot Correcting Glow Serum – 50ml" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-35%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add AXIS-Y Dark Spot Correcting Glow Serum – 50ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view AXIS-Y Dark Spot Correcting Glow Serum – 50ml" data-name="AXIS-Y Dark Spot Correcting Glow Serum – 50ml" data-price="1,299" data-old="2,000"
-                    data-img="assets/images/products/axis-y-dark-spot-correcting-glow-serum-50ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add AXIS-Y Dark Spot Correcting Glow Serum – 50ml to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view AXIS-Y Dark Spot Correcting Glow Serum – 50ml"
+                    data-name="AXIS-Y Dark Spot Correcting Glow Serum – 50ml" data-price="1,299" data-old="2,000"
+                    data-img="assets/images/products/axis-y-dark-spot-correcting-glow-serum-50ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -976,25 +1023,34 @@
                     class="font-display font-extrabold text-xl">৳1,299</span><s class="text-sm text-ink/50">৳2,000</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add AXIS-Y Dark Spot Correcting Glow Serum – 50ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add AXIS-Y Dark Spot Correcting Glow Serum – 50ml to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="Dot &amp; Key" data-color="White" data-size="" data-price="999"
-            data-n="209" data-idx="2">
+          <li data-cat="Beauty" data-brand="Dot &amp; Key" data-color="White" data-size="" data-price="999" data-n="209"
+            data-idx="2">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" referrerpolicy="no-referrer" alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                    referrerpolicy="no-referrer" alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-name="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-price="999" data-old="1,800"
-                    data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm"
+                    data-name="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-price="999" data-old="1,800"
+                    data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1005,25 +1061,34 @@
                     class="font-display font-extrabold text-xl">৳999</span><s class="text-sm text-ink/50">৳1,800</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="Himalaya" data-color="Pink" data-size="" data-price="135"
-            data-n="262" data-idx="3">
+          <li data-cat="Beauty" data-brand="Himalaya" data-color="Pink" data-size="" data-price="135" data-n="262"
+            data-idx="3">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                    referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Himalaya Moisturizing Aloe Vera Face Gel – 100ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
-                    data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Himalaya Moisturizing Aloe Vera Face Gel – 100ml to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml"
+                    data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
+                    data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1034,25 +1099,33 @@
                     class="font-display font-extrabold text-xl">৳135</span><s class="text-sm text-ink/50">৳199</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add Himalaya Moisturizing Aloe Vera Face Gel – 100ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Himalaya Moisturizing Aloe Vera Face Gel – 100ml to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="Kumarika" data-color="White" data-size="" data-price="799"
-            data-n="315" data-idx="4">
+          <li data-cat="Beauty" data-brand="Kumarika" data-color="White" data-size="" data-price="799" data-n="315"
+            data-idx="4">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" referrerpolicy="no-referrer" alt="Kumarika Anti-Hair Fall Serum – 30ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" referrerpolicy="no-referrer"
+                    alt="Kumarika Anti-Hair Fall Serum – 30ml" width="600" height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-18%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Kumarika Anti-Hair Fall Serum – 30ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml" data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
-                    data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Kumarika Anti-Hair Fall Serum – 30ml to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml"
+                    data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
+                    data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1063,25 +1136,34 @@
                     class="font-display font-extrabold text-xl">৳799</span><s class="text-sm text-ink/50">৳980</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add Kumarika Anti-Hair Fall Serum – 30ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Kumarika Anti-Hair Fall Serum – 30ml to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="Simple" data-color="Pink" data-size="" data-price="749"
-            data-n="368" data-idx="5">
+          <li data-cat="Beauty" data-brand="Simple" data-color="Pink" data-size="" data-price="749" data-n="368"
+            data-idx="5">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
+                    referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Simple Refreshing Facial Wash Gel – 150ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view Simple Refreshing Facial Wash Gel – 150ml" data-name="Simple Refreshing Facial Wash Gel – 150ml" data-price="749" data-old="950"
-                    data-img="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Simple Refreshing Facial Wash Gel – 150ml to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Simple Refreshing Facial Wash Gel – 150ml"
+                    data-name="Simple Refreshing Facial Wash Gel – 150ml" data-price="749" data-old="950"
+                    data-img="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1092,25 +1174,34 @@
                     class="font-display font-extrabold text-xl">৳749</span><s class="text-sm text-ink/50">৳950</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add Simple Refreshing Facial Wash Gel – 150ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Simple Refreshing Facial Wash Gel – 150ml to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="Vaseline" data-color="White" data-size="" data-price="489"
-            data-n="421" data-idx="6">
+          <li data-cat="Beauty" data-brand="Vaseline" data-color="White" data-size="" data-price="489" data-n="421"
+            data-idx="6">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                    referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Vaseline Gluta Hya Dewy Radiance Lotion – 200ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                    data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Vaseline Gluta Hya Dewy Radiance Lotion – 200ml to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
+                    data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
+                    data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1121,25 +1212,34 @@
                     class="font-display font-extrabold text-xl">৳489</span><s class="text-sm text-ink/50">৳700</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add Vaseline Gluta Hya Dewy Radiance Lotion – 200ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Vaseline Gluta Hya Dewy Radiance Lotion – 200ml to cart">Add to cart</button>
+            </article>
           </li>
-          <li data-cat="Beauty" data-brand="The Ordinary" data-color="Pink" data-size="" data-price="1099"
-            data-n="156" data-idx="7">
+          <li data-cat="Beauty" data-brand="The Ordinary" data-color="Pink" data-size="" data-price="1099" data-n="156"
+            data-idx="7">
             <article
               class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="relative overflow-hidden bg-primary-soft">
                 <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                    src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600" height="600"
-                    loading="lazy"
+                    src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                    referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600"
+                    height="600" loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
                 <span
                   class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
                 <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to wishlist" aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv" aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
-                    data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" data-href="product.html"><svg class="w-5 h-5"><use href="#i-eye" /></svg></button></div>
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml"
+                    data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
+                    data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
               <div class="p-4 flex flex-col flex-1">
                 <p class="text-xs font-bold text-primary">Beauty</p>
@@ -1150,303 +1250,300 @@
                     class="font-display font-extrabold text-xl">৳1,099</span><s class="text-sm text-ink/50">৳1,650</s>
                 </div>
               </div>
-            <button type="button" class="addcart card-cart" aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to cart">Add to cart</button></article>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add The Ordinary Niacinamide 10% + Zinc 1% – 30ml to cart">Add to cart</button>
+            </article>
           </li>
-                  <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="3252" data-n="20" data-idx="8">
+          <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="3252" data-n="20" data-idx="8">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/accu-chek-instant-blood-glucose-meter-bluetooth.webp"
-                  referrerpolicy="no-referrer" alt="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" width="600" height="600"
-                  loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Accu-Chek Instant Blood Glucose Meter (Bluetooth)"
-                  data-name="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" data-price="946" data-old="1,300"
-                  data-img="assets/images/products/accu-chek-instant-blood-glucose-meter-bluetooth.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Accu-Chek Instant Blood Glucose Meter (Bluetooth)</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳3,252</span><s class="text-sm text-ink/50">৳3,285</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/accu-chek-instant-blood-glucose-meter-bluetooth.webp"
+                    referrerpolicy="no-referrer" alt="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" width="600"
+                    height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Accu-Chek Instant Blood Glucose Meter (Bluetooth)"
+                    data-name="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" data-price="946" data-old="1,300"
+                    data-img="assets/images/products/accu-chek-instant-blood-glucose-meter-bluetooth.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Accu-Chek Instant Blood Glucose Meter (Bluetooth)</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳3,252</span><s class="text-sm text-ink/50">৳3,285</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to cart">Add to cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="105" data-n="156" data-idx="9">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/digital-thermometer-lcd.webp"
-                  referrerpolicy="no-referrer" alt="Digital Thermometer LCD" width="600"
-                  height="600" loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-35%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Digital Thermometer LCD to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Digital Thermometer LCD"
-                  data-name="Digital Thermometer LCD" data-price="1,299" data-old="2,000"
-                  data-img="assets/images/products/digital-thermometer-lcd.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Digital Thermometer LCD</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳105</span><s class="text-sm text-ink/50">৳150</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/digital-thermometer-lcd.webp" referrerpolicy="no-referrer"
+                    alt="Digital Thermometer LCD" width="600" height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-35%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Digital Thermometer LCD to wishlist" aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv" aria-label="Quick view Digital Thermometer LCD"
+                    data-name="Digital Thermometer LCD" data-price="1,299" data-old="2,000"
+                    data-img="assets/images/products/digital-thermometer-lcd.webp" data-href="product.html"><svg
+                      class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Digital Thermometer LCD to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Digital Thermometer LCD</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳105</span><s class="text-sm text-ink/50">৳150</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart" aria-label="Add Digital Thermometer LCD to cart">Add to
+                cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="3155" data-n="209" data-idx="10">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/omron-hn-289-digital-personal-body-weight-scale.webp"
-                  referrerpolicy="no-referrer" alt="Omron HN-289 Digital Personal Body Weight Scale" width="600"
-                  height="600" loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to wishlist"
-                  aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Omron HN-289 Digital Personal Body Weight Scale"
-                  data-name="Omron HN-289 Digital Personal Body Weight Scale" data-price="999" data-old="1,800"
-                  data-img="assets/images/products/omron-hn-289-digital-personal-body-weight-scale.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2">
-                <a href="product.html" class="hover:text-primary">Omron HN-289 Digital Personal Body Weight Scale</a>
-              </h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳3,155</span><s class="text-sm text-ink/50">৳3,506</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/omron-hn-289-digital-personal-body-weight-scale.webp"
+                    referrerpolicy="no-referrer" alt="Omron HN-289 Digital Personal Body Weight Scale" width="600"
+                    height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Omron HN-289 Digital Personal Body Weight Scale"
+                    data-name="Omron HN-289 Digital Personal Body Weight Scale" data-price="999" data-old="1,800"
+                    data-img="assets/images/products/omron-hn-289-digital-personal-body-weight-scale.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2">
+                  <a href="product.html" class="hover:text-primary">Omron HN-289 Digital Personal Body Weight Scale</a>
+                </h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳3,155</span><s class="text-sm text-ink/50">৳3,506</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to cart">Add to cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="5674" data-n="262" data-idx="11">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/omron-ne-c28.webp"
-                  referrerpolicy="no-referrer" alt="Omron NE-C28 Compressor Nebulizer Machine" width="600"
-                  height="600" loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to wishlist"
-                  aria-pressed="false"><svg class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Omron NE-C28 Compressor Nebulizer Machine"
-                  data-name="Omron NE-C28 Compressor Nebulizer Machine" data-price="135" data-old="199"
-                  data-img="assets/images/products/omron-ne-c28.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Omron NE-C28 Compressor Nebulizer Machine</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳5674</span><s class="text-sm text-ink/50">৳6400</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/omron-ne-c28.webp" referrerpolicy="no-referrer"
+                    alt="Omron NE-C28 Compressor Nebulizer Machine" width="600" height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Omron NE-C28 Compressor Nebulizer Machine"
+                    data-name="Omron NE-C28 Compressor Nebulizer Machine" data-price="135" data-old="199"
+                    data-img="assets/images/products/omron-ne-c28.webp" data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Omron NE-C28 Compressor Nebulizer Machine</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳5674</span><s class="text-sm text-ink/50">৳6400</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to cart">Add to cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="1600" data-n="315" data-idx="12">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/fingertip-pulse-oximeter-oled-version-jumper-jpd-500d.webp"
-                  referrerpolicy="no-referrer" alt="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" width="600" height="600"
-                  loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-18%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Fingertip Pulse Oximeter OLED Version Jumper JPD-500D"
-                  data-name="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" data-price="799" data-old="980"
-                  data-img="assets/images/products/fingertip-pulse-oximeter-oled-version-jumper-jpd-500d.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Fingertip Pulse Oximeter OLED Version Jumper JPD-500D</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳1,600</span><s class="text-sm text-ink/50">৳1,650</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/fingertip-pulse-oximeter-oled-version-jumper-jpd-500d.webp"
+                    referrerpolicy="no-referrer" alt="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" width="600"
+                    height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-18%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Fingertip Pulse Oximeter OLED Version Jumper JPD-500D"
+                    data-name="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" data-price="799" data-old="980"
+                    data-img="assets/images/products/fingertip-pulse-oximeter-oled-version-jumper-jpd-500d.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Fingertip Pulse Oximeter OLED Version Jumper JPD-500D</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳1,600</span><s class="text-sm text-ink/50">৳1,650</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to cart">Add to cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="5572" data-n="368" data-idx="13">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/omron-hem-7156t.webp"
-                  referrerpolicy="no-referrer" alt="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" width="600" height="600"
-                  loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth"
-                  data-name="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" data-price="749" data-old="950"
-                  data-img="assets/images/products/omron-hem-7156t.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳5,572</span><s class="text-sm text-ink/50">৳7,388</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/omron-hem-7156t.webp" referrerpolicy="no-referrer"
+                    alt="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" width="600" height="600"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to wishlist"
+                    aria-pressed="false"><svg class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth"
+                    data-name="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" data-price="749"
+                    data-old="950" data-img="assets/images/products/omron-hem-7156t.webp" data-href="product.html"><svg
+                      class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳5,572</span><s class="text-sm text-ink/50">৳7,388</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to cart">Add to
+                cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="400" data-n="421" data-idx="14">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp"
-                  referrerpolicy="no-referrer" alt="Novopen 4 Silver Reusable Insulin Pen" width="600"
-                  height="600" loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Novopen 4 Silver Reusable Insulin Pen to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Novopen 4 Silver Reusable Insulin Pen"
-                  data-name="Novopen 4 Silver Reusable Insulin Pen" data-price="489" data-old="700"
-                  data-img="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
-                  class="hover:text-primary">Novopen 4 Silver Reusable Insulin Pen</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳400</span><s class="text-sm text-ink/50">৳400</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp" referrerpolicy="no-referrer"
+                    alt="Novopen 4 Silver Reusable Insulin Pen" width="600" height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Novopen 4 Silver Reusable Insulin Pen to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Novopen 4 Silver Reusable Insulin Pen"
+                    data-name="Novopen 4 Silver Reusable Insulin Pen" data-price="489" data-old="700"
+                    data-img="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Novopen 4 Silver Reusable Insulin Pen to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Novopen 4 Silver Reusable Insulin Pen</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳400</span><s class="text-sm text-ink/50">৳400</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Novopen 4 Silver Reusable Insulin Pen to cart">Add to cart</button>
+            </article>
           </li>
           <li data-cat="Medical" data-brand="" data-color="" data-size="" data-price="952" data-n="156" data-idx="15">
             <article
-            class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
-            <div class="relative overflow-hidden bg-primary-soft">
-              <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/tynor-abdominal-support-9-l-a-01.webp"
-                  referrerpolicy="no-referrer" alt="Tynor Abdominal Support 9″ L (A-01)" width="600"
-                  height="600" loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
-              <span
-                class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
-              <div class="card-actions"><button type="button"
-                  class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Tynor Abdominal Support 9″ L (A-01) to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
-                    <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Tynor Abdominal Support 9″ L (A-01)"
-                  data-name="Tynor Abdominal Support 9″ L (A-01)" data-price="1,099" data-old="1,650"
-                  data-img="assets/images/products/tynor-abdominal-support-9-l-a-01.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
-                    <use href="#i-eye" />
-                  </svg></button></div>
-            </div>
-            <div class="p-4 flex flex-col flex-1">
-              <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">Tynor Abdominal Support 9″ L (A-01)</a></h3>
-              <p class="ldesc hidden text-sm text-ink/70 mt-2">Tynor Abdominal Support 9″ L (A-01)</p>
-              <div class="mt-auto pt-3 flex items-baseline gap-2"><span
-                  class="font-display font-extrabold text-xl">৳952</span><s class="text-sm text-ink/50">৳1,097</s>
+              class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="relative overflow-hidden bg-primary-soft">
+                <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
+                    src="assets/images/products/tynor-abdominal-support-9-l-a-01.webp" referrerpolicy="no-referrer"
+                    alt="Tynor Abdominal Support 9″ L (A-01)" width="600" height="600" loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
+                <span
+                  class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
+                <div class="card-actions"><button type="button"
+                    class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
+                    aria-label="Add Tynor Abdominal Support 9″ L (A-01) to wishlist" aria-pressed="false"><svg
+                      class="w-5 h-5">
+                      <use href="#i-heart" />
+                    </svg></button><button type="button" class="qv"
+                    aria-label="Quick view Tynor Abdominal Support 9″ L (A-01)"
+                    data-name="Tynor Abdominal Support 9″ L (A-01)" data-price="1,099" data-old="1,650"
+                    data-img="assets/images/products/tynor-abdominal-support-9-l-a-01.webp"
+                    data-href="product.html"><svg class="w-5 h-5">
+                      <use href="#i-eye" />
+                    </svg></button></div>
               </div>
-            </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Tynor Abdominal Support 9″ L (A-01) to cart">Add to cart</button>
-          </article>
+              <div class="p-4 flex flex-col flex-1">
+                <p class="text-xs font-bold text-primary">Medical</p>
+                <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                    class="hover:text-primary">Tynor Abdominal Support 9″ L (A-01)</a></h3>
+                <p class="ldesc hidden text-sm text-ink/70 mt-2">Tynor Abdominal Support 9″ L (A-01)</p>
+                <div class="mt-auto pt-3 flex items-baseline gap-2"><span
+                    class="font-display font-extrabold text-xl">৳952</span><s class="text-sm text-ink/50">৳1,097</s>
+                </div>
+              </div>
+              <button type="button" class="addcart card-cart"
+                aria-label="Add Tynor Abdominal Support 9″ L (A-01) to cart">Add to cart</button>
+            </article>
           </li>
         </ul>
         <div id="empty" hidden class="mt-5 text-center bg-white border border-line rounded-3xl p-10">
@@ -1561,9 +1658,24 @@
               <li class="ft-badge ft-badge--cod">Cash on delivery</li>
             </ul>
             <ul class="ft-badges__row" aria-label="Delivery partners">
-              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Pathao</li>
-              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Steadfast</li>
-              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>RedX</li>
+              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14"
+                  height="14" aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>Pathao</li>
+              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14"
+                  height="14" aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>Steadfast</li>
+              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14"
+                  aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>RedX</li>
             </ul>
           </div>
         </div>
@@ -1576,7 +1688,8 @@
     <div class="absolute inset-0 bg-ink/60" data-close-qv></div>
     <div
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] max-w-3xl bg-white border-4 border-line rounded-3xl shadow-sm overflow-hidden grid sm:grid-cols-2">
-      <img id="qv-img" referrerpolicy="no-referrer" src="" alt="" width="600" height="600" class="w-full h-full object-cover aspect-square">
+      <img id="qv-img" referrerpolicy="no-referrer" src="" alt="" width="600" height="600"
+        class="w-full h-full object-cover aspect-square">
       <div class="p-6 flex flex-col"><button type="button" class="self-end p-1 -mt-2 -mr-2" data-close-qv
           aria-label="Close quick view"><svg class="w-6 h-6">
             <use href="#i-x" />
@@ -1587,7 +1700,10 @@
             class="text-3xl font-display font-extrabold text-primary">৳<span id="qv-price"></span></span><s
             class="text-ink/50">৳<span id="qv-old"></span></s></div>
         <p id="qv-desc" class="qv-desc" hidden></p>
-        <ul class="qv-trust" aria-label="Availability and returns"><li>In stock</li><li>7-day returns</li></ul>
+        <ul class="qv-trust" aria-label="Availability and returns">
+          <li>In stock</li>
+          <li>7-day returns</li>
+        </ul>
         <div class="mt-auto pt-6 grid gap-2"><button type="button"
             class="addcart bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3 border border-line">Add
             to cart</button><a id="qv-link" href="product.html"

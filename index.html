@@ -16,7 +16,7 @@
   <meta property="og:description"
     content="Shop fashion, electronics, home, beauty and grocery online in Bangladesh. Pay with cash on delivery. Fast delivery and 7-day returns.">
   <meta property="og:url" content="https://nitweb.github.io/nebula-mart-html/">
-  <meta property="og:image" content="assets/images/hero/fashion.svg">
+  <meta property="og:image" content="assets/images/hero/slider_01.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="rgb(var(--color-primary))">
   <script
@@ -32,9 +32,24 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2"
+    crossorigin>
   <link rel="preload" href="assets/images/hero/slider_01.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages/icons.css">
+  <link rel="stylesheet" href="assets/css/pages/common.css">
+  <link rel="stylesheet" href="assets/css/pages/about.css">
+  <link rel="stylesheet" href="assets/css/pages/auth.css">
+  <link rel="stylesheet" href="assets/css/pages/checkout.css">
+  <link rel="stylesheet" href="assets/css/pages/contact.css">
+  <link rel="stylesheet" href="assets/css/pages/faq.css">
+  <link rel="stylesheet" href="assets/css/pages/info.css">
+  <link rel="stylesheet" href="assets/css/pages/product.css">
+  <link rel="stylesheet" href="assets/css/pages/returns.css">
+  <link rel="stylesheet" href="assets/css/pages/shipping.css">
+  <link rel="stylesheet" href="assets/css/pages/shop.css">
+  <link rel="stylesheet" href="assets/css/pages/track.css">
+  <link rel="stylesheet" href="assets/css/pages/404.css">
   <link rel="stylesheet" href="assets/css/refresh.css">
   <link rel="stylesheet" href="assets/css/pages/extras.css">
 </head>
@@ -568,7 +583,12 @@
           <li><a href="shop.html"
               class="block px-4 py-2.5 rounded-xl font-bold text-[15px] hover:bg-primary-soft">Sports</a></li>
           <li class="ml-auto"><a href="track.html"
-              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Track order</a></li>
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-[15px] border-2 border-line hover:border-primary hover:text-primary hover:bg-primary-soft transition-colors"><svg
+                viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true">
+                <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                <circle cx="7" cy="17" r="2" fill="currentColor" />
+                <circle cx="17" cy="17" r="2" fill="currentColor" />
+              </svg>Track order</a></li>
           <li>
             <a href="shop.html"
               class="flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[15px] bg-primary text-white hover:brightness-95">
@@ -737,11 +757,13 @@
             height="809" loading="eager" fetchpriority="high"
             class="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover"></a><a href="shop.html"
           class="slide block min-w-full" role="group" aria-roledescription="slide" aria-label="2 of 3"><img
-            src="assets/images/hero/slider_02.webp" alt="Himalaya personal care products with up to 50% off" width="1942" height="809"
-            loading="lazy" class="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover"></a><a href="shop.html"
+            src="assets/images/hero/slider_02.webp" alt="Himalaya personal care products with up to 50% off"
+            width="1942" height="809" loading="lazy"
+            class="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover"></a><a href="shop.html"
           class="slide block min-w-full" role="group" aria-roledescription="slide" aria-label="3 of 3"><img
-            src="assets/images/hero/slider_03.webp" alt="Treasure of Glow: free delivery on orders of BDT 1999+ and up to 72% off" width="1942"
-            height="809" loading="lazy" class="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover"></a></div>
+            src="assets/images/hero/slider_03.webp"
+            alt="Treasure of Glow: free delivery on orders of BDT 1999+ and up to 72% off" width="1942" height="809"
+            loading="lazy" class="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover"></a></div>
       <button type="button" data-prev
         class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 grid place-items-center rounded-full bg-white border border-line hover:bg-accent"
         aria-label="Previous slide"><svg class="w-5 h-5 rotate-90">
@@ -777,7 +799,8 @@
             </svg></button>
         </div>
       </div>
-      <ul id="cat-track" class="cat-track" data-loop="3500" data-loop-prev="[data-cat-prev]" data-loop-next="[data-cat-next]">
+      <ul id="cat-track" class="cat-track" data-loop="3500" data-loop-prev="[data-cat-prev]"
+        data-loop-next="[data-cat-next]">
 
         <li class="cat-slide">
           <a href="shop.html"
@@ -864,10 +887,15 @@
           <p class="text-ink/65 mt-1">Prices drop back to normal at midnight.</p>
         </div>
         <div class="flash-side">
-          <div id="flash-countdown" class="fc" role="timer" aria-live="off" aria-label="Time left in today's flash deals">
-            <span class="fc__label"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Ends in</span>
-            <span class="fc__box"><b data-fc="h">00</b><small>h</small></span><span class="fc__sep" aria-hidden="true"></span>
-            <span class="fc__box"><b data-fc="m">00</b><small>m</small></span><span class="fc__sep" aria-hidden="true"></span>
+          <div id="flash-countdown" class="fc" role="timer" aria-live="off"
+            aria-label="Time left in today's flash deals">
+            <span class="fc__label"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                <path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6z" />
+              </svg>Ends in</span>
+            <span class="fc__box"><b data-fc="h">00</b><small>h</small></span><span class="fc__sep"
+              aria-hidden="true"></span>
+            <span class="fc__box"><b data-fc="m">00</b><small>m</small></span><span class="fc__sep"
+              aria-hidden="true"></span>
             <span class="fc__box fc__box--s"><b data-fc="s">00</b><small>s</small></span>
           </div>
           <a href="shop.html" class="font-bold underline underline-offset-4 shrink-0">View all deals</a>
@@ -879,9 +907,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp"
-                  referrerpolicy="no-referrer" alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" referrerpolicy="no-referrer"
+                  alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
@@ -952,8 +979,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" referrerpolicy="no-referrer"
-                  alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600" height="600" loading="lazy"
+                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  referrerpolicy="no-referrer" alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
@@ -965,8 +993,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm"
                   data-name="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-price="999" data-old="1,800"
-                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -988,8 +1016,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" referrerpolicy="no-referrer"
-                  alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
@@ -1001,8 +1030,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml"
                   data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
-                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1037,8 +1066,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml"
                   data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
-                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1060,9 +1089,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
-                  referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" referrerpolicy="no-referrer"
+                  alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
@@ -1097,8 +1125,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer"
-                  alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -1110,8 +1139,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
                   data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1133,8 +1162,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" referrerpolicy="no-referrer"
-                  alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
@@ -1146,8 +1176,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml"
                   data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
-                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1183,15 +1213,15 @@
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
                   src="assets/images/products/accu-chek-instant-blood-glucose-meter-bluetooth.webp"
-                  referrerpolicy="no-referrer" alt="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" width="600" height="600"
-                  loading="lazy"
+                  referrerpolicy="no-referrer" alt="Accu-Chek Instant Blood Glucose Meter (Bluetooth)" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
+                  aria-label="Add Accu-Chek Instant Blood Glucose Meter (Bluetooth) to wishlist"
+                  aria-pressed="false"><svg class="w-5 h-5">
                     <use href="#i-heart" />
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Accu-Chek Instant Blood Glucose Meter (Bluetooth)"
@@ -1220,22 +1250,19 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/digital-thermometer-lcd.webp"
-                  referrerpolicy="no-referrer" alt="Digital Thermometer LCD" width="600"
-                  height="600" loading="lazy"
+                  src="assets/images/products/digital-thermometer-lcd.webp" referrerpolicy="no-referrer"
+                  alt="Digital Thermometer LCD" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-35%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Digital Thermometer LCD to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
+                  aria-label="Add Digital Thermometer LCD to wishlist" aria-pressed="false"><svg class="w-5 h-5">
                     <use href="#i-heart" />
-                  </svg></button><button type="button" class="qv"
-                  aria-label="Quick view Digital Thermometer LCD"
+                  </svg></button><button type="button" class="qv" aria-label="Quick view Digital Thermometer LCD"
                   data-name="Digital Thermometer LCD" data-price="105" data-old="150"
-                  data-img="assets/images/products/digital-thermometer-lcd.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
+                  data-img="assets/images/products/digital-thermometer-lcd.webp" data-href="product.html"><svg
+                    class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1248,8 +1275,8 @@
                   class="font-display font-extrabold text-xl">৳105</span><s class="text-sm text-ink/50">৳150</s>
               </div>
             </div>
-            <button type="button" class="addcart card-cart"
-              aria-label="Add Digital Thermometer LCD to cart">Add to cart</button>
+            <button type="button" class="addcart card-cart" aria-label="Add Digital Thermometer LCD to cart">Add to
+              cart</button>
           </article>
         </li>
 
@@ -1266,8 +1293,8 @@
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to wishlist"
-                  aria-pressed="false"><svg class="w-5 h-5">
+                  aria-label="Add Omron HN-289 Digital Personal Body Weight Scale to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
                     <use href="#i-heart" />
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Omron HN-289 Digital Personal Body Weight Scale"
@@ -1297,22 +1324,20 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/omron-ne-c28.webp"
-                  referrerpolicy="no-referrer" alt="Omron NE-C28 Compressor Nebulizer Machine" width="600"
-                  height="600" loading="lazy"
+                  src="assets/images/products/omron-ne-c28.webp" referrerpolicy="no-referrer"
+                  alt="Omron NE-C28 Compressor Nebulizer Machine" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to wishlist"
-                  aria-pressed="false"><svg class="w-5 h-5">
+                  aria-label="Add Omron NE-C28 Compressor Nebulizer Machine to wishlist" aria-pressed="false"><svg
+                    class="w-5 h-5">
                     <use href="#i-heart" />
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Omron NE-C28 Compressor Nebulizer Machine"
                   data-name="Omron NE-C28 Compressor Nebulizer Machine" data-price="5674" data-old="6400"
-                  data-img="assets/images/products/omron-ne-c28.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
+                  data-img="assets/images/products/omron-ne-c28.webp" data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1336,15 +1361,15 @@
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
                   src="assets/images/products/fingertip-pulse-oximeter-oled-version-jumper-jpd-500d.webp"
-                  referrerpolicy="no-referrer" alt="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" width="600" height="600"
-                  loading="lazy"
+                  referrerpolicy="no-referrer" alt="Fingertip Pulse Oximeter OLED Version Jumper JPD-500D" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-18%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
+                  aria-label="Add Fingertip Pulse Oximeter OLED Version Jumper JPD-500D to wishlist"
+                  aria-pressed="false"><svg class="w-5 h-5">
                     <use href="#i-heart" />
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Fingertip Pulse Oximeter OLED Version Jumper JPD-500D"
@@ -1373,22 +1398,22 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/omron-hem-7156t.webp"
-                  referrerpolicy="no-referrer" alt="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" width="600" height="600"
+                  src="assets/images/products/omron-hem-7156t.webp" referrerpolicy="no-referrer"
+                  alt="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" width="600" height="600"
                   loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
               <div class="card-actions"><button type="button"
                   class="wish w-9 h-9 grid place-items-center rounded-full bg-white border border-line hover:bg-primary hover:text-white"
-                  aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to wishlist" aria-pressed="false"><svg
-                    class="w-5 h-5">
+                  aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to wishlist"
+                  aria-pressed="false"><svg class="w-5 h-5">
                     <use href="#i-heart" />
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth"
-                  data-name="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" data-price="5572" data-old="7,388"
-                  data-img="assets/images/products/omron-hem-7156t.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
+                  data-name="Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth" data-price="5572"
+                  data-old="7,388" data-img="assets/images/products/omron-hem-7156t.webp" data-href="product.html"><svg
+                    class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1402,7 +1427,8 @@
               </div>
             </div>
             <button type="button" class="addcart card-cart"
-              aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to cart">Add to cart</button>
+              aria-label="Add Omron HEM 7156T Digital Blood Pressure Monitor with Bluetooth to cart">Add to
+              cart</button>
           </article>
         </li>
 
@@ -1411,9 +1437,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp"
-                  referrerpolicy="no-referrer" alt="Novopen 4 Silver Reusable Insulin Pen" width="600"
-                  height="600" loading="lazy"
+                  src="assets/images/products/novopen-4-silver-reusable-insulin-pen.webp" referrerpolicy="no-referrer"
+                  alt="Novopen 4 Silver Reusable Insulin Pen" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -1449,9 +1474,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/tynor-abdominal-support-9-l-a-01.webp"
-                  referrerpolicy="no-referrer" alt="Tynor Abdominal Support 9″ L (A-01)" width="600"
-                  height="600" loading="lazy"
+                  src="assets/images/products/tynor-abdominal-support-9-l-a-01.webp" referrerpolicy="no-referrer"
+                  alt="Tynor Abdominal Support 9″ L (A-01)" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
@@ -1463,14 +1487,15 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Tynor Abdominal Support 9″ L (A-01)"
                   data-name="Tynor Abdominal Support 9″ L (A-01)" data-price="952" data-old="1,097"
-                  data-img="assets/images/products/tynor-abdominal-support-9-l-a-01.webp"
-                  data-href="product.html"><svg class="w-5 h-5">
+                  data-img="assets/images/products/tynor-abdominal-support-9-l-a-01.webp" data-href="product.html"><svg
+                    class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
             <div class="p-4 flex flex-col flex-1">
               <p class="text-xs font-bold text-primary">Medical</p>
-              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html" class="hover:text-primary">Tynor Abdominal Support 9″ L (A-01)</a></h3>
+              <h3 class="font-bold leading-snug mt-1 line-clamp-2"><a href="product.html"
+                  class="hover:text-primary">Tynor Abdominal Support 9″ L (A-01)</a></h3>
               <p class="ldesc hidden text-sm text-ink/70 mt-2">7-day returns and official warranty.</p>
               <div class="mt-auto pt-3 flex items-baseline gap-2"><span
                   class="font-display font-extrabold text-xl">৳952</span><s class="text-sm text-ink/50">৳1,097</s>
@@ -1492,8 +1517,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" referrerpolicy="no-referrer"
-                  alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
@@ -1505,8 +1531,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml"
                   data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
-                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1541,8 +1567,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml"
                   data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
-                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1564,9 +1590,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
-                  referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" referrerpolicy="no-referrer"
+                  alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
@@ -1601,8 +1626,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer"
-                  alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -1614,8 +1640,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
                   data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1645,8 +1671,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer"
-                  alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -1658,8 +1685,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
                   data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1681,8 +1708,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" referrerpolicy="no-referrer"
-                  alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
@@ -1694,8 +1722,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml"
                   data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
-                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1717,9 +1745,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp"
-                  referrerpolicy="no-referrer" alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" referrerpolicy="no-referrer"
+                  alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
@@ -1790,8 +1817,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" referrerpolicy="no-referrer"
-                  alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600" height="600" loading="lazy"
+                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  referrerpolicy="no-referrer" alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
@@ -1803,8 +1831,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm"
                   data-name="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-price="999" data-old="1,800"
-                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1826,8 +1854,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" referrerpolicy="no-referrer"
-                  alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
@@ -1839,8 +1868,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml"
                   data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
-                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1917,8 +1946,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" referrerpolicy="no-referrer"
-                  alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600" height="600" loading="lazy"
+                  src="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  referrerpolicy="no-referrer" alt="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-44%</span>
@@ -1930,8 +1960,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm"
                   data-name="Dot &amp; Key Vitamin C + E Sunscreen SPF 50+ – 80gm" data-price="999" data-old="1,800"
-                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/dot-and-key-vitamin-c-plus-e-sunscreen-spf-50-plus-80gm.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -1953,8 +1983,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" referrerpolicy="no-referrer"
-                  alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  referrerpolicy="no-referrer" alt="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-32%</span>
@@ -1966,8 +1997,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Himalaya Moisturizing Aloe Vera Face Gel – 100ml"
                   data-name="Himalaya Moisturizing Aloe Vera Face Gel – 100ml" data-price="135" data-old="199"
-                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/himalaya-moisturizing-aloe-vera-face-gel-100ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2002,8 +2033,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml"
                   data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
-                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2025,9 +2056,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
-                  referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" referrerpolicy="no-referrer"
+                  alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
@@ -2062,8 +2092,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer"
-                  alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -2075,8 +2106,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
                   data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2120,8 +2151,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Kumarika Anti-Hair Fall Serum – 30ml"
                   data-name="Kumarika Anti-Hair Fall Serum – 30ml" data-price="799" data-old="980"
-                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/kumarika-anti-hair-fall-serum-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2143,9 +2174,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp"
-                  referrerpolicy="no-referrer" alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/simple-refreshing-facial-wash-gel-150ml.webp" referrerpolicy="no-referrer"
+                  alt="Simple Refreshing Facial Wash Gel – 150ml" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-21%</span>
@@ -2180,8 +2210,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" referrerpolicy="no-referrer"
-                  alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  referrerpolicy="no-referrer" alt="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-30%</span>
@@ -2193,8 +2224,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view Vaseline Gluta Hya Dewy Radiance Lotion – 200ml"
                   data-name="Vaseline Gluta Hya Dewy Radiance Lotion – 200ml" data-price="489" data-old="700"
-                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/vaseline-gluta-hya-dewy-radiance-lotion-200ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2216,8 +2247,9 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" referrerpolicy="no-referrer"
-                  alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600" height="600" loading="lazy"
+                  src="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  referrerpolicy="no-referrer" alt="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" width="600"
+                  height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-33%</span>
@@ -2229,8 +2261,8 @@
                   </svg></button><button type="button" class="qv"
                   aria-label="Quick view The Ordinary Niacinamide 10% + Zinc 1% – 30ml"
                   data-name="The Ordinary Niacinamide 10% + Zinc 1% – 30ml" data-price="1,099" data-old="1,650"
-                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp" data-href="product.html"><svg
-                    class="w-5 h-5">
+                  data-img="assets/images/products/the-ordinary-niacinamide-10-percent-plus-zinc-1-percent-30ml.webp"
+                  data-href="product.html"><svg class="w-5 h-5">
                     <use href="#i-eye" />
                   </svg></button></div>
             </div>
@@ -2252,9 +2284,8 @@
             class="group relative bg-white border border-line rounded-2xl overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
             <div class="relative overflow-hidden bg-primary-soft">
               <a href="product.html" class="block aspect-square" tabindex="-1" aria-hidden="true"><img
-                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp"
-                  referrerpolicy="no-referrer" alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600"
-                  loading="lazy"
+                  src="assets/images/products/oxxo-premium-cotton-panjabi-for-men.webp" referrerpolicy="no-referrer"
+                  alt="OXXO Premium Cotton Panjabi for Men" width="600" height="600" loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></a>
               <span
                 class="absolute top-3 left-3 bg-primary text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">-27%</span>
@@ -2421,9 +2452,24 @@
               <li class="ft-badge ft-badge--cod">Cash on delivery</li>
             </ul>
             <ul class="ft-badges__row" aria-label="Delivery partners">
-              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Pathao</li>
-              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>Steadfast</li>
-              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>RedX</li>
+              <li class="ft-badge ft-badge--courier" title="Pathao Courier"><svg viewBox="0 0 24 24" width="14"
+                  height="14" aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>Pathao</li>
+              <li class="ft-badge ft-badge--courier" title="Steadfast Courier"><svg viewBox="0 0 24 24" width="14"
+                  height="14" aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>Steadfast</li>
+              <li class="ft-badge ft-badge--courier" title="RedX"><svg viewBox="0 0 24 24" width="14" height="14"
+                  aria-hidden="true">
+                  <path fill="currentColor" d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+                  <circle cx="7" cy="17" r="2" fill="currentColor" />
+                  <circle cx="17" cy="17" r="2" fill="currentColor" />
+                </svg>RedX</li>
             </ul>
           </div>
         </div>
@@ -2448,7 +2494,10 @@
             class="text-3xl font-display font-extrabold text-primary">৳<span id="qv-price"></span></span><s
             class="text-ink/50">৳<span id="qv-old"></span></s></div>
         <p id="qv-desc" class="qv-desc" hidden></p>
-        <ul class="qv-trust" aria-label="Availability and returns"><li>In stock</li><li>7-day returns</li></ul>
+        <ul class="qv-trust" aria-label="Availability and returns">
+          <li>In stock</li>
+          <li>7-day returns</li>
+        </ul>
         <div class="mt-auto pt-6 grid gap-2"><button type="button"
             class="addcart bg-primary hover:bg-primary-dark text-white font-extrabold rounded-xl py-3 border border-line">Add
             to cart</button><a id="qv-link" href="product.html"
@@ -2468,6 +2517,15 @@
   <script src="assets/js/pages/electronics.js" defer></script>
   <script src="assets/js/chat.js" defer></script>
   <script src="assets/js/pages/countdown.js" defer></script>
+  <script src="assets/js/pages/about.js" defer></script>
+  <script src="assets/js/pages/auth.js" defer></script>
+  <script src="assets/js/pages/checkout.js" defer></script>
+  <script src="assets/js/pages/contact.js" defer></script>
+  <script src="assets/js/pages/faq.js" defer></script>
+  <script src="assets/js/pages/info.js" defer></script>
+  <script src="assets/js/pages/success.js" defer></script>
+  <script src="assets/js/pages/track.js" defer></script>
+  <script src="assets/js/pages/zoom.js" defer></script>
 </body>
 
 </html>

@@ -333,8 +333,8 @@
 }
 
 /* Keep the sticky filter sidebar from touching the footer */
-main { padding-bottom: 3rem; }
+body[data-page="shop"] main { padding-bottom: 3rem; }
 @media (min-width: 1024px) {
   #filter-panel { margin-bottom: 0; }
-  main { padding-bottom: 4rem; }
+  body[data-page="shop"] main { padding-bottom: 4rem; }
 }
